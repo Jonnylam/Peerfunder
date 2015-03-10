@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'company/index'
+
+  get 'company/new'
+
+  get 'company/show'
+
+  get 'company/edit'
+
+  get 'user/index'
+
+  get 'user/new'
+
+  get 'user/show'
+
+  get 'user/edit'
+
   get 'user_sessions/new'
 
   get 'user_sessions/create'
