@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  company_logo: MyString
+  elevator_pitch: MyString
+  location: MyString
+  industry_type: MyString
+  website_url: MyString
+  problem_description: MyText
+  solution_description: MyText
+  product_description: MyText
+  business_description: MyText
+  market_description: MyText
+  competition_description: MyText
+  advantages_description: MyText
+
+two:
+  name: 
+  company_logo: MyString
+  elevator_pitch: MyString
+  location: MyString
+  industry_type: MyString
+  website_url: MyString
+  problem_description: MyText
+  solution_description: MyText
+  product_description: MyText
+  business_description: MyText
+  market_description: MyText
+  competition_description: MyText
+  advantages_description: MyText
