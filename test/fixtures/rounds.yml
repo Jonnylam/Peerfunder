@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_id: 1
+  lead_investor_id: 1
+  funding_goal: 1
+  term_sheet: MyString
+
+two:
+  company_id: 1
+  lead_investor_id: 1
+  funding_goal: 1
+  term_sheet: MyString
