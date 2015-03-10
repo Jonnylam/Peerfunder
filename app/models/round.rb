@@ -1,5 +1,4 @@
 class Round < ActiveRecord::Base
-
   belongs_to :company
   has_many :due_diligences
   has_many :investments
