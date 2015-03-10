@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150310192017) do
+ActiveRecord::Schema.define(version: 20150310221601) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,32 @@ ActiveRecord::Schema.define(version: 20150310192017) do
     t.text     "advantages_description"
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
+  end
+
+  create_table "due_diligences", force: :cascade do |t|
+    t.integer  "round_id"
+    t.integer  "company_id"
+    t.string   "file"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "investments", force: :cascade do |t|
+    t.integer  "investor_id"
+    t.integer  "round_id"
+    t.integer  "company_id"
+    t.integer  "amount"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "rounds", force: :cascade do |t|
+    t.integer  "company_id"
+    t.integer  "lead_investor_id"
+    t.integer  "funding_goal"
+    t.string   "term_sheet"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "users", force: :cascade do |t|
