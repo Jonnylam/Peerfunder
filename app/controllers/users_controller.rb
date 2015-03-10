@@ -9,13 +9,16 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    if @user.save
-       auto_login(@user)
-       redirect_to(:users, notice: 'User was successfully created')
+ 
+     if @user.save
+      UserMailer.welcome_email(@user).deliver_now
+      auto_login(@user)
+      redirect_to users_url, notice: "Signed up!"
     else
       render "new"
     end
   end
+
 
   def show
     @user = User.find(params[:id])
