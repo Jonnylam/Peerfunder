@@ -7,6 +7,7 @@ class CreateCompanies < ActiveRecord::Migration
       t.string :location
       t.string :industry_type
       t.string :website_url
+      t.integer :owner_id
       t.text :problem_description
       t.text :solution_description
       t.text :product_description
