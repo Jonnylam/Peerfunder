@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150310190204) do
+ActiveRecord::Schema.define(version: 20150310192017) do
+
+  create_table "companies", force: :cascade do |t|
+    t.string   "name"
+    t.string   "company_logo"
+    t.string   "elevator_pitch"
+    t.string   "location"
+    t.string   "industry_type"
+    t.string   "website_url"
+    t.text     "problem_description"
+    t.text     "solution_description"
+    t.text     "product_description"
+    t.text     "business_description"
+    t.text     "market_description"
+    t.text     "competition_description"
+    t.text     "advantages_description"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name",                        null: false
