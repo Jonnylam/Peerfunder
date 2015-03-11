@@ -22,12 +22,17 @@ class CompaniesController < ApplicationController
   end
 
   def edit
+    @company = Company.find(params[:id])
   end
 
   def update
+    @company = Company.find(params[:id])
   end
 
   def destroy
+    @company = Company.find(params[:id])
+    @company.destroy
+    redirect_to users_path
   end
 
   private
