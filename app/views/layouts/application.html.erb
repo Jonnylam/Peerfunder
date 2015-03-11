@@ -8,23 +8,28 @@
   <body>
 
   <nav class="group">
-    <div id="primary-nav" class="group">
+    <div id="primary-nav">
       <img src="/logo.png" alt="" class="logo">
       <h2>AngelList Canada</h2>
-      <ul class="group">
+      <ul>
         <li><%= link_to "Companies", companies_path %></li> 
-        <li><%= link_to "Users", companies_path %></li> 
+        <li><%= link_to "Add Company", new_company_path %></li>
+        <li><%= link_to "Users", users_path %></li>
+        <li><%= link_to "Add User", new_user_path %></li> 
       </ul>
     </div>
-    <div id="login" class="group">
-       <% if current_user %>
-       <%= link_to "User Profile", user_path(current_user.id) %>
-        <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-        <%= link_to "Logout", :logout, method: :post %>
-      <% else %>
-        <%= link_to "Register", new_user_path %>
-        <%= link_to "Login", :login %>
-      <% end %>
+    <div id="login">
+      <ul>
+         <% if current_user %>
+         <%= link_to "User Profile", user_path(current_user.id) %>
+          <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
+          <%= link_to "Logout", :logout, method: :post %>
+        <% else %>
+          <%= link_to "Register", new_user_path %>
+          <%= link_to "Login", :login %>
+        <% end %>
+      </ul>
+      
     </div>
   </nav>
 
