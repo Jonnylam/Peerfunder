@@ -1,0 +1,104 @@
+@import 'normalize';
+
+$red-main: #9d4444;
+$white: #f2f2f2;
+$border-test: 1px solid black;
+
+@mixin float-nav($width, $ml) {
+  float: left;
+  display: block;
+  width: $width;
+  margin-left: $ml;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.group:before, 
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group{
+  *zoom: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  background: $red-main;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  position: relative;
+
+
+  img {
+   position: absolute;
+    width: 100px;
+    height: auto;
+    margin-left: 3%;
+  }
+
+  ul {
+   margin-left: 100px;
+  }
+
+  a {
+    float: left;
+    margin-left: 30px;
+    color: $white;
+    margin-top: 20px;
+  }
+}
+
+
+#primary_nav {
+  float: left;
+  width: 45%;
+}
+
+#login {
+  float: right;
+  width: 20%;
+
+  a {
+    float: right;
+  }
+}
+
+footer {
+  background: $red-main;
+
+  .links {
+    border: $border-test;
+    float: left;
+    width: 70%;
+
+    a { 
+        @include float-nav(20%, 4%);
+        color: $white;
+     }
+  }
+
+  .copyright {
+    border: $border-test;
+    float: right;
+    width: 20%;
+
+  }
+}
+
+
+
+

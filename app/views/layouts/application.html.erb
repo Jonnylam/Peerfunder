@@ -1,26 +1,53 @@
 <html>
   <head>
-    <title>Tutorial</title>
+    <title>AngelList Canada</title>
       <%= stylesheet_link_tag    "application" %>
       <%= javascript_include_tag "application" %>
       <%= csrf_meta_tags %>
   </head>
   <body>
 
-  <div id="nav">
-    <% if current_user %>
-      <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-      <%= link_to "Logout", :logout, method: :post %>
-    <% else %>
-      <%= link_to "Register", new_user_path %> |
-      <%= link_to "Login", :login %>
-    <% end %>
-  </div>
+  <nav class="group">
+    <div id="primary-nav">
+      <img src="/logo.png" alt="" class="logo">
+      <ul>
+        <li><%= link_to "About", companies_path %></li> 
+        <li><%= link_to "How It Works", companies_path %></li> 
+      </ul>
+    </div>
+    <div id="login">
+       <% if current_user %>
+        <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
+        <%= link_to "Logout", :logout, method: :post %>
+      <% else %>
+        <%= link_to "Register", new_user_path %>
+        <%= link_to "Login", :login %>
+      <% end %>
+    </div>
+  </nav>
+
   <div>
     <p id="notice"><%= flash[:notice] %></p>
     <p id="alert"><%= flash[:alert] %></p>
   </div>
+  
   <%= yield %>
 
   </body>
+
+  <footer class="group">
+    <div class="links">
+    <ul>
+      <li><%= link_to "About", companies_path %></li> 
+        <li><%= link_to "How It Works", companies_path %></li>
+      </ul>
+    </div>
+
+    <div class="copyright">
+      <ul>
+        <li><%= link_to "About", companies_path %></li> 
+        <li><%= link_to "How It Works", companies_path %></li>
+      </ul>
+    </div>
+  </footer>
 </html>
