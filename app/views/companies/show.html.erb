@@ -1,2 +1,10 @@
-<h1>Company#show</h1>
-<p>Find me in app/views/company/show.html.erb</p>
+<h1><%= @company.name %>'s profile </h1>
+<p>
+	<%= @company.elevator_pitch %>
+</p>
+<p>
+	<%= @company.industry_type %><br>
+	<%= @company.location %><br>
+	<%= @company.website_url %>
+</p>
+

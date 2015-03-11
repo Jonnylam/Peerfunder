@@ -8,7 +8,7 @@ class CompaniesController < ApplicationController
     if @company.save
       redirect_to companies_path
     else
-      render :new, alert: 'Project could not be created.'
+      render :new, alert: 'Company could not be created.'
     end
   end
 
@@ -18,6 +18,7 @@ class CompaniesController < ApplicationController
   end
 
   def show
+    @company = Company.find(params[:id])
   end
 
   def edit

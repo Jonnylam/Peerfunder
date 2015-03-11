@@ -2,7 +2,7 @@
 
 <% @companies.each do |company| %>
 	<p>
-		Name: <%= company.name %>
+		Name: <%= link_to company.name, company_path(company.id) %>
 		<br>
 		Description: <%= company.elevator_pitch %>
 		<br>
@@ -11,7 +11,6 @@
 		Industry: <%= company.industry_type %>  
 		<br>
 		Website: <%= company.website_url %>  
-		<br>
 	</p>
 
 <% end %>
