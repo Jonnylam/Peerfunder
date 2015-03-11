@@ -26,16 +26,36 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    @user.save
   end
 
   def update
     @user = User.find(params[:id])
-      if @product.update_attributes(user_params)
+      if @user.update_attributes(user_params)
         redirect_to users_path(@user)
       else
-        render :edit
+        render :show
       end
+      
+      @user.save
+
+      # if @user.save
+      #   redirect_to @user
+      # else
+      #     puts "this aint working"
+      # end
+      
   end
+
+  #   @user.each do |user|
+  #     if user.update_attributes(user_params)
+  #        user.save
+  #        redirect_to users_path(@user)
+  #     else 
+  #        render :show
+  #     end
+  #   end
+
 
   def destroy
     @user = User.find(params[:id])
