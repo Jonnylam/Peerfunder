@@ -9,8 +9,10 @@
 
   <nav class="group">
     <div id="primary-nav">
-      <img src="/logo.png" alt="" class="logo">
-      <h2>AngelList Canada</h2>
+    <%= link_to(image_tag("/logo.png", :alt => "logo", :title => "Home"), root_url) %>
+      <!-- <a href="/"><img src="/logo.png" alt="" class="logo"></a> -->
+      <h2><%= link_to "AngelList Canda", root_url %></h2> 
+      <!-- <h2><a href="/" style="text-decoration: none;">AngelList Canada</a></h2> -->
       <ul>
         <li><%= link_to "Companies", companies_path %></li> 
         <li><%= link_to "Add Company", new_company_path %></li>
