@@ -8,15 +8,17 @@
   <body>
 
   <nav class="group">
-    <div id="primary-nav">
+    <div id="primary-nav" class="group">
       <img src="/logo.png" alt="" class="logo">
-      <ul>
-        <li><%= link_to "About", companies_path %></li> 
-        <li><%= link_to "How It Works", companies_path %></li> 
+      <h2>AngelList Canada</h2>
+      <ul class="group">
+        <li><%= link_to "Companies", companies_path %></li> 
+        <li><%= link_to "Users", companies_path %></li> 
       </ul>
     </div>
-    <div id="login">
+    <div id="login" class="group">
        <% if current_user %>
+       <%= link_to "User Profile", user_path(current_user.id) %>
         <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
         <%= link_to "Logout", :logout, method: :post %>
       <% else %>
@@ -31,23 +33,28 @@
     <p id="alert"><%= flash[:alert] %></p>
   </div>
   
-  <%= yield %>
-
-  </body>
-
-  <footer class="group">
+  <div id="wrapper">
+    <%= yield %>
+  </div>
+  
+  
+    <footer class="group">
     <div class="links">
     <ul>
-      <li><%= link_to "About", companies_path %></li> 
-        <li><%= link_to "How It Works", companies_path %></li>
+      <li><%= link_to "Terms and Conditions", companies_path %></li> 
+        <li><%= link_to "Privacy", companies_path %></li>
+        <li><%= link_to "FAQs", companies_path %></li>
+        <li><%= link_to "Contact Us", companies_path %></li>
       </ul>
     </div>
 
     <div class="copyright">
-      <ul>
-        <li><%= link_to "About", companies_path %></li> 
-        <li><%= link_to "How It Works", companies_path %></li>
-      </ul>
-    </div>
+      <img src="/logo.png" alt="" class="logo">
+      <p>Copyright &copy; 2015</p>
+      </div>
   </footer>
+
+  </body>
+
+
 </html>

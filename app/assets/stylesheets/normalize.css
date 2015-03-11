@@ -16,7 +16,7 @@ html {
  * Remove default margin.
  */
 
-body, h1, h2, h3, ul, li, a {
+body {
   margin: 0;
 }
 
@@ -424,10 +424,4 @@ table {
 td,
 th {
   padding: 0;
-}
-
-/* ============================================= */
-
-li {
-  list-style-type: none
 }

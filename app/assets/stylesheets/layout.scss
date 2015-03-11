@@ -1,0 +1,131 @@
+
+@mixin float-nav($width, $ml) {
+  float: left;
+  display: block;
+  width: $width;
+  margin-left: $ml;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.group:before, 
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group{
+  *zoom: 1;
+}
+
+#wrapper {
+  margin: 0 auto;
+  width: 96%;
+  
+}
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  background: $red-main;
+  height: 50px;
+  margin-bottom: 50px;
+  position: relative;
+
+
+  img {
+   position: absolute;
+    width: 100px;
+    height: auto;
+    margin-left: 3%;
+  }
+
+  ul {
+   margin-left: 150px;
+  }
+
+  a {
+    color: $white;
+    margin-top: 20px;
+  }
+}
+
+
+#primary-nav {
+  float: left;
+  width: 45%;
+  
+  h2 {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    color: $white;
+  }
+
+  ul {
+    margin-left: 30%;
+    margin-top: 15px;  
+  }
+  li {
+    float: left;
+    padding: 0 15%;
+  }
+}
+
+#login {
+  float: right;
+  width: 30%;
+  a {
+    float: right;
+    padding: 0 5%;
+  }
+}
+
+footer {
+  background: $red-main;
+  padding: 20px 0;
+  margin-top: 100px;
+
+  .links {
+    float: left;
+      width: 70%;
+
+      ul {
+        padding: 0;
+      }
+    a { 
+        @include float-nav(20%, 0%);
+        color: $white;
+        padding-left: 1%;
+     }
+  }
+
+  .copyright {
+    float: right;
+    width: 20%;
+    color: white;
+    position: relative;
+
+    p {
+      margin: 0  0 10px 50px;
+    }
+    img {
+      position: absolute;
+      bottom: 5px;
+      width: 40px;
+      height: auto;
+
+    }
+
+  }
+}
