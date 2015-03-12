@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 
 #gems added
-gem 'sorcery'
+gem 'sorcery', :git => 'https://github.com/NoamB/sorcery.git'
 
 gem 'faker'
 
