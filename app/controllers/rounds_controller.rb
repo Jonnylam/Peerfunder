@@ -6,11 +6,11 @@ class RoundsController < ApplicationController
   end
 
   def create
-    @round = Round.new
-    @round.lead_investor_id = current_user
+    @round = Round.new(round_params)
+    @round.lead_investor = current_user
     @round.company = @company
     if @round.save
-      redirect_to @company_round_path, notice: "New Round has been created"
+      redirect_to company_round_path(@company, @round), notice: "New Round has been created"
     else
        format.html { render :show , alert: "Round could not be saved. Please try again!" }
         format.js {}
