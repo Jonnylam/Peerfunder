@@ -1,26 +1,67 @@
 <html>
   <head>
-    <title>Tutorial</title>
+    <title>AngelList Canada</title>
       <%= stylesheet_link_tag    "application" %>
       <%= javascript_include_tag "application" %>
       <%= csrf_meta_tags %>
   </head>
   <body>
 
-  <div id="nav">
-    <% if current_user %>
-      <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-      <%= link_to "Logout", :logout, method: :post %>
-    <% else %>
-      <%= link_to "Register", new_user_path %> |
-      <%= link_to "Login", :login %>
-    <% end %>
-  </div>
+  <nav class="group">
+    <div id="primary-nav">
+    <%= link_to(image_tag("/logo.png", :alt => "logo", :title => "Home"), root_url) %>
+      <!-- <a href="/"><img src="/logo.png" alt="" class="logo"></a> -->
+      <h2><%= link_to "AngelList Canda", root_url %></h2> 
+      <!-- <h2><a href="/" style="text-decoration: none;">AngelList Canada</a></h2> -->
+      <ul>
+        <li><%= link_to "Companies", companies_path %></li> 
+        <li><%= link_to "Add Company", new_company_path %></li>
+        <li><%= link_to "Users", users_path %></li>
+        <li><%= link_to "Add User", new_user_path %></li> 
+      </ul>
+    </div>
+    <div id="login">
+      <ul>
+         <% if current_user %>
+         <%= link_to "User Profile", user_path(current_user.id) %>
+          <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
+          <%= link_to "Logout", :logout, method: :post %>
+        <% else %>
+          <%= link_to "Register", new_user_path %>
+          <%= link_to "Login", :login %>
+        <% end %>
+      </ul>
+      
+    </div>
+  </nav>
+
   <div>
     <p id="notice"><%= flash[:notice] %></p>
     <p id="alert"><%= flash[:alert] %></p>
   </div>
-  <%= yield %>
+  
+  <div id="wrapper">
+    <%= yield %>
+  </div>
+  
+  
+    <footer class="group">
+    <div class="links">
+    <ul>
+      <li><%= link_to "Terms and Conditions", companies_path %></li> 
+        <li><%= link_to "Privacy", companies_path %></li>
+        <li><%= link_to "FAQs", companies_path %></li>
+        <li><%= link_to "Contact Us", companies_path %></li>
+      </ul>
+    </div>
+
+    <div class="copyright">
+      <img src="/logo.png" alt="" class="logo">
+      <p>Copyright &copy; 2015</p>
+      </div>
+  </footer>
 
   </body>
+
+
 </html>

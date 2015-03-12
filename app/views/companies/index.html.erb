@@ -1,2 +1,17 @@
-<h1>Company#index</h1>
-<p>Find me in app/views/company/index.html.erb</p>
+<h3>Companies</h3>
+
+<% @companies.each do |company| %>
+	<p>
+		Name: <%= company.name %>
+		<br>
+		Description: <%= company.elevator_pitch %>
+		<br>
+		Office Location: <%= company.location %>
+		<br>
+		Industry: <%= company.industry_type %>  
+		<br>
+		Website: <%= company.website_url %>  
+		<br>
+	</p>
+
+<% end %>

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # get 'user/new'
   # get 'user/show'
   # get 'user/edit'
-root :to => 'users#index'
+root :to => 'companies#index'
 resources :user_sessions
 resources :users
 
