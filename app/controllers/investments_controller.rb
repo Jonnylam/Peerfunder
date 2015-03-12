@@ -11,6 +11,8 @@ class InvestmentsController < ApplicationController
     @investment.round = @round
 
     if @investment.save
+       @round.amount_raised += @investment.amount
+        @round.save
       redirect_to company_round_path(@company, @round), notice: "INvestment MAde!"
     else
        format.html { render :show , alert: "Investment could not be saved. Please try again!" }
