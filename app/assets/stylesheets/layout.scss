@@ -36,11 +36,16 @@ a:hover {
   text-decoration: underline;
 }
 
+h1, h2, h3, h4, h5{
+    font-weight: bold; 
+  }
+
 nav {
   background: $red-main;
   height: 50px;
   margin-bottom: 50px;
   position: relative;
+
 
 
   img {
@@ -129,6 +134,14 @@ footer {
       height: auto;
 
     }
-
   }
+}
+
+.window {
+  width: 60%;
+  margin: 0 auto;
+  border: #ccc 1px solid;
+  border-radius: 5px;
+  padding: 10px 100px;
+  
 }
