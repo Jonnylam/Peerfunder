@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  attr_accessor :skip_password
   authenticates_with_sorcery!
 
   has_many :companies
@@ -6,9 +7,8 @@ class User < ActiveRecord::Base
   has_many :companies, through: :investments
   has_many :rounds, through: :investments
 
-  # validates :password, length: { minimum: 3 }
-  # validates :password, confirmation: true
-  # validates :password_confirmation, presence: true
+  validates :password, confirmation: true, length: { minimum: 6 }, unless: :skip_password
+  validates :password_confirmation, presence: true,  unless: :skip_password
 
   validates :email, uniqueness: true
 end

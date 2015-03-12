@@ -31,9 +31,10 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
+    @user.skip_password = true
       respond_to do |format| 
       if @user.update_attributes(user_params)
-        format.html { redirect_to user_path(@user), notice: 'This definitely works.' }
+        format.html { redirect_to user_path(@user)}
         format.js {}
         @user.save
       else
