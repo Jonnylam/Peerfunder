@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   
 
+  get 'investments/new'
+
   resources :companies do
-    resources :rounds
+    resources :rounds do
+      resources :investments
+    end
   end
 
   # get 'user/new'

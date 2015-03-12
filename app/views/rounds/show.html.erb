@@ -2,10 +2,11 @@
   <h1>Round: <%= @round.id %></h1>
   <h3>Lead Investor: </h3><p><%= @round.lead_investor.first_name %></p>
   <h3>Funding Goal: </h3><p><%= @round.funding_goal %></p>
+  <h3>Amount Raised: </h3><p><%= @round.amount_raised %></p>
   <h3>Term Sheet: </h3><p><%= @round.term_sheet %></p>
 
-    <form action="<%= @company.id %>/rounds/">
-    <input type="submit" value="Begin A New Fundraising Round">
+    <form action="<%= @round.id %>/investments/new">
+    <input type="submit" value="Make a new investment!">
   </form>
 </div>
 
