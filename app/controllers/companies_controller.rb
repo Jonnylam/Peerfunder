@@ -17,16 +17,36 @@ class CompaniesController < ApplicationController
     
   end
 
+  def find_company 
+    @company = Company.find(params[:id])
+  end
+
   def show
+    find_company
   end
 
   def edit
+    find_company
   end
 
   def update
+    @company = find_company
+    respond_to do |format| 
+      if @company.update_attributes(user_params)
+        format.html { redirect_to user_path(@company)}
+        format.js {}
+        @company.save
+      else
+        format.html { render :show , alert: "Your attempt to update your profiledidn't work. Please try again!" }
+        format.js {}
+      end
+    end
   end
 
   def destroy
+    find_company
+    @company.destroy
+    redirect_to companies_path
   end
 
   private
