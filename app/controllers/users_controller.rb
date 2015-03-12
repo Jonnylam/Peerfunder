@@ -41,7 +41,6 @@ class UsersController < ApplicationController
         format.html { render :show , alert: "Your attempt to update your profiledidn't work. Please try again!" }
         format.js {}
       end
-
     end
 
 

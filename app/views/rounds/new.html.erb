@@ -1,0 +1,18 @@
+<%= link_to 'Back to companies', @company %>
+
+<%= form_for ([@company, @round]) do |f| %>
+  <h1>Create A New Round</h1>
+  <div class="field">
+    <%= f.label :funding_goal %><br>
+    <%= f.text_field :funding_goal %><br>
+  </div>
+
+  <div class="field">
+    <%= f.label :term_sheet %><br>
+    <%= f.text_field :term_sheet %><br>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

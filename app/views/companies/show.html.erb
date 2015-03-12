@@ -13,7 +13,7 @@
   <h3>Competition: </h3><p><%= @company.competition_description %></p>
   <h3>Advantages: </h3><p><%= @company.advantages_description %></p>
 
-  <form action="/">
+  <form action="<%= @company.id %>/rounds/new">
     <input type="submit" value="Begin A New Fundraising Round">
   </form>
 

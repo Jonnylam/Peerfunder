@@ -1,12 +1,3 @@
-GIT
-  remote: https://github.com/NoamB/sorcery.git
-  revision: bbc745672b4ab4ea04293dca60350dcf64b92f9a
-  specs:
-    sorcery (0.9.0)
-      bcrypt (~> 3.1)
-      oauth (~> 0.4, >= 0.4.4)
-      oauth2 (>= 0.8.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -157,6 +148,10 @@ GEM
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
     slop (3.6.0)
+    sorcery (0.9.0)
+      bcrypt (~> 3.1)
+      oauth (~> 0.4, >= 0.4.4)
+      oauth2 (>= 0.8.0)
     spring (1.3.3)
     sprockets (2.12.3)
       hike (~> 1.2)
@@ -200,7 +195,7 @@ DEPENDENCIES
   responders (~> 2.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  sorcery!
+  sorcery
   spring
   turbolinks
   uglifier (>= 1.3.0)

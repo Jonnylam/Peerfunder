@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   
 
-
-
   resources :companies do
+    resources :rounds
   end
 
   # get 'user/new'
@@ -23,7 +22,7 @@ post 'logout' => 'user_sessions#destroy', :as => :logout
   # root 'welcome#index'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  #   get 'products/round:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
