@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   skip_before_filter :require_login, only: [:index, :new, :create]
+  respond_to :json
   def index
   end
 
@@ -31,13 +32,18 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
+      respond_to do |format| 
       if @user.update_attributes(user_params)
-        redirect_to users_path(@user)
+        format.html { redirect_to user_path(@user), notice: 'This definitely works.' }
+        format.js {}
+        @user.save
       else
-        render :show
+        format.html { render :show , alert: "Your attempt to update your profiledidn't work. Please try again!" }
+        format.js {}
       end
-      
-      @user.save
+
+    end
+
 
       # if @user.save
       #   redirect_to @user
