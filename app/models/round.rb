@@ -4,4 +4,5 @@ class Round < ActiveRecord::Base
   has_many :investments
   has_many :investors, through: :investments
   belongs_to :lead_investor, class_name: 'User'
+  accepts_nested_attributes_for :due_diligences, :reject_if => :all_blank, :allow_destroy => true
 end

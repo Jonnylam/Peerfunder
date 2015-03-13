@@ -55,6 +55,7 @@ GEM
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
+    cocoon (1.2.6)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -189,6 +190,7 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   byebug
+  cocoon
   coffee-rails (~> 4.1.0)
   faker
   jbuilder (~> 2.0)
