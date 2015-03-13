@@ -6,12 +6,18 @@
 
 <% @companies.each do |company| %>
 	<% if current_user == company.owner %> 
-		<%= company.name %> 
-		<%= company.elevator_pitch %>
-		<%= company.location %>
+
+		<h5><strong>
+		
+		<%= company.elevator_pitch %><br>
+		<%= company.location %></h5></strong>
+
 	<% end %>
 <% end %> 
-	 (If none link to Create a company profile) <%= link_to "Create a Company Profile", new_company_path  %>
+
+	<% else %> 
+		<%= link_to "Create a Company Profile", new_company_path  %>
+
 	<br>
 	<br>
 	Porfolio:
