@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :load_companies
   skip_before_filter :require_login, only: [:index, :new, :create]
   respond_to :json
   def index
@@ -71,5 +72,9 @@ class UsersController < ApplicationController
   private
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :biography, :experience, :accreditation, :profile_photo_url, :location, :dob)
+  end
+
+  def load_companies
+     @companies = Company.all
   end
 end

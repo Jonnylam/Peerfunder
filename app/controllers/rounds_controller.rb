@@ -1,5 +1,5 @@
 class RoundsController < ApplicationController
-  before_action :load_company
+  before_action :load_companies
 
   def new
     @round = Round.new
@@ -40,7 +40,7 @@ class RoundsController < ApplicationController
     params.require(:round).permit(:company_id, :lead_investor_id, :funding_goal, :term_sheet)
   end
 
-  def load_company
-    @company = Company.find(params[:company_id])
+  def load_companies
+    @companies = Company.all
   end
 end
