@@ -5,18 +5,29 @@
 	Your Companies:
 
 <% @companies.each do |company| %>
-	<% if current_user == company.owner %> 
-
-		<h5><strong>
+	
 		
-		<%= company.elevator_pitch %><br>
-		<%= company.location %></h5></strong>
+			<% if current_user == company.owner %> 
+			<h5></strong><p>
+				<%= link_to "View Company Page", company_path(company) %><br>
+				<%= company.name %><br>	
+				<%= company.elevator_pitch %><br>
+				<%= company.location %><br>
 
+				
+				<% @rounds.each do |rounds| %>
+				<% if current_user = rounds.lead_investor %>
+				Amount Raised:  <%= rounds.funding_goal %></h5></strong></p><br>
+				<% end %>
+				<% end %>
+		
 	<% end %>
 <% end %> 
 
-	<% else %> 
-		<%= link_to "Create a Company Profile", new_company_path  %>
+Your Investments:
+	
+
+	
 
 	<br>
 	<br>
@@ -44,6 +55,9 @@
 	<br><br>
 	Your friends/followers
 
+
+
+	<%= link_to "Create a Company Profile", new_company_path  %>
 
 
 
