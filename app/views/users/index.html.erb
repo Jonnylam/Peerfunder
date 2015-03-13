@@ -1,63 +1,11 @@
-<div>
-	Dashboard
-</div>
-	<br>
-	Your Companies:
-
-<% @companies.each do |company| %>
-	
-		
-			<% if current_user == company.owner %> 
-			<h5></strong><p>
-				<%= link_to "View Company Page", company_path(company) %><br>
-				<%= company.name %><br>	
-				<%= company.elevator_pitch %><br>
-				<%= company.location %><br>
-
-				
-				<% @rounds.each do |rounds| %>
-				<% if current_user = rounds.lead_investor %>
-				Amount Raised:  <%= rounds.funding_goal %></h5></strong></p><br>
-				<% end %>
-				<% end %>
-		
-	<% end %>
-<% end %> 
-
-Your Investments:
-	
-
-	
-
-	<br>
-	<br>
-	Porfolio:
-	<br>
-	<br>
-
-	(If funded)
-	Company Profile Page: (Public/Round page)
-	Company Name:
-	Amount Invested:
-	Lead Syndacite Profile:
-	Other People Invested: 
-
-	<br><br>
-	(If not funded)
-	Company Profile Page: (Round page)
-	Company Name:
-	Funding Goal:
-	Funding expiry date:
-	Total amount invested: 
-	Your amount invested:
-	Other people invested:
-	
-	<br><br>
-	Your friends/followers
-
-
-
-	<%= link_to "Create a Company Profile", new_company_path  %>
-
+<% @users.each do |user| %>
+	<section class="window">
+	  <h1><%= user.name %></h1>
+	  <h3>Biography</h3>
+	  <p><%= user.biography %></p>
+	  <h3>Experience</h3>
+	  <p><%= user.experience %></p>
+	</section>
+<% end %>
 
 

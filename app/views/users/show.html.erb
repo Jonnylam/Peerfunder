@@ -1,25 +1,83 @@
-<h1>This is your profile page</h1>
-
-
-	<h3><%= @user.first_name %></h3>
-	<h3><%= @user.last_name %></h3>
-
-<div id="profile-information">
-	<%= render partial: 'profileinformation', locals: {user: @user} %>
+<div>
+	<h1>Dashboard</h1> 
 </div>
+	<br>
 
-<h1>Your Portfolio (In a nutshell)</h1>
-<h1>Your Followers</h1>
-<h1>Your Friends</h1>
+
+		<h3>Your Companies:</h3> 
+
+		<% @companies.each do |company| %>
+
+		<% if current_user == company.owner %> 
+			<div class="window">
+				<h1 style="text-align:center"><%= link_to company.name, company_path(company) %></h1> <br>
+				<br>	
+				<%= company.elevator_pitch %><br>
+				<%= company.location %><br>
+
+				<h2>Current Rounds</h2>
+					<% @rounds.each do |round| %>
+						<% if company == round.company %>
+							<p>Round <%= round.id %></p>
+							<p>Funding goal: $<%= round.funding_goal %></p> 	
+							<p>Amount Raised: $<%= round.amount_raised %></p>
+						<% end %>
+					<% end %>
+			</div>
+		<% end %>
+	<% end %> 
+<h3>Your Investments:</h3>
+	<div class="window">
+	
+
+		<% @investments.each do |investment| %>
+			<% if current_user == investment.investor %>
+				<h3>Company Name</h3>
+				<p><%= investment.company.name%></p>
+				<h3>Amount Invested</h3>
+				<p>$<%= investment.amount %></p>
+		<% end %>
+		<% end %>
+		
+	
+
+	
+
+<!-- 	<br>
+	<br>
+	Porfolio:
+	<br>
+	<br>
+	</div> -->
+
+				
+		
+	
+
+
+
 <!-- 
-<script type="text/javascript">
+	(If funded)
+	Company Profile Page: (Public/Round page)
+	Company Name:
+	Amount Invested:
+	Lead Syndacite Profile:
+	Other People Invested: 
 
-  $(document).ready(function() {
-     $("#new_profile")
-        .on('ajax:beforeSend', function() {alert("loading!");})
-        .on('ajax:success', function(data, status, xhr) {alert("success!");})
-        .on('ajax:error', function(xhr, status, error) {alert("error!");})
-        .on('ajax:complete', function() {alert("complete!");});
-  });
+	<br><br>
+	(If not funded)
+	Company Profile Page: (Round page)
+	Company Name:
+	Funding Goal:
+	Funding expiry date:
+	Total amount invested: 
+	Your amount invested:
+	Other people invested:
+	
+	<br><br>
+	Your friends/followers
+ -->
 
-</script> -->
+
+
+
