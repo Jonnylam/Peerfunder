@@ -2,7 +2,16 @@
 	Dashboard
 </div>
 	<br>
-	Your Companies: (If none link to Create a company profile) <%= link_to "Create a Company Profile", new_company_path  %>
+	Your Companies:
+
+<% @companies.each do |company| %>
+	<% if current_user == company.owner %> 
+		<%= company.name %> 
+		<%= company.elevator_pitch %>
+		<%= company.location %>
+	<% end %>
+<% end %> 
+	 (If none link to Create a company profile) <%= link_to "Create a Company Profile", new_company_path  %>
 	<br>
 	<br>
 	Porfolio:
