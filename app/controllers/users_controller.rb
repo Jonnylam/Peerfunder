@@ -76,5 +76,7 @@ class UsersController < ApplicationController
 
   def load_companies
      @companies = Company.all
+     @investments = Investment.all
+     @rounds = Round.all 
   end
 end
