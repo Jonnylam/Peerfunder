@@ -11,6 +11,15 @@
     <%= f.label :term_sheet %><br>
     <%= f.text_field :term_sheet %><br>
   </div>
+  <h3> Due Diligence files </h3>
+    <div id="due_diligences">
+      <%= f.fields_for :due_diligences do |diligence| %>
+       <%= render 'due_diligence_fields', :f => diligence %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'Add a file', f, :due_diligences  %>
+      </div>
+    </div>
 
   <div class="actions">
     <%= f.submit %>
