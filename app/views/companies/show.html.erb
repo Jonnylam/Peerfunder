@@ -1,6 +1,6 @@
-  <h1><%= @company.name %></h1>
+  
 <section class="window">
-
+  <h1><%= @company.name %></h1>
   <h3>Elevator Pitch: </h3><p><%= @company.elevator_pitch %></p>
   <h3>Location: </h3><p><%= @company.location %></p>
   <h3>Industry Type: </h3><p><%= @company.industry_type %></p>
@@ -13,7 +13,7 @@
   <h3>Competition: </h3><p><%= @company.competition_description %></p>
   <h3>Advantages: </h3><p><%= @company.advantages_description %></p>
 
-  <form action="<%= @company.id %>/rounds/new">
+  <form class="submit"  action="<%= @company.id %>/rounds/new">
     <input type="submit" value="Begin A New Fundraising Round">
   </form>
 

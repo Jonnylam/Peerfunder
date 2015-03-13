@@ -5,7 +5,7 @@
   <h3>Amount Raised: </h3><p><%= @round.amount_raised %></p>
   <h3>Term Sheet: </h3><p><%= @round.term_sheet %></p>
 
-    <form action="<%= @round.id %>/investments/new">
+    <form class="submit" action="<%= @round.id %>/investments/new">
     <input type="submit" value="Make a new investment!">
   </form>
 </div>

@@ -5,35 +5,40 @@ form {
   width: 44%;
   margin: 0 auto;
   padding: 3%;
+
+
+  h1 {
+    text-align: center;
+  }
+
+  input, textarea {
+    appearance: 0;
+    height: 30px;
+    width: 100%;
+    border: 1px solid #ccc;
+    @include border-radius(4px);
+    margin: 5px 0 30px;
+  }
+
+
+  textarea {
+    height: 100px;
+  }
+
+  input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  input[type="submit"]:hover {
+    background: #717171;
+    color: white;
+    border: inset #717171 2px;
+  }
 }
 
-form h1 {
-  text-align: center;
-}
-
-form input, textarea {
-  appearance: 0;
-  width: 100%;
-  border: 1px solid #ccc;
-  @include border-radius(4px);
-  margin: 5px 0 30px;
-}
-
-form input {
-  height: 30px;
-}
-textarea {
-  height: 100px;
-}
-
-input[type="submit"] {
-  width: 50%;
-  display: block;
-  margin: 0 auto;
-}
-
-input[type="submit"]:hover {
-  background: #717171;
-  color: white;
-  border: inset #717171 2px;
-}
+ .submit {
+    border: none;
+    width: 60%;
+  }
