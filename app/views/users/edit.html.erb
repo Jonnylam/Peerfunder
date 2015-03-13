@@ -1,2 +1,14 @@
-<h1>User#edit</h1>
-<p>Find me in app/views/user/edit.html.erb</p>
+<h1>Edit your profile page </h1> 
+
+	<h3><%= @user.first_name %></h3>
+	<h3><%= @user.last_name %></h3>
+
+<div id="profile-information">
+	<%= render partial: 'profileinformation', locals: {user: @user} %>
+</div>
+
+
+<div id = "new_profile">
+	<%= render 'addtoprofileinformation' %>
+</div>
+

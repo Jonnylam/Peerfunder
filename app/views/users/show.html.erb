@@ -1,29 +1,16 @@
 <h1>This is your profile page</h1>
 
-	First Name (first_name)
-	<br>
-	Last Name (last_name)
-	<br>
-	Location (location)
-	<br>
-	Profile Picture (profile_photo_url)
-	<br>
-	Biography (biography)
-	Experience (experience)
+
 	<h3><%= @user.first_name %></h3>
 	<h3><%= @user.last_name %></h3>
 
-<div id="profile-information"></div>
-<h3><strong>Location: </strong><%= @user.location %></h3>
-
-<h3><strong>Biography: </strong><%= @user.biography %></h3>
-<h3><strong>Experience: </strong><%= @user.experience %></h3>
-
-
-<div id = "new_profile">
-	<%= render 'show' %>
+<div id="profile-information">
+	<%= render partial: 'profileinformation', locals: {user: @user} %>
 </div>
 
+<h1>Your Portfolio (In a nutshell)</h1>
+<h1>Your Followers</h1>
+<h1>Your Friends</h1>
 <!-- 
 <script type="text/javascript">
 

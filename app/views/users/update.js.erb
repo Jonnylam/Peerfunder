@@ -15,7 +15,5 @@
 // });
 
     $('#new_profile').on('ajax:success', function(event, data, status, xhr) {
-    	 $('#profile-information').append('Successful in transmitting data, and parsing it into the show page');
-});
-
-// $('#profile-information').append('<%= j render partial: 'users/profileinformation', locals: {user: @user} %>';
+		$('#profile-information').html('<%= j render partial: 'users/profileinformation', locals: {user: @user} %>');
+	});

@@ -11,13 +11,12 @@
     <div id="primary-nav">
     <%= link_to(image_tag("/logo.png", :alt => "logo", :title => "Home"), root_url) %>
       <!-- <a href="/"><img src="/logo.png" alt="" class="logo"></a> -->
-      <h2><%= link_to "AngelList Canda", root_url %></h2> 
+      <h2><%= link_to "AngelList Canada", root_url %></h2> 
       <!-- <h2><a href="/" style="text-decoration: none;">AngelList Canada</a></h2> -->
       <ul>
         <li><%= link_to "Companies", companies_path %></li> 
         <li><%= link_to "Add Company", new_company_path %></li>
-        <li><%= link_to "Users", users_path %></li>
-        <li><%= link_to "Add User", new_user_path %></li> 
+        <li><%= link_to "Dashboard", users_path %></li>
       </ul>
     </div>
     <div id="login">
