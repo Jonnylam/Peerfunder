@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true,  unless: :skip_password
 
   validates :email, uniqueness: true
+
+   def name
+    self.first_name + " " + self.last_name
+  end
 end

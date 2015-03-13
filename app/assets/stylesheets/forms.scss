@@ -5,6 +5,7 @@ form {
   width: 44%;
   margin: 0 auto;
   padding: 3%;
+  background: #f9f9f9;
 
 
   h1 {
@@ -28,7 +29,7 @@ form {
   input[type="submit"] {
     display: block;
     margin: 0 auto;
-    width: 60%;
+    width: 100%;
   }
 
   input[type="submit"]:hover {
@@ -40,5 +41,5 @@ form {
 
  .submit {
     border: none;
-    width: 60%;
+    width: 80%;
   }

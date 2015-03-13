@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   skip_before_filter :require_login, only: [:index, :new, :create]
   respond_to :json
   def index
+    @users = User.all
   end
 
   def new
@@ -19,7 +20,6 @@ class UsersController < ApplicationController
       render "new"
     end
   end
-
 
   def show
     @user = User.find(params[:id])

@@ -1,18 +1,28 @@
-<h3>Companies</h3>
+<h1>Companies</h1>
 
 <% @companies.each do |company| %>
+<div class="window company">
 	<p>
-		Name: <%= company.name %>
-		<br>
-		Description: <%= company.elevator_pitch %>
-		<br>
-		Office Location: <%= company.location %>
-		<br>
-		Industry: <%= company.industry_type %>  
-		<br>
-		Website: <%= company.website_url %>  
-		<br>
+	<h2><%= link_to company.name, company %></h2>	
+	<br>
+	<h3>Description</h3> 
+	<p><%= company.elevator_pitch %></p> 
+	<br>
+	<h3>Office Location</h3>
+	<p><%= company.location %></p> 
+	<br>
+	<h3>Industry</h3>
+	<p><%= company.industry_type %></p>   
+	<br>
+	<h3>Website</h3>
+	 <%= company.website_url %>  
+	<br>
 	</p>
+	<div class="button"><%= link_to "Create A New Round", new_company_round_path(company.id)  %></div>	
+</div>
+
+	
+		
 
 <% end %>
 

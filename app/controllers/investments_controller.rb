@@ -9,6 +9,7 @@ class InvestmentsController < ApplicationController
     @investment = Investment.new(investment_params)
     @investment.investor = current_user
     @investment.round = @round
+    @investment.company = @company
 
     if @investment.save
        @round.amount_raised += @investment.amount
