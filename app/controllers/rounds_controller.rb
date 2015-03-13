@@ -37,7 +37,7 @@ class RoundsController < ApplicationController
 
   private 
   def round_params
-    params.require(:round).permit(:company_id, :lead_investor_id, :funding_goal, :term_sheet)
+    params.require(:round).permit(:company_id, :lead_investor_id, :funding_goal, :term_sheet, due_diligences_attributes: [:id, :file, :done, :_destroy])
   end
 
   def load_company

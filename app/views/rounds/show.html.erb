@@ -4,6 +4,9 @@
   <h3>Funding Goal: </h3><p><%= @round.funding_goal %></p>
   <h3>Amount Raised: </h3><p><%= @round.amount_raised %></p>
   <h3>Term Sheet: </h3><p><%= @round.term_sheet %></p>
+  <h3>Due Diligence Files:</h3><% @round.due_diligences.each do |diligence| %>
+  <p><%= link_to diligence.file, diligence.file_url %></p>
+  <% end %>
 
     <form class="submit" action="<%= @round.id %>/investments/new">
     <input type="submit" value="Make a new investment!">
