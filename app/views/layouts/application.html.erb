@@ -14,15 +14,17 @@
       <h2><%= link_to "AngelList Canada", root_url %></h2> 
       <!-- <h2><a href="/" style="text-decoration: none;">AngelList Canada</a></h2> -->
       <ul>
-        <li><%= link_to "Companies", companies_path %></li> 
-        <li><%= link_to "Add Company", new_company_path %></li>
+        <li><%= link_to "Start Ups", companies_path %></li> 
+        <li><%= link_to "Register a Company", new_company_path %></li>
+        <% if current_user %>
         <li><%= link_to "Dashboard", user_path(current_user) %></li>
+        <% end %>
       </ul>
     </div>
     <div id="login">
       <ul>
          <% if current_user %>
-         <%= link_to "User Profile", user_path(current_user.id) %>
+         <%= link_to "User Profile", users_profile_path %>
           <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
           <%= link_to "Logout", :logout, method: :post %>
         <% else %>

@@ -1,2 +1,11 @@
-<h1>Company#edit</h1>
-<p>Find me in app/views/company/edit.html.erb</p>
+
+
+  <h1>Edit Your Company Profile</h1>
+<div id = "edit_company_profile">
+ 	<%= render 'form' %>
+</div>
+
+
+  <div id = "company_profile">
+  	<%= render partial: 'companyprofileinformation', locals: {company: @company} %>
+  </div>
