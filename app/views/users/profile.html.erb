@@ -11,15 +11,12 @@
 <h1>Your Portfolio (In a nutshell)</h1>
 <h1>Your Followers</h1>
 <h1>Your Friends</h1>
-<!-- 
-<script type="text/javascript">
 
-  $(document).ready(function() {
-     $("#new_profile")
-        .on('ajax:beforeSend', function() {alert("loading!");})
-        .on('ajax:success', function(data, status, xhr) {alert("success!");})
-        .on('ajax:error', function(xhr, status, error) {alert("error!");})
-        .on('ajax:complete', function() {alert("complete!");});
-  });
+<div id = "editbutton">
+<%= link_to "Edit your profile", :remote => :true  %>
+</div> 
+<br><br>
 
-</script> -->
+<div id = "editform">
+
+  </div>
