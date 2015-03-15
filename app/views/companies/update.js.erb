@@ -1,9 +1,9 @@
-    $('#edit_company_profile1').on('ajax:success', function(event, data, status, xhr) {
+$('#edit_company_profile1').on('ajax:success', function(event, data, status, xhr) {
 		$('#company_profile').html('<%= j render partial: 'companies/companyprofileinformation', locals: {company: @company} %>');
 	});
 
-    $('#edit_company_form').on('ajax:success', function(event, data, status, xhr) {
+$('#edit_company_form').on('ajax:success', function(event, data, status, xhr) {
 		$('#company_information').html('<%= j render partial: 'companies/companyprofileinformation', locals: {company: @company} %>');
 		$('#edit_company_form').html('')
-
+		
 });
