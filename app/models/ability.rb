@@ -7,11 +7,23 @@ class Ability
       user ||= User.new # guest user (not logged in)
       if user.user_type? :admin 
         can :manage, :all
-        can :manage, :companies
       elsif user.user_type? :leadsyndicate
+        can :manage, :all
+      elsif user.user_type? :accredited
+        can :manage, :all
+      elsif user.user_type? :eligible
+        can :manage, :useres
         can :manage, :companies
-      else 
-        can :read, :all
+        can :read, :rounds
+        can :crud, :investments
+      elsif user.user_type? :normal
+        can :manage, :users
+        can :manage, :companies
+        cannot :crud, :rounds
+        cannot :crud, :investments
+      else
+        can :read, :companies
+        can :create, :users
       end
         
     # The first argument to `can` is the action you are giving the user
