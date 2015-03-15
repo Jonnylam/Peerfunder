@@ -25,9 +25,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 
 #gems added
-gem 'sorcery', '0.8.6'
+gem 'sorcery' #, :git => 'https://github.com/NoamB/sorcery.git' #, '0.8.6'
 
 gem 'faker'
+
+gem 'cancancan', '~> 1.10'
 
 #postgreSQL gem
 gem 'pg'
