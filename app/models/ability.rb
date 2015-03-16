@@ -11,15 +11,33 @@ class Ability
       user ||= User.new # guest user (not logged in)
 
       alias_action :create, :read, :update, :destroy, :to => :crud
-      
-      if user.eligible_investor?
+
+      if user.admin?
+        can :manage, :all
+      elsif user.accreditation?
         can :crud, Company, :owner_id => user.id
         can :crud, User, :user_id => user.id
+        can :crud, Round, :lead_investor_id => user.id
+        can :create, Investment
+
         can :read, Round
         can :read, Company
-        can :create, Investment
         can :read, Investment, :investor_id => user.id
+      else  
+        can [:create, :read], User
+        can :read, Company
       end
+
+
+
+      # if user.eligible_investor?
+      #   can :crud, Company, :owner_id => user.id
+      #   can :crud, User, :user_id => user.id
+      #   can :read, Round
+      #   can :read, Company
+      #   can :create, Investment
+      #   can :read, Investment, :investor_id => user.id
+      # end
 
       # if user.user_type? :admin 
       #   can :manage, :all

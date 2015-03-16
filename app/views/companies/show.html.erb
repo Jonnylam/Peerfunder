@@ -16,9 +16,12 @@
 <div id = "edit_company_form">
 
 </div>
-  <form class="submit"  action="<%= @company.id %>/rounds/new">
-    <input type="submit" value="Begin A New Fundraising Round">
-  </form>
+  
+  <% if can? :create, @round %>
+    <form class="submit"  action="<%= @company.id %>/rounds/new">
+      <input type="submit" value="Begin A New Fundraising Round">
+    </form>
+  <% end %>
 
 </section>
 
