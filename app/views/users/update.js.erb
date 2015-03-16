@@ -17,3 +17,9 @@
     $('#new_profile').on('ajax:success', function(event, data, status, xhr) {
 		$('#profile-information').html('<%= j render partial: 'users/profileinformation', locals: {user: @user} %>');
 	});
+
+    $('#editform').on('ajax:success', function(event, data, status, xhr) {
+		$('#profile-information').html('<%= j render partial: 'users/profileinformation', locals: {user: @user} %>');
+		$('#editform').html('')
+
+});

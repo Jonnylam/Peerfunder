@@ -1,8 +1,4 @@
-<%= link_to 'Back to companies', companies_path %>
-
-  <h1>Register a New Company </h1>
-
-<%= form_for @company do |f| %>
+<%= form_for @company, :remote => true do |f| %>
  <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %><br>
