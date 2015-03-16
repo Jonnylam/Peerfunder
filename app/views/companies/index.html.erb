@@ -1,3 +1,4 @@
+
 <h1>Companies</h1>
 
 <% @companies.each do |company| %>
@@ -18,9 +19,15 @@
 	 <%= company.website_url %>  
 	<br>
 	</p>
-	<div class="button"><%= link_to "Create A New Round", new_company_round_path(company.id)  %></div>	
-</div>
 
+	<div class="m-scene" id="main">
+		<div class="m-right-panel m-page scene_element scene_element--fadeinright">
+			<div class="button">
+				<%= link_to "Create A New Round", new_company_round_path(company.id)  %>
+			</div>	
+		</div>
+	</div>
+</div>
 	
 		
 

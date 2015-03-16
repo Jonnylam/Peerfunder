@@ -25,6 +25,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def profile
+    @user = current_user
+  end
+
   def edit
     @user = User.find(params[:id])
     @user.save
@@ -44,23 +48,9 @@ class UsersController < ApplicationController
       end
     end
 
-
-      # if @user.save
-      #   redirect_to @user
-      # else
-      #     puts "this aint working"
-      # end
-      
   end
 
-  #   @user.each do |user|
-  #     if user.update_attributes(user_params)
-  #        user.save
-  #        redirect_to users_path(@user)
-  #     else 
-  #        render :show
-  #     end
-  #   end
+
 
 
   def destroy
@@ -71,7 +61,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :biography, :experience, :accreditation, :profile_photo_url, :location, :dob)
+    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :biography, :experience, :accreditation, :profile_photo_url, :location, :dob, :user_type)
   end
 
   def load_companies

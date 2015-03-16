@@ -1,0 +1,22 @@
+<h1>This is your profile page</h1>
+
+
+	<h3><%= @user.first_name %></h3>
+	<h3><%= @user.last_name %></h3>
+
+<div id="profile-information">
+	<%= render partial: 'profileinformation', locals: {user: @user} %>
+</div>
+
+<h1>Your Portfolio (In a nutshell)</h1>
+<h1>Your Followers</h1>
+<h1>Your Friends</h1>
+
+<div id = "editbutton">
+<%= link_to "Edit your profile", :remote => :true  %>
+</div> 
+<br><br>
+
+<div id = "editform">
+
+  </div>

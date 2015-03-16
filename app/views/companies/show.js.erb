@@ -1,0 +1,6 @@
+$( "#edit_company_profile").click(function() {
+  $('#company_information').html('');
+  $('#edit_company_form').html('<%= j render partial: 'companies/form', locals: {company: @company} %>');
+});
+
+

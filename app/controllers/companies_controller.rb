@@ -33,12 +33,13 @@ class CompaniesController < ApplicationController
   def update
     @company = find_company
     respond_to do |format| 
-      if @company.update_attributes(user_params)
-        format.html { redirect_to user_path(@company)}
+      if @company.update_attributes(company_params)
+        format.html { redirect_to companies_path(@company)}
+        # why is it going to companies.X instead of companies/show?
         format.js {}
         @company.save
       else
-        format.html { render :show , alert: "Your attempt to update your profiledidn't work. Please try again!" }
+        format.html { render :show , alert: "Your attempt to update your profile didn't work. Please try again!" }
         format.js {}
       end
     end

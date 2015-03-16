@@ -1,18 +1,19 @@
   
 <section class="window">
-  <h1><%= @company.name %></h1>
-  <h3>Elevator Pitch: </h3><p><%= @company.elevator_pitch %></p>
-  <h3>Location: </h3><p><%= @company.location %></p>
-  <h3>Industry Type: </h3><p><%= @company.industry_type %></p>
-  <h3>Website: </h3><p><%= @company.website_url %></p>
-  <h3>Problem To Solve: </h3><p><%= @company.problem_description %></p>
-  <h3>Solution: </h3><p><%= @company.solution_description %></p>
-  <h3>Product Description: </h3><p><%= @company.product_description %></p>
-  <h3>Business Description: </h3><p><%= @company.business_description %></p>
-  <h3>Market: </h3><p><%= @company.market_description %></p>
-  <h3>Competition: </h3><p><%= @company.competition_description %></p>
-  <h3>Advantages: </h3><p><%= @company.advantages_description %></p>
 
+<div id = "edit_company_profile">
+  <%= link_to 'Edit Your Company Profile', :remote => :true %>
+</div>
+
+<div id = "company_information">
+  <%= render partial: 'companyprofileinformation', locals: {company: @company} %>
+</div>
+<div id = "updated_company_information"> 
+
+  </div>
+<div id = "edit_company_form">
+
+</div>
   <form class="submit"  action="<%= @company.id %>/rounds/new">
     <input type="submit" value="Begin A New Fundraising Round">
   </form>

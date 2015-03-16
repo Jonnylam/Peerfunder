@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
 
   get 'investments/new'
+  get 'users/profile'
 
   resources :companies do
     resources :rounds do

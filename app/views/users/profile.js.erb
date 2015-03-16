@@ -1,0 +1,5 @@
+$( "#editbutton" ).click(function() {
+  $('#editform').html('<%= j render partial: 'users/addtoprofileinformation', locals: {user: @user} %>')
+});
+
+
