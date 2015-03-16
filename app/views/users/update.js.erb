@@ -22,4 +22,22 @@
 		$('#profile-information').html('<%= j render partial: 'users/profileinformation', locals: {user: @user} %>');
 		$('#editform').html('')
 
-});
+	});
+
+    $('#edit_location_form').on('ajax:success', function(event, data, status, xhr) {
+		$('#editlocationinformation').html('Location: <%= @user.location %> ');
+		$('#edit_location_form').html('')
+
+	});
+
+	 $('#edit_biography_form').on('ajax:success', function(event, data, status, xhr) {
+		$('#editbiographyinformation').html('<%= @user.biography %> ');
+		$('#edit_biography_form').html('')
+
+	});
+
+	  $('#edit_experience_form').on('ajax:success', function(event, data, status, xhr) {
+		$('#editexperienceinformation').html('<%= @user.experience %> ');
+		$('#edit_experience_form').html('')
+
+	});

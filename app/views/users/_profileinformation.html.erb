@@ -1,6 +1,40 @@
 <h1>Additional Information</h1>
-<h3><strong>Location: </strong><%= @user.location %></h3>
 
+<div id = "editlocationinformation">
+<h3><strong>Location: </strong><%= @user.location %></h3>
+</div>
+<div id = "editlocationbutton">
+<%= link_to "Edit Location", :remote => :true  %>
+</div>
+<div id = "edit_location_form">
+</div>
+
+
+<div id = "editbiographyinformation">
 <h3><strong>Biography: </strong><%= @user.biography %></h3>
+</div>
+<div id = "editbiographybutton">
+<%= link_to "Edit Biography", :remote => :true  %>
+</div>
+<div id ="edit_biography_form">
+</div>
+
+<div id = "editexperienceinformation">
 <h3><strong>Experience: </strong><%= @user.experience %></h3>
+</div>
+<div id ="editexperiencebutton">
+<%= link_to "Edit Experience", :remote => :true  %>
+</div>
+<div id = "edit_experience_form">
+</div>
+
+<div id = "edit_user_type">
 <h3><strong>User_type: </strong><%= @user.user_type %></h3>
+<%= link_to "Edit user_type", :remote => :true  %>
+</div>
+
+
+
+
+
+
