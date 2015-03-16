@@ -14,11 +14,25 @@
 <h1>Your Friends</h1>
 
 <div id = "editbutton">
+<%= link_to "Edit your profile User Type", :remote => :true  %>
+</div> 
+<br><br>
+
+<div id = "showeditbuttons">
 <%= link_to "Edit your profile", :remote => :true  %>
 </div> 
 <br><br>
 
 <div id = "editform">
+</div>
 
-  </div>
+<div id = "canceleditbutton">
+<%= link_to "Cancel", :remote => :true  %>
+</div>
 
+<script type="text/javascript">
+	$(document).on('ready page:load', function(){
+		$(".editbuttons").hide();
+		$('#canceleditbutton').hide();
+	});
+</script>
