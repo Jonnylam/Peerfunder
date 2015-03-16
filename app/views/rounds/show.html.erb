@@ -8,7 +8,16 @@
   <p><%= link_to diligence.file, diligence.file_url %></p>
   <% end %>
 
-    <form class="submit" action="<%= @round.id %>/investments/new">
+  <div class="current-investors group">
+    <% @round.investments.each do |investment| %>
+      <div class="investor">
+        <p>Investor: <%= investment.investor.name %>
+        <p>Latest Investment: <%= investment.created_at %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <form class="submit" action="<%= @round.id %>/investments/new">
     <input type="submit" value="Make a new investment!">
   </form>
 
