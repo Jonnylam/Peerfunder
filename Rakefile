@@ -2,5 +2,8 @@
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
 require File.expand_path('../config/application', __FILE__)
-
+require "pry"
+require "awesome_print"
+AwesomePrint.pry!
+binding.pry
 Rails.application.load_tasks
