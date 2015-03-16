@@ -1,5 +1,36 @@
+
+
+
+// var container = $(document.createElement('div')).css({
+//     type: 'text',
+//     width: '600px',
+// 	height: '120px',
+// 	border: '3px solid #cccccc',
+// 	padding: '50px'
+//         });
+
+//  var input = $('<input id="attribute" type="text" value="' + '" />')
+
+	// padding: 5px;
+	// font-family: Tahoma, sans-serif;
+	// background-image: url(bg.gif);
+	// background-position: bottom right;
+	// background-repeat: no-repeat;
+
 $( "#editbutton" ).click(function() {
   $('#editform').html('<%= j render partial: 'users/addtoprofileinformation', locals: {user: @user} %>')
 });
 
+
+$("#editlocationbutton").click(function() {
+  $('#edit_location_form').html('<%= j render partial: 'users/locationprofileinformation', locals: {user: @user} %>')
+});
+
+$("#editbiographybutton").click(function() {
+  $('#edit_biography_form').html('<%= j render partial: 'users/biographyprofileinformation', locals: {user: @user} %>')
+});
+
+$("#editexperiencebutton").click(function() {
+  $('#edit_experience_form').html('<%= j render partial: 'users/experienceprofileinformation', locals: {user: @user} %>')
+});
 

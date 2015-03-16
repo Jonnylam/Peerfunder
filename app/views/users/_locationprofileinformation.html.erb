@@ -1,0 +1,11 @@
+<div id = "edit_user_location">
+	<%= form_for @user, :remote => true do |f| %>
+		  <div class="field">
+		    <%= f.label :location %>
+		    <%= f.text_area :location %>
+		  </div>
+		  <div class="action">
+		    <%= f.submit %>
+		  </div>
+	<% end %>
+</div>

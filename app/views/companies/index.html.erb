@@ -20,13 +20,12 @@
 	<br>
 	</p>
 
-	<div class="m-scene" id="main">
-		<div class="m-right-panel m-page scene_element scene_element--fadeinright">
+	<% if current_user == company.owner %>
 			<div class="button">
 				<%= link_to "Create A New Round", new_company_round_path(company.id)  %>
 			</div>	
-		</div>
-	</div>
+	<% end %>
+	
 </div>
 	
 		
