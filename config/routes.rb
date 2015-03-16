@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'investments/new'
   get 'users/profile'
+  get 'investors' => 'users#index'
 
   resources :companies do
     resources :rounds do
