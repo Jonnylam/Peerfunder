@@ -8,7 +8,7 @@ class Ability
       if user.user_type? :admin 
         can :manage, :all
       elsif user.user_type? :leadsyndicate
-        can :manage, :all
+        can :manage, Companies.where("company.round.lead_investor_id= ?", user.id)
       elsif user.user_type? :accredited
         can :manage, :all
       elsif user.user_type? :eligible
@@ -23,6 +23,7 @@ class Ability
         cannot :crud, :investments
       else
         can :read, :companies
+        can :read, :users
         can :create, :users
       end
         
