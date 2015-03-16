@@ -1,25 +1,19 @@
-
-
-
-// var container = $(document.createElement('div')).css({
-//     type: 'text',
-//     width: '600px',
-// 	height: '120px',
-// 	border: '3px solid #cccccc',
-// 	padding: '50px'
-//         });
-
-//  var input = $('<input id="attribute" type="text" value="' + '" />')
-
-	// padding: 5px;
-	// font-family: Tahoma, sans-serif;
-	// background-image: url(bg.gif);
-	// background-position: bottom right;
-	// background-repeat: no-repeat;
-
 $( "#editbutton" ).click(function() {
   $('#editform').html('<%= j render partial: 'users/addtoprofileinformation', locals: {user: @user} %>')
 });
+
+$( "#showeditbuttons" ).click(function() {
+  $('.editbuttons').show();
+  $('#canceleditbutton').show();
+  $('#showeditbuttons').hide();
+});
+
+$('#canceleditbutton').click(function(){
+  $('.editbuttons').hide();
+  $('#showeditbuttons').show();
+  $('#canceleditbutton').hide();
+});
+
 
 
 $("#editlocationbutton").click(function() {
