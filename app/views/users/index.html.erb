@@ -5,6 +5,11 @@
 	  <p><%= user.biography %></p>
 	  <h3>Experience</h3>
 	  <p><%= user.experience %></p>
+	  <br>
+	  <div id = "follow_user">
+	  <%= link_to "Follow", :remote => :true  %>
+	  </div>
+	  <br>
 	</section>
 <% end %>
 
