@@ -29,15 +29,16 @@
 <h3>Your Investments:</h3>
 	<div class="window">
 	
-
-		<% @investments.each do |investment| %>
-			<% if current_user == investment.investor %>
-				<h3>Company Name</h3>
-				<p><%= investment.company.name%></p>
-				<h3>Amount Invested</h3>
-				<p>$<%= investment.amount %></p>
+		<% if can? :read, @investment %>
+			<% @investments.each do |investment| %>
+				<% if current_user == investment.investor %>
+					<h3>Company Name</h3>
+					<p><%= investment.company.name%></p>
+					<h3>Amount Invested</h3>
+					<p>$<%= investment.amount %></p>
+			<% end %>
 		<% end %>
-		<% end %>
+	<% end %>
 		
 	
 

@@ -12,7 +12,15 @@ class User < ActiveRecord::Base
 
   validates :email, uniqueness: true
 
-   def name
+  def name
     self.first_name + " " + self.last_name
+  end
+
+  def accreditation?
+    self.accreditation == true
+  end
+
+  def admin?
+    self.user_type == "admin"
   end
 end

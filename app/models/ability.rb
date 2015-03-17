@@ -1,31 +1,63 @@
 class Ability
   include CanCan::Ability
 
+  def lead_syndicate_company
+
+  end
+
   def initialize(user)
     # Define abilities for the passed in user here. For example:
     #
       user ||= User.new # guest user (not logged in)
-      if user.user_type? :admin 
+      alias_action :create, :read, :update, :destroy, :to => :crud
+
+      if user.admin?
         can :manage, :all
-      elsif user.user_type? :leadsyndicate
-        can :manage, Companies.where("company.round.lead_investor_id= ?", user.id)
-      elsif user.user_type? :accredited
-        can :manage, :all
-      elsif user.user_type? :eligible
-        can :manage, :useres
-        can :manage, :companies
-        can :read, :rounds
-        can :crud, :investments
-      elsif user.user_type? :normal
-        can :manage, :users
-        can :manage, :companies
-        cannot :crud, :rounds
-        cannot :crud, :investments
-      else
-        can :read, :companies
-        can :read, :users
-        can :create, :users
+      elsif user.accreditation?
+        can :crud, Company, :owner_id => user.id
+        can :crud, User, :user_id => user.id
+        can :crud, Round, :lead_investor_id => user.id
+        can :create, Investment
+
+        can :read, Round
+        can :read, Company
+        can :read, Investment, :investor_id => user.id
+      else  
+        can [:create, :read], User
+        can :read, Company
       end
+
+
+
+      # if user.eligible_investor?
+      #   can :crud, Company, :owner_id => user.id
+      #   can :crud, User, :user_id => user.id
+      #   can :read, Round
+      #   can :read, Company
+      #   can :create, Investment
+      #   can :read, Investment, :investor_id => user.id
+      # end
+
+      # if user.user_type? :admin 
+      #   can :manage, :all
+      # elsif user.user_type? :leadsyndicate
+      #   can :manage, Company(where)
+      # elsif user.user_type? :accredited
+      #   can :manage, :all
+      # elsif user.user_type? :eligible
+      #   can :manage, :users
+      #   can :manage, :companies
+      #   can :read, :rounds
+      #   can :crud, :investments
+      # elsif user.user_type? :normal
+      #   can :manage, :users
+      #   can :manage, :companies
+      #   cannot :crud, :rounds
+      #   cannot :crud, :investments
+      # else
+      #   can :read, :companies
+      #   can :create, :users
+      # end
         
     # The first argument to `can` is the action you are giving the user
     # permission to do.

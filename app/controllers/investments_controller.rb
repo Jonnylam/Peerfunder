@@ -12,13 +12,15 @@ class InvestmentsController < ApplicationController
     @investment.company = @company
 
     if @investment.save
-       @round.amount_raised += @investment.amount
-        @round.save
+      @round.amount_raised += @investment.amount
+      @round.save
       redirect_to company_round_path(@company, @round), notice: "Investment Made!"
     else
-       format.html { render :show ,alert: "Investment could not be saved. Please try again!" }
+      respond_to do |format|
+        format.html { redirect_to company_round_path(@company, @round), alert: "Investment could not be saved. Please try again!" }
         format.js {}
-       # flash[:notice] = "Investment could not be saved"
+         # flash[:notice] = "Investment could not be saved"
+      end
     end
   end
 

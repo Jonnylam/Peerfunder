@@ -2,7 +2,9 @@
 <section class="window">
 
 <div id = "edit_company_profile">
-  <%= link_to 'Edit Your Company Profile', :remote => :true %>
+  <% if can? :update, @company %>
+    <%= link_to 'Edit Your Company Profile', :remote => :true %>
+  <% end %>
 </div>
 
 <div id = "company_information">
@@ -14,9 +16,12 @@
 <div id = "edit_company_form">
 
 </div>
-  <form class="submit"  action="<%= @company.id %>/rounds/new">
-    <input type="submit" value="Begin A New Fundraising Round">
-  </form>
+  
+  <% if can? :create, @round %>
+    <form class="submit"  action="<%= @company.id %>/rounds/new">
+      <input type="submit" value="Begin A New Fundraising Round">
+    </form>
+  <% end %>
 
 </section>
 
