@@ -44,16 +44,24 @@ h1, h2, h3, h4, h5{
   }
 
 nav {
-  background: $red-main;
+  background: #f6f9ff; /* Old browsers */
+  background: -moz-linear-gradient(top, #f6f9ff 0%, #e3eaed 37%, #e5e5e5 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f9ff), color-stop(37%,#e3eaed), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f6f9ff 0%,#e3eaed 37%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f6f9ff 0%,#e3eaed 37%,#e5e5e5 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f6f9ff 0%,#e3eaed 37%,#e5e5e5 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #f6f9ff 0%,#e3eaed 37%,#e5e5e5 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f9ff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
   height: 50px;
   margin-bottom: 50px;
   position: relative;
+  border-bottom: 5px solid #ccc;
 
 
 
   img {
     position: absolute;
-    width: 100px;
+    max-width: 9%;
     height: auto;
     margin-left: 3%;
   }
@@ -63,7 +71,7 @@ nav {
   }
 
   a {
-    color: $white;
+    color: #333;
   }
 }
 
