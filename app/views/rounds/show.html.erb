@@ -26,7 +26,7 @@
     <%= form_for (Invitation.new) do |f| %>
       <%= f.hidden_field :round_id, value: @round.id %>
       <%= f.hidden_field :company_id, value: @round.company_id %>
-      <%= f.collection_select(:invitee_id, User.all, :id, :first_name) %>
+      <%= f.collection_select(:invitee_id, User.all, :id, :name) %>
       <%= f.submit %>
     <% end %>
   </div>

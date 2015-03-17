@@ -5,7 +5,6 @@ class InvitationsController < ApplicationController
 		@invitation = Invitation.create(invitation_params)
 		@invitation.inviter = current_user
 		@invitation.save
-		# binding.pry
 		redirect_to company_round_path(params[:invitation][:company_id], @invitation.round_id)
 	end
 
