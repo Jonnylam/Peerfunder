@@ -16,7 +16,11 @@ class Ability
       elsif user.accreditation?
         can :crud, Company, :owner_id => user.id
         can :crud, User, :user_id => user.id
-        can :crud, Round, :lead_investor_id => user.id
+        # binding.pry
+        # can :crud, Round do |round|
+        #   round.company.owner_id == user.id
+        # end
+        can :crud, Round
         can :create, Investment
 
         can :read, Round
@@ -25,6 +29,7 @@ class Ability
       else  
         can [:create, :read], User
         can :read, Company
+        # can :crud, Round
       end
 
 

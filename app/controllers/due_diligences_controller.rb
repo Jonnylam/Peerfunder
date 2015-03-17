@@ -8,7 +8,7 @@ class DueDiligencesController < ApplicationController
     @diligence.user = current_user
 
     if @diligence.save
-      redirect_to company_rounds_path, notice: 'Review created successfully'
+      redirect_to company_rounds_path, notice: 'File added successfully'
     else
       render new_company_round_path
     end
