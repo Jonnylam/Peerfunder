@@ -16,8 +16,7 @@
 <div id = "edit_company_form">
 
 </div>
-  
-  <% if can? :create, @round %>
+  <% if can? :create, @company %>
     <form class="submit"  action="<%= @company.id %>/rounds/new">
       <input type="submit" value="Begin A New Fundraising Round">
     </form>
