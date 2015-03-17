@@ -15,15 +15,11 @@ class CompaniesController < ApplicationController
 
   def new
     @company = Company.new
-    
-  end
-
-  def find_company 
-    @company = Company.find(params[:id])
   end
 
   def show
     find_company
+    @round = Round.new
   end
 
   def edit
@@ -52,6 +48,11 @@ class CompaniesController < ApplicationController
   end
 
   private
+
+  def find_company 
+    @company = Company.find(params[:id])
+  end
+
   def company_params
     params.require(:company).permit(
       :name,

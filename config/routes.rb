@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 root :to => 'companies#index'
 resources :user_sessions
 resources :users
+resources :invitations
+resources :rounds
 
 get 'login' => 'user_sessions#new', :as => :login
 post 'logout' => 'user_sessions#destroy', :as => :logout

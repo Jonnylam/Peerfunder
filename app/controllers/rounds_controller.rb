@@ -1,14 +1,18 @@
 class RoundsController < ApplicationController
-  before_action :load_company
+  # before_action :load_company
+  load_and_authorize_resource :company
+  load_and_authorize_resource :round, :through => :company
 
   def new
     @round = Round.new
   end
 
   def create
+    # binding.pry
     @round = Round.new(round_params)
     @round.lead_investor = current_user
-    @round.company = @company
+    @round.company_id = params[:company_id]
+    
     if @round.save
       redirect_to company_round_path(@company, @round), notice: "New Round has been created"
     else
@@ -17,9 +21,6 @@ class RoundsController < ApplicationController
     end
   end
 
-  def find_round
-    @round = Round.find(params[:id])
-  end
 
   def show
     find_round
@@ -32,15 +33,25 @@ class RoundsController < ApplicationController
   def destroy
     find_round
     @round.destroy
-    redirect_to @company
+    redirect_to @round.company
   end
 
   private 
-  def round_params
-    params.require(:round).permit(:company_id, :lead_investor_id, :funding_goal, :term_sheet, due_diligences_attributes: [:id, :file, :done, :_destroy])
+
+  def find_round
+    @round = Round.find(params[:id])
   end
 
-  def load_company
-    @company = Company.find(params[:company_id])
+  def round_params
+    params.require(:round)
+          .permit(:company_id, 
+                  :lead_investor_id, 
+                  :funding_goal, 
+                  :term_sheet, 
+                  due_diligences_attributes: [:id, :file, :done, :_destroy])
   end
+
+  # def load_company
+  #   @company = Company.find(params[:company_id])
+  # end
 end
