@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 root :to => 'companies#index'
 resources :user_sessions
 resources :users do
-  resources :follows, :only => [:create, :destroy]
+  resources :follows
 end
 
 get 'login' => 'user_sessions#new', :as => :login

@@ -2,11 +2,11 @@ class User < ActiveRecord::Base
   attr_accessor :skip_password
   authenticates_with_sorcery!
 
-  has_many :followers, foreign_key: :follower_id
-  has_many :followable, foreign_key: :followable_id
+  # has_many :followers, foreign_key: :follower_id
+  # has_many :followable, foreign_key: :followable_id
 
-  # acts_as_follower
-  # act_as_followable
+  acts_as_follower
+  acts_as_followable
 
   has_many :companies
   has_many :investments, foreign_key: :investor_id

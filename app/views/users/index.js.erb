@@ -1,1 +1,1 @@
-$('#follow_user').html('testestset');
+$('#follow_user').html('<%= escape_javascript(render :partial => "follows/follow_user", :locals => {:user => @followable}) %>');

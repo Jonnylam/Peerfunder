@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   
   def index
     @users = User.all
+    @user = current_user
   end
 
   def new
@@ -67,9 +68,9 @@ class UsersController < ApplicationController
       end
   end
 
-  def followable 
-    @followable ||= User.find(params[:id])
-  end
+  # def followable 
+  #   @followable ||= User.find(params[:id])
+  # end
 
   private
   def user_params
