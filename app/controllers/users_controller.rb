@@ -28,6 +28,7 @@ class UsersController < ApplicationController
 
   def profile
     @user = current_user
+    @invitations = Invitation.where('invitee_id=?', @user.id)
   end
 
   def edit
