@@ -16,7 +16,9 @@ Rails.application.routes.draw do
   # get 'user/edit'
 root :to => 'companies#index'
 resources :user_sessions
-resources :users
+resources :users do 
+  resources :follows
+end
 resources :invitations do
   collection do
     post :send_out_invitations, :as => :send_out_invitations
