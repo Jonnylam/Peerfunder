@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-
+gem "acts_as_follower"
 #gems added
 gem 'sorcery' #, :git => 'https://github.com/NoamB/sorcery.git' #, '0.8.6'
 

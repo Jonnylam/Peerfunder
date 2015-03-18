@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   
   def index
     @users = User.all
+    @user = current_user
   end
 
   def new
@@ -52,14 +53,25 @@ class UsersController < ApplicationController
 
   end
 
-
-
-
   def destroy
     @user = User.find(params[:id])
     @user.destroy
     redirect_to users_path
   end
+
+  def follow
+    @user = User.find(params[:id])
+      if current_user 
+         current_user.follow(@user)
+         flash[:notice] = "You are now following this person"
+      else 
+         flash[:notice] = "Sorry you could not follow this person"
+      end
+  end
+
+  # def followable 
+  #   @followable ||= User.find(params[:id])
+  # end
 
   private
   def user_params
@@ -70,5 +82,6 @@ class UsersController < ApplicationController
      @companies = Company.all
      @investments = Investment.all
      @rounds = Round.all 
+     @follow = Follow.all 
   end
 end
