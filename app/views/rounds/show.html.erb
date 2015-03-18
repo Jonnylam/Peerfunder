@@ -23,11 +23,15 @@
 
   <div class="invitation_form">
     <h1>Invite Investors</h1>
-    <%= form_for (Invitation.new) do |f| %>
-      <%= f.hidden_field :round_id, value: @round.id %>
-      <%= f.hidden_field :company_id, value: @round.company_id %>
-      <%= f.collection_select(:invitee_id, User.all, :id, :first_name) %>
-      <%= f.submit %>
+    <%= form_tag url_for(:controller => 'invitations', :action => 'send_out_invitations'), :method => 'post' do %>
+      <% User.all.each do |user| %>
+          <%= check_box_tag "invitee_ids[]", user.id %>
+          <%= user.name %>
+      <% end %>
+      <%= hidden_field_tag 'round_id', @round.id %>
+      <%= hidden_field_tag 'company_id', @round.company_id %>
+      <%= submit_tag "Invite Users" %>
+
     <% end %>
   </div>
 
