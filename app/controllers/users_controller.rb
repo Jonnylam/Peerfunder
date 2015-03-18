@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :load_everything
   skip_before_filter :require_login, only: [:index, :new, :create]
   respond_to :json
-  
+
   def index
     @users = User.all
     @user = current_user
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.skip_password = true
-      respond_to do |format| 
+      respond_to do |format|
       if @user.update_attributes(user_params)
         format.html { redirect_to user_path(@user)}
         format.js {}
@@ -61,15 +61,15 @@ class UsersController < ApplicationController
 
   def follow
     @user = User.find(params[:id])
-      if current_user 
+      if current_user
          current_user.follow(@user)
          flash[:notice] = "You are now following this person"
-      else 
+      else
          flash[:notice] = "Sorry you could not follow this person"
       end
   end
 
-  # def followable 
+  # def followable
   #   @followable ||= User.find(params[:id])
   # end
 
@@ -81,12 +81,8 @@ class UsersController < ApplicationController
   def load_everything
      @companies = Company.all
      @investments = Investment.all
-<<<<<<< HEAD
      @rounds = Round.all
      @invitations = Invitation.all
-=======
-     @rounds = Round.all 
-     @follow = Follow.all 
->>>>>>> 0725051c85a76f1e327c3d72aeaa445307d4e2e5
+     @follow = Follow.all
   end
 end

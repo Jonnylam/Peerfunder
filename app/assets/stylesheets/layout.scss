@@ -1,13 +1,7 @@
 body {
   background: #eee;
   min-width: 960px;
-}
-
-@mixin float-nav($width, $ml) {
-  float: left;
-  display: block;
-  width: $width;
-  margin-left: $ml;
+  font-family: $sans;
 }
 
 
@@ -47,7 +41,8 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5{
-    font-weight: bold;
+    font-weight: $bold;
+    letter-spacing: 0px;
   }
 
 header {
@@ -76,6 +71,7 @@ nav {
 
   font-family: $sans;
   font-weight: $bold;
+  letter-spacing: 2px;
 
   ul {
     margin-top: 20px;
@@ -90,7 +86,6 @@ nav {
 #primary-nav {
   float: left;
   width: 60%;
-  border: 1px solid red;
   margin-left: 13%;
 
   h2 {
@@ -114,8 +109,10 @@ nav {
 }
 
 .login {
+  letter-spacing: 0;
   float: right;
   width: 25%;
+  padding-bottom: 5px;
 
 
   li {
@@ -146,8 +143,18 @@ nav {
 
 
 footer {
-  background: $red;
-  padding: 20px 0;
+  background: #a23d43; /* Old browsers */
+  background: -moz-linear-gradient(top, #a23d43 0%, #77222b 50%, #7a1f2a 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a23d43), color-stop(50%,#77222b), color-stop(100%,#7a1f2a)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #a23d43 0%,#77222b 50%,#7a1f2a 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #a23d43 0%,#77222b 50%,#7a1f2a 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #a23d43 0%,#77222b 50%,#7a1f2a 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #a23d43 0%,#77222b 50%,#7a1f2a 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a23d43', endColorstr='#7a1f2a',GradientType=0 ); /* IE6-9 */
+
+  border-top: thick solid #777;
+
+  padding: 10px 0 0;
   margin-top: 100px;
 
   .links {
@@ -156,12 +163,21 @@ footer {
 
       ul {
         padding: 0;
+        margin-left: 5%;
       }
-    a {
-        @include float-nav(20%, 0%);
+      li {
+        float: left;
+        padding-left: 10%;
+
+      }
+      a {
         color: $white;
-        padding-left: 1%;
-     }
+        padding-left: 0%;
+      }
+
+      a:hover {
+        color: #111;
+      }
   }
 
   .copyright {
@@ -170,12 +186,15 @@ footer {
     color: white;
     position: relative;
 
+
     p {
-      margin: 0  0 10px 50px;
+      margin: 0  10px 10px 0px;
+      text-align: right;
     }
     img {
       position: absolute;
-      bottom: 5px;
+      top: -8px;
+      right: 46%;
       width: 40px;
       height: auto;
 

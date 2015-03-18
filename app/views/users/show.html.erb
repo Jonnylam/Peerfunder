@@ -1,35 +1,40 @@
 <div>
-	<h1>Dashboard</h1> 
+	<h1>Dashboard</h1>
 </div>
 	<br>
 
 
-		<h3>Your Companies:</h3> 
+		<h3>Your Companies:</h3>
 
 		<% @companies.each do |company| %>
 
-		<% if current_user == company.owner %> 
+		<% if current_user == company.owner %>
 			<div class="window">
 				<h1 style="text-align:center"><%= link_to company.name, company_path(company) %></h1> <br>
-				<br>	
-				<%= company.elevator_pitch %><br>
-				<%= company.location %><br>
+				<br>
+
+				<div class="quick_description">
+					<img src="doesnt.com/ds.jpg" alt="">
+					<%= company.elevator_pitch %><br>
+					<%= company.location %><br>
+				</div>
+
 
 				<h2>Current Rounds</h2>
 					<% @rounds.each do |round| %>
 						<% if company == round.company %>
 							<p>Round <%= round.id %></p>
-							<p>Funding goal: $<%= round.funding_goal %></p> 	
+							<p>Funding goal: $<%= round.funding_goal %></p>
 							<p>Amount Raised: $<%= round.amount_raised %></p>
 						<% end %>
 					<% end %>
 			</div>
 		<% end %>
-	<% end %> 
+	<% end %>
 <h3>Your Investments:</h3>
 	<div class="window">
-	
-		
+
+
 			<% @investments.each do |investment| %>
 				<% if current_user == investment.investor %>
 					<h3>Company Name</h3>
@@ -51,15 +56,15 @@
 	    <p>To Invest In: <%= Company.find(Round.find(invitation.round_id).company_id).name %></p>
 	    <p><%= link_to "View This Round", company_round_path(Company.find(Round.find(invitation.round_id).company_id), invitation.round_id ) %></p>
 	    <% end %>
-	  
+
 	  <% end %>
 	<% end %>
 	</div>
-		
-		
-	
 
-	
+
+
+
+
 
 <!-- 	<br>
 	<br>
@@ -68,19 +73,19 @@
 	<br>
 	</div> -->
 
-				
-		
-	
 
 
 
-<!-- 
+
+
+
+<!--
 	(If funded)
 	Company Profile Page: (Public/Round page)
 	Company Name:
 	Amount Invested:
 	Lead Syndacite Profile:
-	Other People Invested: 
+	Other People Invested:
 
 	<br><br>
 	(If not funded)
@@ -88,10 +93,10 @@
 	Company Name:
 	Funding Goal:
 	Funding expiry date:
-	Total amount invested: 
+	Total amount invested:
 	Your amount invested:
 	Other people invested:
-	
+
 	<br><br>
 	Your friends/followers
  -->
