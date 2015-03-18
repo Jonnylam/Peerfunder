@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
   has_many :investments, foreign_key: :investor_id
   has_many :companies, through: :investments
   has_many :rounds, through: :investments
-  has_many :inviters
-  has_many :invitees
+  has_many :inviters, foreign_key: :inviter_id
+  has_many :invitees, foreign_key: :invitee_id
 
   validates :password, confirmation: true, length: { minimum: 6 }, unless: :skip_password
   validates :password_confirmation, presence: true,  unless: :skip_password

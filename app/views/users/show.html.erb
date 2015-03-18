@@ -29,7 +29,7 @@
 <h3>Your Investments:</h3>
 	<div class="window">
 	
-		<% if can? :read, @investment %>
+		
 			<% @investments.each do |investment| %>
 				<% if current_user == investment.investor %>
 					<h3>Company Name</h3>
@@ -38,7 +38,24 @@
 					<p>$<%= investment.amount %></p>
 			<% end %>
 		<% end %>
+	</div>
+
+
+<h3>Your Invitations:</h3>
+	<div class="window">
+		<% if @invitations != nil %>
+	  <h1>Your Invitations</h1>
+	  <% @invitations.each do |invitation| %>
+	    <% if invitation.invitee_id == current_user.id %>
+	    <p>Invited by: <%= invitation.inviter.name %>
+	    <p>To Invest In: <%= Company.find(Round.find(invitation.round_id).company_id).name %></p>
+	    <p><%= link_to "View This Round", company_round_path(Company.find(Round.find(invitation.round_id).company_id), invitation.round_id ) %></p>
+	    <% end %>
+	  
+	  <% end %>
 	<% end %>
+	</div>
+		
 		
 	
 

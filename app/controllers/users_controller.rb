@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :load_companies
+  before_action :load_everything
   skip_before_filter :require_login, only: [:index, :new, :create]
   respond_to :json
   
@@ -24,11 +24,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @invitations = Invitation.all
   end
 
   def profile
     @user = current_user
-    @invitations = Invitation.where('invitee_id=?', @user.id)
   end
 
   def edit
@@ -66,9 +66,10 @@ class UsersController < ApplicationController
     params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :biography, :experience, :accreditation, :profile_photo_url, :location, :dob, :user_type)
   end
 
-  def load_companies
+  def load_everything
      @companies = Company.all
      @investments = Investment.all
-     @rounds = Round.all 
+     @rounds = Round.all
+     @invitations = Invitation.all
   end
 end
