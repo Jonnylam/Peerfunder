@@ -13,4 +13,11 @@
 	</section>
 <% end %>
 
+	<% @follow.each do |follow| %> 
+
+		<% if current_user = follow.follower %> 
+			<%= follow.followable.name %>
+		<% end %>
+	<% end %>
+
 

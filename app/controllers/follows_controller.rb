@@ -4,9 +4,13 @@ class FollowsController < ApplicationController
 	end
 
 	def create
-		current_user.follow(@user)
-		flash[:notice] = "You followed #{@user.first_name}"
-		redirect_to users_url
+		if current_user.follow(@user) 
+			flash[:notice] = "You followed #{@user.first_name}"
+			redirect_to users_url
+		else 
+			flash[:notice] = "You cant follow yourself!!!!"
+			redirect_to users_url
+		end
 	end
 
 	def destroy

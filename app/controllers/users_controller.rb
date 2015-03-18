@@ -81,5 +81,6 @@ class UsersController < ApplicationController
      @companies = Company.all
      @investments = Investment.all
      @rounds = Round.all 
+     @follow = Follow.all 
   end
 end
