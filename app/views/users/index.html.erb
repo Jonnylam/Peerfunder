@@ -13,7 +13,16 @@
 		<% if current_user.following?(user) %>
 		  <div class="unfollow" id="unfollow_<%=user.id%>">
 			  <%= button_to("Unfollow", user_follow_path(user.id, current_user.id), 
-						  { method: :delete, data: { confirm: 'Are you sure?' } }) %>
+						  method: :delete)
+						   %>
+
+	<!-- 		  
+	THIS IS FOR JAVASCRIPT LATER
+			  	$('#unfollow_<%=user.id%>').click(function(){
+			  		
+			  	});
+ -->
+			 
 		  </div>
 		<% else %>
 		  <div class="follow" id="follow_<%=user.id%>">
@@ -25,3 +34,12 @@
 	  <br>
 	</section>
 <% end %>
+
+
+
+<script type="text/javascript">
+	$(document).on('ready page:load', function(){
+		$(".editbuttons").hide();
+		$('#canceleditbutton').hide();
+	});
+</script>
