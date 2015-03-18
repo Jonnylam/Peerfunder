@@ -10,7 +10,26 @@
 </div>
 
 <h1>Your Portfolio (In a nutshell)</h1>
-<h1>Your Followers</h1>
+<h1>People who Follow You</h1>
+
+	<% @follow.each do |follow| %> 
+		<br>
+		<% if current_user == follow.followable %> 
+
+			<%= follow.follower%>
+		<% end %>
+	<% end %>
+
+<h1>People You Are Following</h1>
+
+	<% @follow.each do |follow| %> 
+		<br>
+		<% if current_user == follow.follower %> 
+			<%= follow.followable.name %>
+		<% end %>
+	<% end %>
+
+
 <h1>Your Friends</h1>
 
 <div id = "editbutton">
