@@ -81,12 +81,8 @@ class UsersController < ApplicationController
   def load_everything
      @companies = Company.all
      @investments = Investment.all
-<<<<<<< HEAD
      @rounds = Round.all
      @invitations = Invitation.all
-=======
-     @rounds = Round.all 
      @follow = Follow.all 
->>>>>>> 0725051c85a76f1e327c3d72aeaa445307d4e2e5
   end
 end
