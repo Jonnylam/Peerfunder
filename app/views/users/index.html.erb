@@ -5,7 +5,19 @@
 	  <p><%= user.biography %></p>
 	  <h3>Experience</h3>
 	  <p><%= user.experience %></p>
+	  <br>
+  <div id="follow_user">
+    <%= render :partial => "follows/follow_user", :locals => {:user => user} %>
+  </div>
+	  <br>
 	</section>
 <% end %>
+
+	<% @follow.each do |follow| %> 
+
+		<% if current_user = follow.follower %> 
+			<%= follow.followable.name %>
+		<% end %>
+	<% end %>
 
 
