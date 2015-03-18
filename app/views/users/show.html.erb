@@ -1,6 +1,4 @@
-<div>
-	<h1>Dashboard</h1>
-</div>
+
 	<br>
 
 
@@ -9,25 +7,31 @@
 		<% @companies.each do |company| %>
 
 		<% if current_user == company.owner %>
-			<div class="window">
+			<div class="your-company window">
 				<h1 style="text-align:center"><%= link_to company.name, company_path(company) %></h1> <br>
 				<br>
 
-				<div class="quick_description">
+				<div class="company-blurb">
 					<img src="doesnt.com/ds.jpg" alt="">
-					<%= company.elevator_pitch %><br>
-					<%= company.location %><br>
+					<div class="quick_description">
+						<h3>Location</h3>
+						<p><%= company.location %></p>
+						<h3>Industry Type</h3>
+						<p><%= company.industry_type %></p><br>
+					</div>
 				</div>
 
 
-				<h2>Current Rounds</h2>
-					<% @rounds.each do |round| %>
-						<% if company == round.company %>
-							<p>Round <%= round.id %></p>
-							<p>Funding goal: $<%= round.funding_goal %></p>
-							<p>Amount Raised: $<%= round.amount_raised %></p>
+				<div class="your-round">
+					<h2>View Round</h2>
+						<% @rounds.each do |round| %>
+							<% if company == round.company %>
+								<p>Round <%= round.id %></p>
+								<p>Funding goal: $<%= round.funding_goal %></p>
+								<p>Amount Raised: $<%= round.amount_raised %></p>
+							<% end %>
 						<% end %>
-					<% end %>
+				</div>
 			</div>
 		<% end %>
 	<% end %>
