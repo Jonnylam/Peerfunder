@@ -1,3 +1,6 @@
+<div id="follow_user_successful">
+	
+</div>
 <% @users.each do |user| %>
 	<section class="window">
 	  <h1><%= user.name %></h1>
@@ -6,18 +9,19 @@
 	  <h3>Experience</h3>
 	  <p><%= user.experience %></p>
 	  <br>
-  <div id="follow_user">
-    <%= render :partial => "follows/follow_user", :locals => {:user => user} %>
-  </div>
+
+		<% if current_user.following?(user) %>
+		  <div class="unfollow" id="unfollow_<%=user.id%>">
+			  <%= button_to("Unfollow", user_follow_path(user.id, current_user.id), 
+						  { method: :delete, data: { confirm: 'Are you sure?' } }) %>
+		  </div>
+		<% else %>
+		  <div class="follow" id="follow_<%=user.id%>">
+				<%= button_to("Follow", user_follows_path(user))%>
+		  </div>
+		<% end %>
+	  
+
 	  <br>
 	</section>
 <% end %>
-
-	<% @follow.each do |follow| %> 
-
-		<% if current_user = follow.follower %> 
-			<%= follow.followable.name %>
-		<% end %>
-	<% end %>
-
-
