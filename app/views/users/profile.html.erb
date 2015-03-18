@@ -12,6 +12,12 @@
 <h1>Your Portfolio (In a nutshell)</h1>
 <h1>Your Followers</h1>
 <h1>Your Friends</h1>
+<h1>Your Invitations</h1>
+<% @invitations.each do |invitation| %>
+<% round = Round.find(invitation.round_id) %>
+<% company = Company.find(round.company_id) %>
+<%= link_to company.name, company_round_path(round.company_id, round.id) %>
+<% end %>
 
 <div id = "editbutton">
 <%= link_to "Edit your profile User Type", :remote => :true  %>
