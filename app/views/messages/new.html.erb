@@ -1,4 +1,4 @@
-Send a message to <%= @user.name %>
+Start a Conversation with <%= @user.name %>
  
 <%= form_tag({controller: 'messages', action: 'create'}, method: :post) do %>
  <%= label_tag :subject %>
