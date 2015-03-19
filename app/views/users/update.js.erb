@@ -1,7 +1,7 @@
 
 // $('#profile-information').html('asdfsdfasdf')
 
-// $('#new_profile').submit(function() {  
+// $('#new_profile').submit(function() {
 //     var valuesToSubmit = $(this).serialize();
 //     $.ajax({
 //         type: "POST"
@@ -24,15 +24,13 @@
 
 	});
 
-    $('#edit_location_form').on('ajax:success', function(event, data, status, xhr) {
-		$('#editlocationinformation').html('Location: <%= @user.location %> ');
-		$('#edit_location_form').html('')
+    $('#location').on('ajax:success', function(event, data, status, xhr) {
+		$('#location').html('Location: <%= @user.location %> ');
 
 	});
 
-	 $('#edit_biography_form').on('ajax:success', function(event, data, status, xhr) {
-		$('#editbiographyinformation').html('<%= @user.biography %> ');
-		$('#edit_biography_form').html('')
+	 $('#biography').on('ajax:success', function(event, data, status, xhr) {
+		$('#biography').html('<%= @user.biography %> ');
 
 	});
 

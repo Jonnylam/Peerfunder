@@ -20,6 +20,8 @@
           <% if current_user %>
             <li><%= link_to "REGISTER", new_company_path %></li>
             <li><%= link_to "DASHBOARD", user_path(current_user) %></li>
+          <% else %>
+            <li><%= link_to "ABOUT US", users_path %></li>
           <% end %>
         </ul>
       </div>
@@ -32,29 +34,26 @@
               <div class="thumbnail">Pic</div>
             </li>
             <% end %>
-            <li class="user">
-
-            </li>
             <li>
               <%= link_to "Logout", :logout, method: :post %>
             </li>
           <% else %>
-            <%= link_to "Register", new_user_path %>
-            <%= link_to "Login", :login %>
+            <li><%= link_to "Register", new_user_path %></li>
+            <li><%= link_to "Login", :login %></li>
           <% end %>
         </ul>
-
       </div>
     </nav>
   </header>
 
 
-  <div>
-    <p id="notice"><%= flash[:notice] %></p>
-    <p id="alert"><%= flash[:alert] %></p>
-  </div>
+
 
   <div id="wrapper">
+    <div class="notice">
+      <p id="notice"><%= flash[:notice] %></p>
+      <p id="alert"><%= flash[:alert] %></p>
+    </div>
     <%= yield %>
   </div>
 

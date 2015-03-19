@@ -1,9 +1,12 @@
+html, body, #container { height: 80%; }
 body {
   background: #fafafa;
   min-width: 1100px;
   font-family: $sans;
   color: #333;
 }
+
+body > #wrapper { height: auto; min-height: 100%; }
 
 
 * {
@@ -112,6 +115,7 @@ nav {
   float: left;
   width: 60%;
   margin-left: 13%;
+  padding-bottom: 1em;
 
 
 
@@ -129,6 +133,7 @@ nav {
   float: right;
   width: 25%;
   padding-bottom: 5px;
+  margin-right: 10px;
 
 
   li {
@@ -172,6 +177,10 @@ footer {
 
   padding: 10px 0 0;
   margin-top: 100px;
+
+  // sticky footer code
+
+
 
   .links {
     float: left;
@@ -264,4 +273,9 @@ div.headings {
   p {
    margin-top: 5px !important;
   }
+}
+
+.notice {
+  text-align: right;
+  text-decoration: underline;
 }

@@ -26,4 +26,26 @@
   }
 }
 
+.company-view {
+  width: 80%;
+  margin-top: 30px;
+  padding: 2%;
+
+  .overview {
+    padding: 10px 2%;
+
+    img {
+      @include img(40%, 5px);
+      background: #fff;
+    }
+
+    .quick_description {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 20px;
+      width: 59%;
+    }
+  }
+}
+
 

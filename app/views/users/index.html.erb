@@ -1,5 +1,5 @@
 <div id="follow_user_successful">
-	
+
 </div>
 <% @users.each do |user| %>
 	<section class="window">
@@ -12,29 +12,28 @@
 
 		<% if current_user.following?(user) %>
 		  <div class="unfollow" id="unfollow_<%=user.id%>">
-			  <%= button_to("Unfollow", user_follow_path(user.id, current_user.id), 
+			  <%= button_to("Unfollow", user_follow_path(user.id, current_user.id),
 						  method: :delete)
 						   %>
 
-	<!-- 		  
+	<!--
 	THIS IS FOR JAVASCRIPT LATER
 			  	$('#unfollow_<%=user.id%>').click(function(){
-			  		
+
 			  	});
  -->
-			 
+
 		  </div>
 		<% else %>
 		  <div class="follow" id="follow_<%=user.id%>">
 				<%= button_to("Follow", user_follows_path(user))%>
 		  </div>
 		<% end %>
-	  
+
 
 	  <br>
 	</section>
 <% end %>
-
 
 
 <script type="text/javascript">

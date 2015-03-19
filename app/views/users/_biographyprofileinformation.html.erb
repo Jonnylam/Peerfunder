@@ -1,7 +1,6 @@
 <div id = "edit_user_biography">
 	<%= form_for @user, :remote => true do |f| %>
 		  <div class="field">
-		    <%= f.label :biography %>
 		    <%= f.text_area :biography %>
 		  </div>
 		  <div class="action">
