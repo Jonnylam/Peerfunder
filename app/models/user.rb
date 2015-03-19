@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   # has_many :followers, foreign_key: :follower_id
   # has_many :followable, foreign_key: :followable_id
-
+  acts_as_messageable
   acts_as_follower
   acts_as_followable
 
@@ -30,5 +30,9 @@ class User < ActiveRecord::Base
 
   def admin?
     self.user_type == "admin"
+  end
+
+  def mailboxer_email(object)
+    email
   end
 end
