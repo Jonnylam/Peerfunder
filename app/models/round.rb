@@ -6,4 +6,9 @@ class Round < ActiveRecord::Base
   has_many :investors, through: :investments
   belongs_to :lead_investor, class_name: 'User'
   accepts_nested_attributes_for :due_diligences, :reject_if => :all_blank, :allow_destroy => true
+
+  def progress
+    (self.amount_raised.to_f / self.funding_goal.to_f).round(2) * 100
+  end
+
 end

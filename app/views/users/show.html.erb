@@ -2,18 +2,17 @@
 	<br>
 
 
-		<h3>Your Companies:</h3>
+		<h2 class="heading">Your Companies:</h2>
 
 		<% @companies.each do |company| %>
 
 		<% if current_user == company.owner %>
 			<div class="your-company window">
-				<h1 style="text-align:center"><%= link_to company.name, company_path(company) %></h1> <br>
-				<br>
+				<h1 class="center small-caps"><%= link_to company.name, company_path(company) %></h1>
 
 				<div class="company-blurb">
 					<img src="doesnt.com/ds.jpg" alt="">
-					<div class="quick_description">
+					<div class="quick_description headings">
 						<h3>Location</h3>
 						<p><%= company.location %></p>
 						<h3>Industry Type</h3>
@@ -23,45 +22,55 @@
 
 
 				<div class="your-round">
-					<h2>View Round</h2>
+					<h2 class="center light">Current Round</h2>
 						<% @rounds.each do |round| %>
 							<% if company == round.company %>
-								<p>Round <%= round.id %></p>
-								<p>Funding goal: $<%= round.funding_goal %></p>
-								<p>Amount Raised: $<%= round.amount_raised %></p>
+								<p><strong>$<%= round.amount_raised %></strong> of $<%= round.funding_goal %> Goal</p>
+								<h5><%= link_to "View Round", company_round_path(company.id, round.id) %></h5>
+								<div class="progress-bar group"><div class="progress" style="<%= round.progress %>%;"></div></div>
 							<% end %>
 						<% end %>
 				</div>
 			</div>
 		<% end %>
 	<% end %>
-<h3>Your Investments:</h3>
-	<div class="window">
 
+<h2 class="heading">Your Investments:</h2>
+	<div class="window your-investments group">
+		<% @investments.each do |investment| %>
 
-			<% @investments.each do |investment| %>
-				<% if current_user == investment.investor %>
-					<h3>Company Name</h3>
-					<p><%= investment.company.name%></p>
+			<% if current_user == investment.investor %>
+				<div class="investment headings">
+					<%= link_to image_tag("sdds.jpg"), company_path(investment.round.company_id) %>
+
+					<h3><%= link_to investment.company.name, company_path(investment.round.company_id) %></h3>
 					<h3>Amount Invested</h3>
 					<p>$<%= investment.amount %></p>
+				</div>
 			<% end %>
+
 		<% end %>
 	</div>
 
 
-<h3>Your Invitations:</h3>
-	<div class="window">
+<h2 class="heading">Your Invitations:</h2>
+	<div class="your-invitations window group">
 		<% if @invitations != nil %>
 	  <h1>Your Invitations</h1>
-	  <% @invitations.each do |invitation| %>
-	    <% if invitation.invitee_id == current_user.id %>
-	    <p>Invited by: <%= invitation.inviter.name %>
-	    <p>To Invest In: <%= Company.find(Round.find(invitation.round_id).company_id).name %></p>
-	    <p><%= link_to "View This Round", company_round_path(Company.find(Round.find(invitation.round_id).company_id), invitation.round_id ) %></p>
-	    <% end %>
 
-	  <% end %>
+
+	  	<% @invitations.each do |invitation| %>
+	  		<% if invitation.invitee_id == current_user.id %>
+		  		<div class="invitation">
+		  			<%= link_to image_tag("sdds.jpg"), company_path(invitation.round.company_id) %>
+			    	<p><strong><%= invitation.inviter.name %></strong> invites you </p>
+			    	<p>To Invest In: <%= Company.find(Round.find(invitation.round_id).company_id).name %></p>
+			    	<p><%= link_to "View This Round", company_round_path(Company.find(Round.find(invitation.round_id).company_id), invitation.round_id ) %></p>
+		    	</div>
+	    	<% end %>
+			<% end %>
+
+
 	<% end %>
 	</div>
 
