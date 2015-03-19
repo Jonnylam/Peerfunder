@@ -27,7 +27,7 @@
 							<% if company == round.company %>
 								<p><strong>$<%= round.amount_raised %></strong> of $<%= round.funding_goal %> Goal</p>
 								<h5><%= link_to "View Round", company_round_path(company.id, round.id) %></h5>
-								<div class="progress-bar group"><div class="progress" style="<%= round.progress %>%;"></div></div>
+								<div class="progress-bar group"><div class="progress" style="width:<%= round.progress %>%;"></div></div>
 							<% end %>
 						<% end %>
 				</div>
