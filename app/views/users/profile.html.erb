@@ -1,46 +1,68 @@
-<h1>Profile</h1>
+<h1 class="heading">Profile</h1>
 
 
 <div class="window">
 	<div id="profile_information">
 		<%= render partial: 'profileinformation', locals: {user: @user} %>
 	</div>
+		<h3 class="edit" id = "show_edit_button"><%= link_to "Edit your profile", :remote => :true  %></h3>
+		<h3 class='edit' id="cancel_edit_button"><%= link_to "Cancel", :remote => :true  %></h3>
 </div>
 
 
-<h1>Your Portfolio (In a nutshell)</h1>
-<h1>People who Follow You</h1>
+<h2 class="heading">Your Portfolio </h2>
+	<div class="window">
+			<% @follow.each do |follow| %>
 
-	<% @follow.each do |follow| %>
-		<br>
-		<% if current_user == follow.followable %>
+			<% if current_user == follow.followable %>
 
-			<%= follow.follower%>
+				<%= follow.follower%>
+			<% end %>
 		<% end %>
-	<% end %>
-
-<h1>People You Are Following</h1>
-
-	<% @follow.each do |follow| %>
-		<br>
-		<% if current_user == follow.follower %>
-			<%= follow.followable.name %>
-		<% end %>
-	<% end %>
-
-
-<h1>Your Friends</h1>
-
-<div id = "show_edit_button">
-<%= link_to "Edit your profile", :remote => :true  %>
+		<h3 class="edit"><%= link_to "Edit your portfolio", :remote => :true  %></h3>
 </div>
+	</div>
+
+
+<h2 class="heading">People who Follow You</h2>
+	<div class="window">
+
+		<% if @follow.exists?(followable_id: (current_user.id)) %>
+			<% @follow.each do |follow| %>
+				<% if current_user == follow.followable %>
+					<%= follow.follower%>
+				<% end %>
+			<% end %>
+		<% else %>
+			<h2 class="center">You don't currently have any followers!</h2>
+		<% end %>
+	</div>
+
+
+
+<h2 class="heading">People You Are Following</h2>
+	<div class="window">
+		<% if @follow.exists?(follower_id: (current_user.id)) %>
+			<% @follow.each do |follow| %>
+				<br>
+				<% if current_user == follow.follower %>
+					<%= follow.followable.name %>
+				<% end %>
+			<% end %>
+		<% else %>
+			<h2 class="center">You're not currently following anyone!</h2>
+		<% end %>
+
+	</div>
+
+
+
+
+
 
 <div id = "edit_form">
 </div>
 
-<div id = "cancel_edit_button">
-<%= link_to "Cancel", :remote => :true  %>
-</div>
 
 <script type="text/javascript">
 	$(document).on('ready page:load', function(){

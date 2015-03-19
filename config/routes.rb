@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  
+
+
+
 
   get 'investments/new'
   get 'users/profile'
@@ -14,9 +16,9 @@ Rails.application.routes.draw do
   # get 'user/new'
   # get 'user/show'
   # get 'user/edit'
-root :to => 'companies#index'
+root :to => 'start#index'
 resources :user_sessions
-resources :users do 
+resources :users do
   resources :follows
 end
 resources :invitations do

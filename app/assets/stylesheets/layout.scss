@@ -44,6 +44,11 @@ body > #wrapper { height: auto; min-height: 100%; }
   text-align: center !important;
 }
 
+.edit {
+  text-align: right;
+  margin: 50px -60px 0 0 !important;
+}
+
 .small-caps {
   font-variant: small-caps;
 }
@@ -232,7 +237,7 @@ footer {
   margin: 0 auto;
   border: #ccc 1px solid;
   border-radius: 5px;
-  padding: 10px 100px;
+  padding: 10px 100px 20px;
   background: #fff;
 
   h1 {
@@ -242,6 +247,7 @@ footer {
   * {
     margin-top: 20px;
   }
+
 
 }
 

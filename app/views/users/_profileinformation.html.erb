@@ -1,11 +1,10 @@
 <div class="name">
-  <h1><%= @user.name %></h1>
+  <h1 class"center"><%= @user.name %></h1>
 </div>
 
-
-<div id = "location">
 <h3>Location:</h3>
-  p# <%= @user.location %>
+<div id = "location">
+  <p><%= @user.location %></p>
 </div>
 
 <div class = "edit_button", id = "edit_location_button">
@@ -15,18 +14,19 @@
 </div>
 
 
-
+<h3>Biography</h3>
 <div class = "biography">
-  <h3>Biography</h3>
   <p id = "biography"><%= @user.biography %></p>
 </div>
 <div class = "edit_button", id = "edit_biography_button">
   <%= link_to "Edit Biography", :remote => :true  %>
 </div>
 
+<h3>Experience:</h3>
 <div id = "edit_experience">
-<h3><strong>Experience: </strong><%= @user.experience %></h3>
+  <p><%= @user.experience %></p>
 </div>
+
 <div class = "edit_button", id ="edit_experience_button">
 <%= link_to "Edit Experience", :remote => :true  %>
 </div>
