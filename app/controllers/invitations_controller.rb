@@ -1,5 +1,4 @@
 class InvitationsController < ApplicationController
-	before_action :load_users
   before_action :load_everything
 
 
@@ -18,7 +17,7 @@ class InvitationsController < ApplicationController
 	end
 
 	def load_users
-    @users = User.all
+    
   end
 
   def send_out_invitations
@@ -39,11 +38,12 @@ class InvitationsController < ApplicationController
   end
 
   def load_everything
-     @companies = Company.all
-     @investments = Investment.all
-     @rounds = Round.all
-     @invitations = Invitation.all
-     @follow = Follow.all
+    @users = User.all - [current_user]
+    @companies = Company.all
+    @investments = Investment.all
+    @rounds = Round.all
+    @invitations = Invitation.all
+    @follow = Follow.all
   end
 
 

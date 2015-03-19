@@ -21,7 +21,6 @@ class RoundsController < ApplicationController
     end
   end
 
-
   def show
     
     find_round
