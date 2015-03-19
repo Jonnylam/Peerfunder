@@ -8,9 +8,9 @@ class FollowsController < ApplicationController
 			if current_user.follow(@user) 
 				format.html {redirect_to users_path}
 				format.js {}
-				flash[:notice] = "You are following #{@user.name} " 
+				# flash[:notice] = "You are following #{@user.name} " 
 			else 
-				format.html { render :index, alert: "You can't follow yourself"}
+				format.html { render :index}
 				format.js {}
 			end
 		end
@@ -18,7 +18,7 @@ class FollowsController < ApplicationController
 
 	def destroy
 		current_user.stop_following(@user)
-		flash[:notice] = "You stopped following #{@user.name}" 
+		# flash[:notice] = "You stopped following #{@user.name}" 
 		redirect_to users_path
 	end
 

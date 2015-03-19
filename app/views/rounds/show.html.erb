@@ -8,6 +8,8 @@
   <p><%= link_to diligence.file, diligence.file_url %></p>
   <% end %>
 
+
+  <h3><%= link_to "delete the round", company_round_path, :method => :delete %></h3>
   <div class="current-investors group">
     <% @round.investments.each do |investment| %>
       <div class="investor">
@@ -25,6 +27,7 @@
     <h1>Invite Investors</h1>
 
     <%= form_tag url_for(:controller => 'invitations', :action => 'send_out_invitations'), :method => 'post' do %>
+  
       <% User.all.each do |user| %>
           <%= check_box_tag "invitee_ids[]", user.id %>
           <%= user.name %>
@@ -32,9 +35,9 @@
       <%= hidden_field_tag 'round_id', @round.id %>
       <%= hidden_field_tag 'company_id', @round.company_id %>
       <%= submit_tag "Invite Users" %>
-
-
-    <% end %>
+        
+   
+   <% end %>
   </div>
 
 </div>
