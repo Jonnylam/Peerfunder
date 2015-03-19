@@ -1,20 +1,29 @@
-<section class="window">
+  <h1 class="light"><%= link_to @company.name, company_path(@company) %></h1>
+  <section class="window company-view">
 
-  <div id = "edit_company_profile">
-    <% if can? :update, @company %>
-      <%= link_to 'Edit Your Company Profile', :remote => :true %>
-    <% end %>
-  </div>
+  <h3>Overview</h3>
 
-  <div id = "company_information">
-    <%= render partial: 'companyprofileinformation', locals: {company: @company} %>
-  </div>
-  <div id = "updated_company_information">
 
-    </div>
-  <div id = "edit_company_form">
 
-  </div>
+        <div class="overview">
+          <img src="doesnt.com/ds.jpg" alt="">
+          <div class="quick_description headings">
+            <h3>Location</h3>
+            <p><%= @company.location %></p>
+            <h3>Industry Type</h3>
+            <p><%= @company.industry_type %></p><br>
+            <% @company.rounds.each do |round| %>
+              <% if @company == round.company %>
+                <p><strong>$<%= round.amount_raised %></strong> of $<%= round.funding_goal %> Goal</p>
+
+                <div class="progress-bar group" style="width: 80%"><div class="progress" style="width: <%= round.progress %>%;"></div>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+
+
     <% if can? :create, @company %>
       <form class="submit"  action="<%= @company.id %>/rounds/new">
         <input type="submit" value="Begin A New Fundraising Round">
