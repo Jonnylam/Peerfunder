@@ -6,7 +6,11 @@ body {
   color: #333;
 }
 
-body > #wrapper { height: auto; min-height: 100%; }
+body > #wrapper {
+  height: auto;
+  min-height: 100%;
+
+ }
 
 
 * {
@@ -26,9 +30,8 @@ body > #wrapper { height: auto; min-height: 100%; }
 }
 
 #wrapper {
-  margin: 0 auto;
+  margin: 150px auto 0;
   width: 94%;
-
 }
 
 .heading {
@@ -247,8 +250,6 @@ footer {
   * {
     margin-top: 20px;
   }
-
-
 }
 
 .progress-bar {
@@ -282,6 +283,7 @@ div.headings {
 }
 
 .notice {
+  margin: -60px 0 30px !important;
   text-align: right;
   text-decoration: underline;
 }
