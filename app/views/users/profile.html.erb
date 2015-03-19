@@ -19,6 +19,7 @@
 				<% if current_user == follow.followable %>
 					<%= follow.follower%>
 				<% end %>
+			<% end %>
 
 		<h3 class="edit"><%= link_to "Edit your portfolio", :remote => :true  %></h3>
 	</div>
