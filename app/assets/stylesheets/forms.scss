@@ -36,10 +36,13 @@ form {
     background: #717171;
     color: white;
     border: inset #717171 2px;
+    @include fadein(all)
   }
 }
 
  .submit {
     border: none;
     width: 80%;
+    padding: 0;
+
   }
