@@ -45,6 +45,8 @@ gem 'responders', '~> 2.0'
 gem 'cocoon'
 
 gem 'carrierwave'
+
+gem 'mailboxer', :git => 'git://github.com/div/mailboxer.git', :branch => 'rails42-foreigner'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

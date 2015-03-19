@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'investments/new'
   get 'users/profile'
   get 'investors' => 'users#index'
+  get 'users/inbox'
 
   resources :companies do
     resources :rounds do
@@ -28,6 +29,26 @@ resources :rounds
 
 get 'login' => 'user_sessions#new', :as => :login
 post 'logout' => 'user_sessions#destroy', :as => :logout
+
+get "/messages" => redirect("/conversations")
+  resources :messages do
+  member do
+    post :new
+  end
+end
+resources :conversations do
+  member do
+    post :reply
+    post :trash
+    post :untrash
+  end
+ collection do
+    get :trashbin
+    post :empty_trash
+ end
+end
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

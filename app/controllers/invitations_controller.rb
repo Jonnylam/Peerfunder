@@ -22,6 +22,7 @@ class InvitationsController < ApplicationController
 
   def send_out_invitations
     invitee_ids = params[:invitee_ids]
+
     invitee_ids.each do |invitee_id|
       create(invitee_id)
     end

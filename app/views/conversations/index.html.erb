@@ -1,0 +1,51 @@
+<br \> <br \>
+<div class="container">
+  <div class="well">
+    <div class="title">
+      <h1>Conversations</h1></div>
+       Click on subject to open the convo
+    <br>
+  
+    <br>
+    <h3> Inbox </h3>
+    <br \>
+  <table width="900" border="0" cellspacing="0" cellpadding="0" style="border-radius:10px;" align="center">
+  <tr>
+    <th>SUBJECT</th>
+    <th>DATE</th>
+    <th></th>
+  </tr>
+  <% if @conversations == nil || @conversations.empty? %>
+    <i>Your Inbox folder is currently empty</i>
+    <%end%>
+  <% @conversations.each do |conversation| %>
+  <tr>
+    <td>
+    <% conversation.participants.each do |participant| %>
+      <% if participant != current_user %>
+          <% if conversation.is_read?(current_user) %> <%= participant.name %>
+             <% else %> 
+             <b> <%= participant.name %> </b> 
+          <% end %> 
+        <% end %>
+      <% end %>
+    </td>
+    <td>
+       <% if conversation.is_read?(current_user) %> 
+        <%= link_to conversation.subject, conversation_path(conversation) %> </td>
+        <% else %>
+        <b><%= link_to conversation.subject, conversation_path(conversation) %></b> </td>
+       <% end %>
+    <td>
+      <% if conversation.is_read?(current_user) %> <%= conversation.updated_at.strftime("%a, %m/%e/%Y %I:%M %p") %></td>  
+      <% else %> 
+      <b> <%= conversation.updated_at.strftime("%a, %m/%e/%Y %I:%M %p") %> </b> 
+      </td> 
+      <% end %>
+  </tr>
+   <% end %>
+</table>
+  </span>
+</div>
+</div>
+</div>

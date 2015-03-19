@@ -58,19 +58,28 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
-  def follow
-    @user = User.find(params[:id])
-      if current_user
-         current_user.follow(@user)
-         flash[:notice] = "You are now following this person"
-      else
-         flash[:notice] = "Sorry you could not follow this person"
-      end
-  end
+  # def follow
+  #   @user = User.find(params[:id])
+  #     if current_user
+  #        current_user.follow(@user)
+  #        flash[:notice] = "You are now following this person"
+  #     else
+  #        flash[:notice] = "Sorry you could not follow this person"
+  #     end
+  # end
 
   # def followable
   #   @followable ||= User.find(params[:id])
   # end
+
+  # def inbox
+  #   @user = User.first
+  # end
+
+  # def mailboxer_email(object)
+  #   object.email
+  # end
+
 
   private
   def user_params
