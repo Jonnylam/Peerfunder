@@ -12,12 +12,13 @@
 
 
 
+<h2 class="heading">Your Portfolio </h2>
+	<div class="window">
 
-	<% @follow.each do |follow| %>
-		<br>
-		<% if current_user == follow.followable %>
-			<%= follow.follower.name %>
-		<% end %>
+			<% @follow.each do |follow| %>
+				<% if current_user == follow.followable %>
+					<%= follow.follower%>
+				<% end %>
 
 		<h3 class="edit"><%= link_to "Edit your portfolio", :remote => :true  %></h3>
 	</div>
@@ -54,6 +55,9 @@
 		<% end %>
 
 	</div>
+
+
+
 
 
 
