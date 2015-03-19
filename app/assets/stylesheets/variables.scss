@@ -13,6 +13,15 @@
       border: 1px solid #ccc;
     }
 
+@mixin fadein($effect) {
+  -webkit-transition: $effect .5s ease;
+  -moz-transition: $effect .5s ease;
+  -ms-transition: $effect .5s ease;
+  -o-transition: $effect .5s ease;
+  transition: $effect .5s ease;
+}
+
+
 $red: #a23d43;
 $darkred: #652629;
 $white: #f2f2f2;
