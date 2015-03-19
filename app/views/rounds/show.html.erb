@@ -8,8 +8,10 @@
   <p><%= link_to diligence.file, diligence.file_url %></p>
   <% end %>
 
-
-  <h3><%= link_to "delete the round", company_round_path, :method => :delete %></h3>
+  <% if current_user.id == @round.company.owner_id %>
+  <h3><%= link_to "Cancel The Round", company_round_path, :method => :delete, data: {confirm: "Are you sure?"} %></h3>
+  <% end %>
+  
   <div class="current-investors group">
     <% @round.investments.each do |investment| %>
       <div class="investor">

@@ -14,7 +14,6 @@
 	<% @follow.each do |follow| %>
 		<br>
 		<% if current_user == follow.followable %>
-			<%= follow.follower.profile_photo_url %>
 			<%= follow.follower.name %>
 		<% end %>
 		
@@ -25,7 +24,6 @@
 	<% @follow.each do |follow| %>
 		<br>
 		<% if current_user == follow.follower %>
-			<%= follow.followable.profile_photo_url %>
 			<%= follow.followable.name %>
 		<% end %>
 	<% end %>
