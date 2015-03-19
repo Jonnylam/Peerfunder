@@ -1,19 +1,19 @@
-<h1>This is your profile page</h1>
-
-	<h3><%= @user.first_name %></h3>
-	<h3><%= @user.last_name %></h3>
+<h1>Profile</h1>
 
 
-<div id="profile-information">
-	<%= render partial: 'profileinformation', locals: {user: @user} %>
+<div class="window">
+	<div id="profile_information">
+		<%= render partial: 'profileinformation', locals: {user: @user} %>
+	</div>
 </div>
+
 
 <h1>Your Portfolio (In a nutshell)</h1>
 <h1>People who Follow You</h1>
 
-	<% @follow.each do |follow| %> 
+	<% @follow.each do |follow| %>
 		<br>
-		<% if current_user == follow.followable %> 
+		<% if current_user == follow.followable %>
 
 			<%= follow.follower%>
 		<% end %>
@@ -21,9 +21,9 @@
 
 <h1>People You Are Following</h1>
 
-	<% @follow.each do |follow| %> 
+	<% @follow.each do |follow| %>
 		<br>
-		<% if current_user == follow.follower %> 
+		<% if current_user == follow.follower %>
 			<%= follow.followable.name %>
 		<% end %>
 	<% end %>
@@ -31,28 +31,20 @@
 
 <h1>Your Friends</h1>
 
-
-
-<div id = "editbutton">
-<%= link_to "Edit your profile User Type", :remote => :true  %>
-</div> 
-<br><br>
-
-<div id = "showeditbuttons">
+<div id = "show_edit_button">
 <%= link_to "Edit your profile", :remote => :true  %>
-</div> 
-<br><br>
-
-<div id = "editform">
 </div>
 
-<div id = "canceleditbutton">
+<div id = "edit_form">
+</div>
+
+<div id = "cancel_edit_button">
 <%= link_to "Cancel", :remote => :true  %>
 </div>
 
 <script type="text/javascript">
 	$(document).on('ready page:load', function(){
-		$(".editbuttons").hide();
-		$('#canceleditbutton').hide();
+		$(".edit_button").hide();
+		$('#cancel_edit_button').hide();
 	});
 </script>

@@ -1,30 +1,33 @@
-$( "#editbutton" ).click(function() {
-  $('#editform').html('<%= j render partial: 'users/addtoprofileinformation', locals: {user: @user} %>')
+$( "#edit_button" ).click(function() {
+  $('#edit_form').html('<%= j render partial: 'users/addtoprofileinformation', locals: {user: @user} %>')
+});
+//Form for editing usertype
+
+
+$( "#show_edit_button" ).click(function() {
+  $('.edit_button').show();
+  $('#cancel_edit_button').show();
+  $('#show_edit_button').hide();
+});
+//displaying all the edit buttons so user can edit profile
+
+$('#cancel_edit_button').click(function(){
+  $('.edit_button').hide();
+  $('#show_edit_button').show();
+  $('#cancel_edit_button').hide();
+});
+//Cancel to revert back to normal
+
+$("#edit_location_button").click(function() {
+  $('#location').html('<%= j render partial: 'users/locationprofileinformation', locals: {user: @user} %>')
+});
+//when you click the edit location button, a form pops on the page that lets you change location
+
+$("#edit_biography_button").click(function() {
+  $('#biography').html('<%= j render partial: 'users/biographyprofileinformation', locals: {user: @user} %>')
 });
 
-$( "#showeditbuttons" ).click(function() {
-  $('.editbuttons').show();
-  $('#canceleditbutton').show();
-  $('#showeditbuttons').hide();
-});
-
-$('#canceleditbutton').click(function(){
-  $('.editbuttons').hide();
-  $('#showeditbuttons').show();
-  $('#canceleditbutton').hide();
-});
-
-
-
-$("#editlocationbutton").click(function() {
-  $('#edit_location_form').html('<%= j render partial: 'users/locationprofileinformation', locals: {user: @user} %>')
-});
-
-$("#editbiographybutton").click(function() {
-  $('#edit_biography_form').html('<%= j render partial: 'users/biographyprofileinformation', locals: {user: @user} %>')
-});
-
-$("#editexperiencebutton").click(function() {
+$("#edit_experience_button").click(function() {
   $('#edit_experience_form').html('<%= j render partial: 'users/experienceprofileinformation', locals: {user: @user} %>')
 });
 
