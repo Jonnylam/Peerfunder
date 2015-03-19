@@ -21,8 +21,8 @@ class RoundsController < ApplicationController
     end
   end
 
-
   def show
+    
     find_round
   end
 
@@ -51,7 +51,7 @@ class RoundsController < ApplicationController
                   due_diligences_attributes: [:id, :file, :done, :_destroy])
   end
 
-  # def load_company
-  #   @company = Company.find(params[:company_id])
-  # end
+  def load_company
+    @company = Company.all
+  end
 end

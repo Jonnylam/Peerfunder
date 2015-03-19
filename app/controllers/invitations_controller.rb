@@ -1,5 +1,5 @@
 class InvitationsController < ApplicationController
-	before_action :load_users
+  before_action :load_everything
 
 
 	def create(invitee_id)
@@ -17,7 +17,7 @@ class InvitationsController < ApplicationController
 	end
 
 	def load_users
-    @users = User.all
+    
   end
 
   def send_out_invitations
@@ -29,12 +29,22 @@ class InvitationsController < ApplicationController
     redirect_to company_round_path(params[:company_id], params[:round_id])
   end
   
-
+ 
   private
   def invitation_params
     params.permit(:round_id)
   	# params.require(:invitation)
   	# 			.permit(:round_id, :invitee_id)
   end
+
+  def load_everything
+    @users = User.all - [current_user]
+    @companies = Company.all
+    @investments = Investment.all
+    @rounds = Round.all
+    @invitations = Invitation.all
+    @follow = Follow.all
+  end
+
 
 end
