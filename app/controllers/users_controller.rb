@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def new
       @user = User.new
+      u.avatar = params[:file]
   end
 
   def create

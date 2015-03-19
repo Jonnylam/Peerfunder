@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessor :skip_password
   authenticates_with_sorcery!
+  mount_uploader :avatar, AvatarUploader
 
   # has_many :followers, foreign_key: :follower_id
   # has_many :followable, foreign_key: :followable_id
