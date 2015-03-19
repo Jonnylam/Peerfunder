@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def new
       @user = User.new
+      @user.avatar = params[:file]
   end
 
   def create
@@ -83,7 +84,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email, :password, :password_confirmation, :biography, :experience, :accreditation, :profile_photo_url, :location, :dob, :user_type)
+    params.require(:user).permit(:first_name, :last_name, :email, :avatar, :password, :password_confirmation, :biography, :experience, :accreditation, :profile_photo_url, :location, :dob, :user_type)
   end
 
   def load_everything

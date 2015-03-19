@@ -1,40 +1,38 @@
 <h1>Additional Information</h1>
 
-<div class="name">
-  <h1><%= @user.name %></h1>
+<div id = "editlocationinformation">
+<h3><strong>Location: </strong><%= @user.location %></h3>
 </div>
 
-
-<div id = "location">
-<h3>Location:</h3>
-  p# <%= @user.location %>
-</div>
-
-<div class = "edit_button", id = "edit_location_button">
-  <%= link_to "Edit Location", :remote => :true  %>
+<div class = "editbuttons", id = "editlocationbutton">
+<%= link_to "Edit Location", :remote => :true  %>
 </div>
 <div id = "edit_location_form">
 </div>
 
 
-
-<div class = "biography">
-  <h3>Biography</h3>
-  <p id = "biography"><%= @user.biography %></p>
+<div id = "editbiographyinformation">
+<h3><strong>Biography: </strong><%= @user.biography %></h3>
 </div>
-<div class = "edit_button", id = "edit_biography_button">
-  <%= link_to "Edit Biography", :remote => :true  %>
+<div class = "editbuttons", id = "editbiographybutton">
+<%= link_to "Edit Biography", :remote => :true  %>
+</div>
+<div id ="edit_biography_form">
 </div>
 
-<div id = "edit_experience">
+<div id = "editexperienceinformation">
 <h3><strong>Experience: </strong><%= @user.experience %></h3>
 </div>
-<div class = "edit_button", id ="edit_experience_button">
+<div class = "editbuttons", id ="editexperiencebutton">
 <%= link_to "Edit Experience", :remote => :true  %>
 </div>
 <div id = "edit_experience_form">
 </div>
 
+<div class = "editbuttons", id = "edit_user_type">
+<h3><strong>User_type: </strong><%= @user.user_type %></h3>
+<%= link_to "Edit user_type", :remote => :true  %>
+</div>
 
 
 

@@ -153,6 +153,7 @@ ActiveRecord::Schema.define(version: 20150319013614) do
     t.string   "remember_me_token"
     t.datetime "remember_me_token_expires_at"
     t.string   "user_type",                    default: "normal"
+    t.string   "avatar"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
