@@ -1,28 +1,37 @@
 
 <div class="name">
-  <h1><%= @user.name %></h1>
+  <h1 class"center"><%= @user.name %></h1>
 </div>
 
-<div class = "editbuttons", id = "editlocationbutton">
-<%= link_to "Edit Location", :remote => :true  %>
+
+<h3>Location:</h3>
+<div id = "location">
+  <p><%= @user.location %></p>
+</div>
+
+<div class = "edit_button", id = "edit_location_button">
+  <%= link_to "Edit Location", :remote => :true  %>
 </div>
 <div id = "edit_location_form">
 </div>
 
 
-<div id = "editbiographyinformation">
-<h3><strong>Biography: </strong><%= @user.biography %></h3>
-</div>
-<div class = "editbuttons", id = "editbiographybutton">
-<%= link_to "Edit Biography", :remote => :true  %>
+
+<h3>Biography</h3>
+<div class = "biography">
+  <p id = "biography"><%= @user.biography %></p>
 </div>
 <div id ="edit_biography_form">
 </div>
 
-<div id = "editexperienceinformation">
-<h3><strong>Experience: </strong><%= @user.experience %></h3>
+
+<h3>Experience:</h3>
+<div id = "edit_experience">
+  <p><%= @user.experience %></p>
 </div>
-<div class = "editbuttons", id ="editexperiencebutton">
+
+<div class = "edit_button", id ="edit_experience_button">
+
 <%= link_to "Edit Experience", :remote => :true  %>
 </div>
 <div id = "edit_experience_form">

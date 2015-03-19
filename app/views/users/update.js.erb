@@ -25,7 +25,7 @@
 	});
 
     $('#location').on('ajax:success', function(event, data, status, xhr) {
-		$('#location').html('Location: <%= @user.location %> ');
+		$('#location').html('<%= @user.location %> ');
 
 	});
 
@@ -35,7 +35,6 @@
 	});
 
 	  $('#edit_experience_form').on('ajax:success', function(event, data, status, xhr) {
-		$('#editexperienceinformation').html('<%= @user.experience %> ');
-		$('#edit_experience_form').html('')
+		$('#edit_experience_information').html('<%= @user.experience %> ');
 
 	});

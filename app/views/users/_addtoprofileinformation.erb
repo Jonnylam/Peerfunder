@@ -1,22 +1,23 @@
-<%= form_for @user, :remote => true do |f| %>
-		  <div class="field">
-		    <%= f.label :location %>
-		    <%= f.text_area :location %>
-		  </div>
-		  <div class="field">
-		    <%= f.label :biography %>
-		    <%= f.text_area :biography %>
-		  </div>
-		   <div class="field">
-		    <%= f.label :experience %>
-		    <%= f.text_area :experience %>
-		  </div>
-		  <div class ="field">
-			<%= f.label :user_type %>
- 			<%= f.select :user_type, [['Admin','admin'],['Lead Syndicate','leadsyndicate'],['Accredited Investor','accredited'],['Eligible Investor','eligible'],['Normal User', 'normal']] %>
-		  </div><br>
 
-		  <div class="action">
-		    <%= f.submit %>
-		  </div>
+<%= form_for @user, :remote => true do |f| %>
+      <div class="field">
+        <%= f.label :location %>
+        <%= f.text_area :location %>
+      </div>
+      <div class="field">
+        <%= f.label :biography %>
+        <%= f.text_area :biography %>
+      </div>
+       <div class="field">
+        <%= f.label :experience %>
+        <%= f.text_area :experience %>
+      </div>
+      <div class ="field">
+      <%= f.label :user_type %>
+      <%= f.select :user_type, [['Admin','admin'],['Lead Syndicate','leadsyndicate'],['Accredited Investor','accredited'],['Eligible Investor','eligible'],['Normal User', 'normal']] %>
+      </div><br>
+
+      <div class="action">
+        <%= f.submit %>
+      </div>
     <% end %>

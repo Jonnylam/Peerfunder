@@ -1,0 +1,20 @@
+.welcome {
+  * {
+    margin-top: 0;
+  }
+
+}
+.button-path {
+  appearance: 0;
+  padding: 0px;
+  background: #ccc;
+  width: 100%;
+  border: 1px solid #ccc;
+  @include border-radius(4px);
+}
+
+.button-path:hover {
+  background: #717171;
+  color: white;
+  @include fadein(all)
+}
