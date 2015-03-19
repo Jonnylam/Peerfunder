@@ -23,12 +23,13 @@
           </div>
         </div>
 
-
+  <% if current_user == @company.owner %>
     <% if can? :create, @company %>
       <form class="submit"  action="<%= @company.id %>/rounds/new">
         <input type="submit" value="Begin A New Fundraising Round">
       </form>
     <% end %>
+  <% end %>
 
 </section>
 
