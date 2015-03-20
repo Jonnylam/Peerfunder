@@ -87,6 +87,36 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       remote_avatar_url: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/017/17b/1d859cd.jpg'
     })
 
+    User.create!({
+    email: "peter@foundersfund.com",
+    first_name: "Peter",
+    last_name: "Thiel",
+    password: "password",
+    password_confirmation: "password",
+    biography: "As a venture capitalist and entrepreneur, Peter has been involved with some of the most dynamic companies to emerge from Silicon Valley in the past decade",
+    experience: "Cofounder of Paypal(acq:'02). Founder & Chairman at Clarium Capital, Mithril Capital Management, Palantir Technologies, Valar Ventures.  Partner at Founder's Fund ",
+    accreditation: true,
+    profile_photo_url: 'http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2011/06/Peter_Thiel-657x245.jpg',
+    location: "San Francisco, California, USA",
+    dob: "1967-10-11",
+    remote_avatar_url: 'http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2011/06/Peter_Thiel-657x245.jpg'
+  })
+
+    User.create!({
+    email: "marc@a16z.com",
+    first_name: "Marc",
+    last_name: "Andreessen",
+    password: "password",
+    password_confirmation: "password",
+    biography: "Andreessen is the quintessential guy who is wrong with corporate America...Hard to hear, talks with a squeaky voice that only a dog can understand.'–Carl Icahn",
+    experience: "Cofounder of Netscape Communications Corp. and Opsware Inc. CTO of AOL.  Founder and managing partner at Andreessen Horowitz.",
+    accreditation: true,
+    profile_photo_url: 'http://static1.businessinsider.com/image/532ebee46da811c10a3bff41-480/andreessen.jpg',
+    location: "Menlo Park, California, USA",
+    dob: "1971-07-09",
+    remote_avatar_url: 'http://static1.businessinsider.com/image/532ebee46da811c10a3bff41-480/andreessen.jpg'
+  })
+
   companies =
     Company.create!({
       name: "Borrowell",
@@ -179,6 +209,13 @@ follows =
     followable_type: 'User',
     follower_type: 'User',
     follower_id: 4,
+    })
+
+  Follow.create!({ 
+    followable_id: 7,
+    followable_type: 'User',
+    follower_type: 'User',
+    follower_id: 6,
     })
 
 
