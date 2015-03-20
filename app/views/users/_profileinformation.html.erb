@@ -5,8 +5,8 @@
 
 
 <h3>Location:</h3>
-<div id = "location">
-  <p><%= @user.location %></p>
+<div class="location">
+  <p id = "location"><%= @user.location %></p>
 </div>
 
 <div class = "edit_button", id = "edit_location_button">
@@ -17,30 +17,24 @@
 
 
 
-<h3>Biography</h3>
+<h3>Biography:</h3>
 <div class = "biography">
   <p id = "biography"><%= @user.biography %></p>
 </div>
-<div id ="edit_biography_form">
+<div class="edit_button" id ="edit_biography_button">
+   <%= link_to "Edit Biography", :remote => :true  %>
 </div>
 
 
 <h3>Experience:</h3>
-<div id = "edit_experience">
-  <p><%= @user.experience %></p>
-</div>
+  <div class="experience">
+    <p id="experience"><%= @user.experience %></p>
+  </div>
 
 <div class = "edit_button", id ="edit_experience_button">
-
-<%= link_to "Edit Experience", :remote => :true  %>
-</div>
-<div id = "edit_experience_form">
+  <%= link_to "Edit Experience", :remote => :true  %>
 </div>
 
-<div class = "editbuttons", id = "edit_user_type">
-<h3><strong>User_type: </strong><%= @user.user_type %></h3>
-<%= link_to "Edit user_type", :remote => :true  %>
-</div>
 
 
 

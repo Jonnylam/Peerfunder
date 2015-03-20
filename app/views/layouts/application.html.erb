@@ -20,10 +20,8 @@
           <% if current_user %>
             <li><%= link_to "REGISTER", new_company_path %></li>
             <li><%= link_to "DASHBOARD", user_path(current_user) %></li>
-            <li> <%= link_to "INBOX", messages_path %></li>
           <% else %>
             <li><%= link_to "ABOUT US", users_path %></li>
-
           <% end %>
         </ul>
       </div>
@@ -48,10 +46,10 @@
     </nav>
   </header>
 
-  <div class="notice">
-      <p id="notice"><%= flash[:notice] %></p>
-      <p id="alert"><%= flash[:alert] %></p>
-    </div>
+  <!-- <div class="notice">
+    <p id="notice"><%= flash[:notice] %></p>
+    <p id="alert"><%= flash[:alert] %></p>
+  </div> -->
 
 
   <div id="wrapper">

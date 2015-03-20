@@ -34,7 +34,7 @@
 
 	});
 
-	  $('#edit_experience_form').on('ajax:success', function(event, data, status, xhr) {
-		$('#edit_experience_information').html('<%= @user.experience %> ');
+	  $('#experience').on('ajax:success', function(event, data, status, xhr) {
+		$('#experience').html('<%= @user.experience %> ');
 
 	});

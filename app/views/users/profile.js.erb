@@ -28,6 +28,6 @@ $("#edit_biography_button").click(function() {
 });
 
 $("#edit_experience_button").click(function() {
-  $('#edit_experience_form').html('<%= j render partial: 'users/experienceprofileinformation', locals: {user: @user} %>')
+  $('#experience').html('<%= j render partial: 'users/experienceprofileinformation', locals: {user: @user} %>')
 });
 
