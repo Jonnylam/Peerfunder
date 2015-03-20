@@ -13,7 +13,7 @@ class Ability
 
       if user.admin?
         can :manage, :all
-      elsif user.accreditation?
+      else #if user.accreditation?
         can :crud, Company, :owner_id => user.id
         can :crud, User, :user_id => user.id
         # binding.pry
@@ -26,10 +26,10 @@ class Ability
         can :read, Round
         can :read, Company
         can :read, Investment, :investor_id => user.id
-      else  
-        can [:create, :read], User
-        can :read, Company
-        # can :crud, Round
+      # else
+      #   can [:create, :read], User
+      #   can :read, Company
+      #   # can :crud, Round
       end
 
 
@@ -43,7 +43,7 @@ class Ability
       #   can :read, Investment, :investor_id => user.id
       # end
 
-      # if user.user_type? :admin 
+      # if user.user_type? :admin
       #   can :manage, :all
       # elsif user.user_type? :leadsyndicate
       #   can :manage, Company(where)
@@ -63,7 +63,7 @@ class Ability
       #   can :read, :companies
       #   can :create, :users
       # end
-        
+
     # The first argument to `can` is the action you are giving the user
     # permission to do.
     # If you pass :manage it will apply to every action. Other common actions

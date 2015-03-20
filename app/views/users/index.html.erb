@@ -2,13 +2,16 @@
 
 </div>
 <% @users.each do |user| %>
-	<section class="window">
-	  <h1><%= user.name %></h1>
-	  <h3>Biography</h3>
+	<section class="window user-list">
+	<h1><%= user.name %></h1>
+	<%= image_tag(user.avatar_url) %>
+
+	 <div class="user-quick headings">
+	  <h3 class="headings">Biography</h3>
 	  <p><%= user.biography %></p>
 	  <h3>Experience</h3>
 	  <p><%= user.experience %></p>
-	  <br>
+	 </div>
 
 		<% if current_user.following?(user) %>
 		  <div class="unfollow" id="unfollow_<%=user.id%>">

@@ -77,6 +77,10 @@ h2 {
   font-size: 1.5em;
 }
 
+p {
+  line-height: 1.4em;
+}
+
 img {
   border: #ccc 1px solid;
   padding: 5px;
@@ -323,6 +327,7 @@ footer {
 div.headings {
 
   h3 {
+    text-decoration: underline;
     margin-bottom: 0 !important;
   }
 

@@ -8,7 +8,7 @@ class SorceryCore < ActiveRecord::Migration
       t.string :salt
       t.text :biography
       t.text :experience
-      t.boolean :accreditation, :default => false
+      t.boolean :accreditation, :default => true
       t.string :profile_photo_url
       t.string :location
       t.date :dob
