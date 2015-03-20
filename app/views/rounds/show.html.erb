@@ -8,16 +8,20 @@
     <h3>Due Diligence Files:</h3><% @round.due_diligences.each do |diligence| %>
     <p><%= link_to diligence.file, diligence.file_url %></p>
     <% end %>
+
+    <div class="progress-bar group"><div class="progress" style="width:<%= @round.progress %>%;"></div></div>
+
     <% if current_user.id == @round.company.owner_id %>
   <h3 class="right"><%= link_to "Cancel The Round", company_round_path, :method => :delete, data: {confirm: "Are you sure?"} %></h3>
   <% end %>
   </div>
+</div>
 
 
 
-
+<div class="window less-pad">
 <% unless @round.investments.empty? %>
-  <h2 class="center">Investors</h2>
+  <h1 class="center">Investors</h1>
   <div class="current-investors group">
     <% @round.investments.each do |investment| %>
       <div class="investor">
@@ -29,9 +33,12 @@
   </div>
 <% end %>
 
-  <form class="submit" action="<%= @round.id %>/investments/new">
+ <form class="submit" action="<%= @round.id %>/investments/new">
     <input type="submit" value="Make a new investment!">
   </form>
+</div>
+
+<div class="window">
 
   <div class="checkbox_form group">
     <h1>Invite Investors</h1>
@@ -50,9 +57,6 @@
       <% end %>
       <%= hidden_field_tag 'round_id', @round.id %><%= hidden_field_tag 'company_id', @round.company_id %>
       <%= submit_tag "Invite Users" %>
-
-
    <% end %>
   </div>
-
 </div>

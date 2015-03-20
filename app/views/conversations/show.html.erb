@@ -1,10 +1,7 @@
-<br \><br \>
-<div class="container">
-  <div class="well">
-    <h1>
-      <%= @conversation.subject %>
-    </h1>
-    <h2>
+
+<div class="conversation group">
+    <h1><%= @conversation.subject %></h1>
+    <h2 style="margin-bottom: 30px;">
       <span>A conversation with</span>
       <% @conversation.participants.each do |participant| %>
         <% if participant != current_user %>
@@ -13,25 +10,32 @@
       <% end %>
     </h2>
     <br/>
-    <ul>
-      <%= content_tag_for(:li, @conversation.receipts_for(current_user).reverse) do |receipt| %>
-        <% message = receipt.message %>
-        <br/>
-        <b>
-          <%= message.sender.name %>
-        </b>
-        <p>
-          <%= simple_format h message.body %>
-        </p>
-        <span class="timestamp">Sent</span>
-        <span class="timestamp">
-          <%= time_ago_in_words(message.updated_at) %>
-        </span>
-        <span class="timestamp">ago.</span>
-        <br/>
+    <div class="messages">
+      <ul>
+        <%= content_tag_for(:li, @conversation.receipts_for(current_user).reverse) do |receipt| %>
+
+        <div class="window group">
+          <a href="<%= user_path(receipt.message.sender.id) %>"><%= image_tag(receipt.message.sender.avatar, :class=>"profile-pic", :alt => "#{receipt.message.sender.name}", :title => "Home") %></a>
+          <div class="message">
+            <% message = receipt.message %>
+            <br/>
+            <b>
+              <%= message.sender.name %>
+            </b>
+            <p>
+              <%= simple_format h message.body %>
+            </p>
+          </div>
+        <p class="time-sent">Sent <%= time_ago_in_words(message.updated_at) %> ago.</p>
+        </div>
       <% end %>
-      <br/>
-    </ul>
-    <%= render 'messages/form', conversation: @conversation %>
+      </ul>
+    </div>
+
+    <div class="message-box group">
+      <%= render 'messages/form', conversation: @conversation %>
+    </div>
+
   </div>
-</div>
+
+

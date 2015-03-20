@@ -100,7 +100,7 @@ header {
   background: linear-gradient(to bottom, #f6f9ff 0%,#e3eaed 37%,#e5e5e5 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f9ff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
 
-  margin-bottom: 100px;
+  margin-bottom: 70px;
   position: relative;
   border-bottom: 5px solid #ccc;
 
@@ -309,7 +309,7 @@ footer {
 
 .window {
   width: 60%;
-  margin: 0 auto;
+  margin: 0 auto 80px;
   border: #ccc 1px solid;
   border-radius: 5px;
   padding: 10px 100px 20px;
@@ -322,6 +322,10 @@ footer {
   * {
     margin-top: 20px;
   }
+}
+
+.less-pad {
+  padding: 10px 50px 20px;
 }
 
 .progress-bar {
@@ -362,5 +366,11 @@ div.headings {
   margin-bottom: 15px;
   font-weight:bold;
   color: $red;
+}
+
+.profile-pic {
+  width: 20%;
+  height: auto;
+  margin: 20px 0 0 0;
 }
 
