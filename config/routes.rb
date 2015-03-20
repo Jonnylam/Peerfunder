@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'investments/new'
   get 'users/profile'
+  get 'users/dashboard'
   get 'investors' => 'users#index'
   get 'users/inbox'
 

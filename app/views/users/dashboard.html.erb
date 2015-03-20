@@ -1,0 +1,116 @@
+
+		<h2>Your Companies:</h2>
+
+		<% @companies.each do |company| %>
+
+		<% if current_user == company.owner %>
+			<div class="your-company window">
+				<h1 class="center small-caps"><%= link_to company.name, company_path(company) %></h1>
+
+				<div class="company-blurb">
+					<%= link_to image_tag(company.company_logo), company_path(company) %>
+					<div class="quick_description headings">
+						<h3>Location</h3>
+						<p><%= company.location %></p>
+						<h3>Industry Type</h3>
+						<p><%= company.industry_type %></p><br>
+					</div>
+				</div>
+
+
+				<div class="your-round">
+					<h2 class="center light">Current Round</h2>
+						<% @rounds.each do |round| %>
+							<% if company == round.company %>
+								<p><strong>$<%= round.amount_raised %></strong> of $<%= round.funding_goal %> Goal</p>
+								<h5><%= link_to "View Round", company_round_path(company.id, round.id) %></h5>
+								<div class="progress-bar group"><div class="progress" style="width:<%= round.progress %>%;"></div></div>
+							<% end %>
+						<% end %>
+				</div>
+			</div>
+		<% end %>
+	<% end %>
+
+<h2 class="heading">Your Investments:</h2>
+	<div class="window your-investments group">
+		<% @investments.each do |investment| %>
+
+			<% if current_user == investment.investor %>
+				<div class="investment headings">
+					<%= link_to image_tag("sdds.jpg"), company_path(investment.round.company_id) %>
+
+					<h3><%= link_to investment.company.name, company_path(investment.round.company_id) %></h3>
+					<h3>Amount Invested</h3>
+					<p>$<%= investment.amount %></p>
+				</div>
+			<% end %>
+
+		<% end %>
+	</div>
+
+
+<h2 class="heading">Your Invitations:</h2>
+	<div class="your-invitations window group">
+		<% if @invitations != nil %>
+	  <h1>Your Invitations</h1>
+
+
+	  	<% @invitations.each do |invitation| %>
+	  		<% if invitation.invitee_id == current_user.id %>
+		  		<div class="invitation">
+		  			<%= link_to image_tag("sdds.jpg"), company_path(invitation.round.company_id) %>
+			    	<p><strong><%= invitation.inviter.name %></strong> invites you </p>
+			    	<p>To Invest In: <%= Company.find(Round.find(invitation.round_id).company_id).name %></p>
+			    	<p><%= link_to "View This Round", company_round_path(Company.find(Round.find(invitation.round_id).company_id), invitation.round_id ) %></p>
+		    	</div>
+	    	<% end %>
+			<% end %>
+
+
+	<% end %>
+	</div>
+
+
+
+
+
+
+<!-- 	<br>
+	<br>
+	Porfolio:
+	<br>
+	<br>
+	</div> -->
+
+
+
+
+
+
+
+<!--
+	(If funded)
+	Company Profile Page: (Public/Round page)
+	Company Name:
+	Amount Invested:
+	Lead Syndacite Profile:
+	Other People Invested:
+
+	<br><br>
+	(If not funded)
+	Company Profile Page: (Round page)
+	Company Name:
+	Funding Goal:
+	Funding expiry date:
+	Total amount invested:
+	Your amount invested:
+	Other people invested:
+
+	<br><br>
+	Your friends/followers
+ -->
+
+
+
+
