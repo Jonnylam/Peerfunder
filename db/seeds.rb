@@ -20,7 +20,8 @@ I am most famous for having written 'BrickBreaker' for the RIM Blackberry device
       accreditation: true,
       profile_photo_url: 'https://pbs.twimg.com/profile_images/2037532740/profile.jpg',
       location: "Toronto, Ontario, Canada",
-      dob: "1975-01-15"
+      dob: "1975-01-15",
+      remote_avatar_url: 'https://pbs.twimg.com/profile_images/2037532740/profile.jpg'
     })
 
     User.create!({
