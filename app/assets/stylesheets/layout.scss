@@ -77,6 +77,11 @@ h2 {
   font-size: 1.5em;
 }
 
+img {
+  border: #ccc 1px solid;
+  padding: 5px;
+}
+
 header {
   background: #f6f9ff; /* Old browsers */
   background: -moz-linear-gradient(top, #f6f9ff 0%, #e3eaed 37%, #e5e5e5 100%); /* FF3.6+ */
@@ -91,11 +96,12 @@ header {
   position: relative;
   border-bottom: 5px solid #ccc;
 
-  img {
+  .logo {
     position: absolute;
     max-width: 9%;
     height: auto;
     margin-left: 1%;
+    border: none;
   }
 }
 
@@ -124,6 +130,41 @@ nav {
 
   }
 }
+
+ ul ul {
+    clear: both;
+    display:none;
+    position: absolute;
+    background: #6a6a6a;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+ ul li:hover ul {
+    display: block;
+
+  }
+
+ul li:hover ul li {
+    float: none;
+    clear: left;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+ul li:hover ul li a {
+    padding: 0px;
+    background: #5c5c5c;
+    border: 2px solid black;
+    box-sizing: border-box;
+    display: block;
+     padding: 0;
+    margin: 0;
+  }
 
 
 #primary-nav {
@@ -156,21 +197,22 @@ nav {
     padding-left: 12%;
   }
 
-  div {
-    margin-top: -50px;
-    border: 1px solid #000;
-    font-size: 10px;
-    padding: 15px;
+  p {
+    display: inline-block;
+    vertical-align: top;
+  }
+  img.thumbnail {
     text-align: center;
     display: inline-block;
-    margin-left: 10px;
+    margin: -15px 0 0 5px;
+    padding: 1px;
   }
 
   li.user:hover {
-    color: $red;
-    border-color: $red;
-    div {
+    .thumbnail, p {
+      color: $red;
       border-color: $red;
+      @include fadein(all);
     }
   }
 }

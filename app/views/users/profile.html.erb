@@ -1,9 +1,10 @@
-<h1 class="heading">Profile</h1>
+	<h1 class="heading">Profile</h1>
 
 
 <div class="window">
-	<div id="profile_information">
+	<h1 class"center"><%= @user.name %></h1>
 		<%= image_tag(@user.avatar_url) %>
+	<div class="profile_information">
 		<%= render partial: 'profileinformation', locals: {user: @user} %>
 	</div>
 		<h3 class="edit" id = "show_edit_button"><%= link_to "Edit your profile", :remote => :true  %></h3>
@@ -13,7 +14,7 @@
 
 
 <h2 class="heading">Your Portfolio </h2>
-	<div class="window">	
+	<div class="window">
 		<h3 class="edit"><%= link_to "Edit your portfolio", :remote => :true  %></h3>
 	</div>
 

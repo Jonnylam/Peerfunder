@@ -8,12 +8,9 @@
   <body>
 
   <header>
-  <%= link_to(image_tag("/angels_north_logo.png", :alt => "logo", :title => "Home"), root_url) %>
+  <%= link_to(image_tag("/angels_north_logo.png", :class => "logo", :alt => "Angels North Logo", :title => "Home"), root_url) %>
     <nav class="group">
       <div id="primary-nav">
-
-        <!-- <a href="/"><img src="/logo.png" alt="" class="logo"></a> -->
-        <!-- <h2><a href="/" style="text-decoration: none;">AngelList Canada</a></h2> -->
         <ul>
           <li class="first"><%= link_to "INVESTORS", investors_path %></li>
           <li><%= link_to "START-UPS", companies_path %></li>
@@ -30,8 +27,9 @@
           <% if current_user %>
            <%= link_to users_profile_path do %>
             <li class="user">
-              <%= current_user.name %>
-              <div class="thumbnail">Pic</div>
+              <p class="username"><%= current_user.first_name %></p>
+              <%= image_tag("/uploads/user/avatar/#{current_user.id}/thumb_avatar.jpg", :class => "thumbnail", :alt => "logo", :title => "Home") %>
+
             </li>
             <% end %>
             <li>

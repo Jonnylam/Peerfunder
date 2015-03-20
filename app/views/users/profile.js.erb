@@ -15,6 +15,13 @@ $('#cancel_edit_button').click(function(){
   $('.edit_button').hide();
   $('#show_edit_button').show();
   $('#cancel_edit_button').hide();
+  $('.edit-field').hide();
+
+  //show all html elements after form is hidden
+  $('#location').html('<%= @user.location %>');
+  $('#biography').html('<%= @user.biography %>');
+  $('#experience').html('<%= @user.experience %>');
+
 });
 //Cancel to revert back to normal
 
