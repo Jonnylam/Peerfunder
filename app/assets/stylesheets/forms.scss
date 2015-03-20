@@ -43,6 +43,7 @@ form {
  .submit {
     border: none;
     padding: 0;
+    background: none;
 
   }
 
@@ -56,4 +57,36 @@ form {
       margin: 0;
     }
   }
+}
+
+.checkbox_form {
+  width: 100%;
+
+  form {
+    width: 100%;
+  }
+
+  label, input, p {
+    display: inline-block;
+    width: 20%;
+  }
+
+  img {
+    vertical-align: bottom;
+    width: 30%;
+    height: auto;
+  }
+
+  p {
+    width: 40%;
+  }
+
+  input {
+    width: 10%;
+  }
+}
+
+.checkbox_tag {
+  width: 49.5%;
+  display: inline-block;
 }

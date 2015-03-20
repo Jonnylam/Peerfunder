@@ -28,7 +28,7 @@
 
             <li class="user">
                 <a href="<%= users_profile_path %>">
-                  <p class="username"><%= current_user.first_name %></p>
+                  <p class="username"><%= current_user.name %></p>
                 <%= image_tag(current_user.avatar.thumb, :class => "thumbnail", :alt => "logo", :title => "Home") %>
                 </a>
                 <ul>

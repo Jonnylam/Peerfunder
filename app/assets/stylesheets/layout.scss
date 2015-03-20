@@ -47,6 +47,10 @@ body > #wrapper {
   text-align: center !important;
 }
 
+.right {
+  text-align: right !important;
+}
+
 .edit {
   text-align: right;
   margin: 50px -60px 0 0 !important;
@@ -138,7 +142,7 @@ nav {
  ul ul {
     clear: both;
     display:none;
-    width: 94%;
+    width: 170px;
     position: absolute;
     z-index: 2;
     margin: 0;
@@ -147,26 +151,30 @@ nav {
 
 
 
- ul li:hover ul {
-    display: block;
+ul li:hover ul {
+  display: block;
+  padding-top:  5px;
+
+  li {
     background: #5c5c5c;
-
-    li a {
-      padding: 10px 10px;
-      background: #5c5c5c;
-      box-sizing: border-box;
-      display: block;
-      margin: 0 0 0;
-      color: white;
-      margin-top: 0px;
-    }
-
-    li a:hover {
-      color: $red;
-      background: black;
-    }
-
   }
+
+  li a {
+    padding: 10px 10px;
+    background: #5c5c5c;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 0 0;
+    color: white;
+    margin-top: 0px;
+  }
+
+  li a:hover {
+    color: $red;
+    background: black;
+  }
+
+}
 
 ul li:hover ul li {
     float: none;
@@ -338,12 +346,15 @@ footer {
 div.headings {
 
   h3 {
-    text-decoration: underline;
     margin-bottom: 0 !important;
   }
 
   p {
    margin-top: 5px !important;
+  }
+
+  span {
+    color: $red;
   }
 }
 

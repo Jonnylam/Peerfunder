@@ -10,7 +10,7 @@
 
 	<div class="quick-description headings">
 		<h3>Description</h3>
-		<p><%= company.elevator_pitch %></p>
+		<p><%=h truncate(company.elevator_pitch, :length => 300) %></p>
 		<br>
 		<h3>Office Location</h3>
 		<p><%= company.location %></p>

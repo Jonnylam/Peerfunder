@@ -1,45 +1,57 @@
-<div class="window">
-  <h1>Round: <%= @round.id %></h1>
-  <h3>Lead Investor: </h3><p><%= @round.lead_investor.name %></p>
-  <h3>Funding Goal: </h3><p>$<%= @round.funding_goal %></p>
-  <h3>Amount Raised: </h3><p>$<%= @round.amount_raised %></p>
-  <h3>Term Sheet: </h3><p><%= @round.term_sheet %></p>
-  <h3>Due Diligence Files:</h3><% @round.due_diligences.each do |diligence| %>
-  <p><%= link_to diligence.file, diligence.file_url %></p>
+<div class="window headings">
+  <div class="main-info">
+    <h1><a href="<%= company_path(@round.company.id) %>)"> <%= @round.company.name %></a> <%=  %></span> Fundraising Round </h1>
+    <h3>Lead Investor: </h3><p><%= @round.lead_investor.name %></p>
+    <h3>Funding Goal: </h3><p>$<%= @round.funding_goal %></p>
+    <h3>Amount Raised: </h3><p>$<%= @round.amount_raised %></p>
+    <h3>Term Sheet: </h3><p><%= @round.term_sheet %></p>
+    <h3>Due Diligence Files:</h3><% @round.due_diligences.each do |diligence| %>
+    <p><%= link_to diligence.file, diligence.file_url %></p>
+    <% end %>
+    <% if current_user.id == @round.company.owner_id %>
+  <h3 class="right"><%= link_to "Cancel The Round", company_round_path, :method => :delete, data: {confirm: "Are you sure?"} %></h3>
   <% end %>
+  </div>
 
-  <% if current_user.id == @round.company.owner_id %>
-  <h3><%= link_to "Cancel The Round", company_round_path, :method => :delete, data: {confirm: "Are you sure?"} %></h3>
-  <% end %>
-  
+
+
+
+<% unless @round.investments.empty? %>
+  <h2 class="center">Investors</h2>
   <div class="current-investors group">
     <% @round.investments.each do |investment| %>
       <div class="investor">
-        <p>Investor: <%= investment.investor.name %>
-        <p>Latest Investment: <%= investment.created_at %></p>
+        <%= image_tag(investment.investor.avatar) %>
+        <p><strong><%= investment.investor.name %></strong></p>
+        <p>On <%= investment.created_at.strftime("%A, %b %d") %></p>
       </div>
     <% end %>
   </div>
+<% end %>
 
   <form class="submit" action="<%= @round.id %>/investments/new">
     <input type="submit" value="Make a new investment!">
   </form>
 
-  <div class="invitation_form">
+  <div class="checkbox_form group">
     <h1>Invite Investors</h1>
 
     <%= form_tag url_for(:controller => 'invitations', :action => 'send_out_invitations'), :method => 'post' do %>
-      
+
       <% User.all.each do |user| %>
-        <% unless user == current_user %> 
+        <% unless user == current_user%>
+        <div class="checkbox_tag">
+
           <%= check_box_tag "invitee_ids[]", user.id %>
-          <%= user.name %>
+          <%= image_tag(user.avatar) %>
+          <p><%= user.name %></p>
+        </div>
         <% end %>
       <% end %>
       <%= hidden_field_tag 'round_id', @round.id %><%= hidden_field_tag 'company_id', @round.company_id %>
       <%= submit_tag "Invite Users" %>
-        
-   
+
+
    <% end %>
   </div>
 

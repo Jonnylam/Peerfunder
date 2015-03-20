@@ -58,6 +58,8 @@ Dashboard Page
     img {
       @include img(250px, 5px);
       background: #fff;
+      width: 50%;
+      height: auto;
     }
 
     .quick_description {
