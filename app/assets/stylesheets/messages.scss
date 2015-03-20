@@ -1,3 +1,5 @@
+// Start Conversation
+
 .start-conversation {
   margin-bottom: 30px;
 
@@ -6,3 +8,116 @@
   }
 
 }
+
+// Conversations
+div.conversations {
+  .window {
+    padding: 5px 50px 50px;
+
+    img {
+      width: 20%;
+      height: auto;
+      margin-top: 0;
+    }
+
+    h3 {
+      border-bottom: $black 1px solid;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      font-size: 1.3em;
+
+    }
+
+    p {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 1.1em;
+      padding-left: 20px;
+    }
+  }
+}
+
+.view-message {
+  text-align: right;
+  margin-bottom: -20px;
+}
+
+.recipient {
+  float: left;
+  width: 60%;
+  margin-bottom: 40px !important;
+
+  img {
+
+  }
+}
+
+.time {
+  float: right;
+  width: 32%;
+}
+.subject {
+  clear: both;
+  width: 100%;
+
+  h3 {
+    text-decoration: none !important;
+    border-bottom: none;
+    display: inline-block;
+  }
+
+  h4 {
+    font-size: 1.2em;
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+// Messages
+
+.conversation {
+  margin-top: 0;
+  padding-top: 0;
+
+  .window {
+    margin: 0 0 20px 0;
+    padding: 0px 50px 5px;
+    width: 100%;
+
+  }
+
+  .message {
+    margin: 0;
+    width: 75%;
+    float: right;
+  }
+
+  .time-sent {
+    margin: 0;
+    text-align: right;
+    font-size: .8em;
+    clear: both;
+  }
+}
+
+.messages {
+  width: 60%;
+  float: left;
+}
+
+.message-box {
+  width: 35%;
+  float: right;
+  margin: 0;
+  margin-top: -20px;
+
+  form {
+    width: 100%;
+    margin-top: 10px;
+    vertical-align: top;
+  }
+}
+
+
+
+
