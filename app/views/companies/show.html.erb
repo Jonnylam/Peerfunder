@@ -9,10 +9,12 @@
             <%= image_tag(@company.company_logo) %>
           <div class="quick_description headings">
             <h3>Product</h3>
+            <h3>Company Description</h3>
+            <p><%=h truncate(@company.elevator_pitch, :length => 300) %></p>
             <h3>Location</h3>
             <p><%= @company.location %></p>
             <h3>Industry Type</h3>
-            <p><%= @company.industry_type %></p><br>
+            <p><%= @company.industry_type %></p>
             <h3>Founders</h3>
             <h3>Previous Investors</h3>
             <h3>Team</h3>
