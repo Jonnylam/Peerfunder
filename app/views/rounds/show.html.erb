@@ -1,6 +1,6 @@
 <div class="window">
   <h1>Round: <%= @round.id %></h1>
-  <h3>Lead Investor: </h3><p><%= @round.lead_investor.first_name %></p>
+  <h3>Lead Investor: </h3><p><%= @round.lead_investor.name %></p>
   <h3>Funding Goal: </h3><p>$<%= @round.funding_goal %></p>
   <h3>Amount Raised: </h3><p>$<%= @round.amount_raised %></p>
   <h3>Term Sheet: </h3><p><%= @round.term_sheet %></p>
@@ -29,13 +29,14 @@
     <h1>Invite Investors</h1>
 
     <%= form_tag url_for(:controller => 'invitations', :action => 'send_out_invitations'), :method => 'post' do %>
-  
+      
       <% User.all.each do |user| %>
+        <% unless user == current_user %> 
           <%= check_box_tag "invitee_ids[]", user.id %>
           <%= user.name %>
+        <% end %>
       <% end %>
-      <%= hidden_field_tag 'round_id', @round.id %>
-      <%= hidden_field_tag 'company_id', @round.company_id %>
+      <%= hidden_field_tag 'round_id', @round.id %><%= hidden_field_tag 'company_id', @round.company_id %>
       <%= submit_tag "Invite Users" %>
         
    
