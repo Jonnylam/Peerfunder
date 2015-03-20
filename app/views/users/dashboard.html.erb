@@ -38,7 +38,7 @@
 
 			<% if current_user == investment.investor %>
 				<div class="investment headings">
-					<%= link_to image_tag("sdds.jpg"), company_path(investment.round.company_id) %>
+					<%= link_to image_tag(investment.round.company.company_logo), company_path(investment.round.company_id) %>
 
 					<h3><%= link_to investment.company.name, company_path(investment.round.company_id) %></h3>
 					<h3>Amount Invested</h3>
@@ -59,9 +59,9 @@
 	  	<% @invitations.each do |invitation| %>
 	  		<% if invitation.invitee_id == current_user.id %>
 		  		<div class="invitation">
-		  			<%= link_to image_tag("sdds.jpg"), company_path(invitation.round.company_id) %>
+		  			<%= link_to image_tag(invitation.inviter.avatar), company_path(invitation.round.company_id) %>
 			    	<p><strong><%= invitation.inviter.name %></strong> invites you </p>
-			    	<p>To Invest In: <%= Company.find(Round.find(invitation.round_id).company_id).name %></p>
+			    	<p>to invest in: <strong><%= Company.find(Round.find(invitation.round_id).company_id).name %></strong></p>
 			    	<p><%= link_to "View This Round", company_round_path(Company.find(Round.find(invitation.round_id).company_id), invitation.round_id ) %></p>
 		    	</div>
 	    	<% end %>
