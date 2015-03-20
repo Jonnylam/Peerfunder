@@ -5,10 +5,10 @@
           border-radius: $radius;
 }
 
-@mixin img ($width_height, $padding) {
+@mixin img ($width, $padding) {
       display:inline-block;
-      width: $width_height;
-      height: $width_height;
+      width: $width;
+      height: auto;
       padding: $padding;
       border: 1px solid #ccc;
     }

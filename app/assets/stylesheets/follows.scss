@@ -1,3 +1,25 @@
-// Place all the styles related to the follows controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.follow {
+  padding: 10px 50px;
+}
+
+.follower-box {
+  width: 30%;
+  display: inline-block;
+  margin-left: 4.4%;
+  vertical-align: top;
+
+  img {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+  }
+
+  h3 {
+    display: block;
+    text-align: center;
+  }
+}
+
+.follower-box:nth-child(3n+2) {
+  margin-left: 0
+}

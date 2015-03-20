@@ -1,7 +1,7 @@
 	<h1 class="heading">Profile</h1>
 
 
-<div class="window">
+<div class="window profile">
 	<h1 class"center"><%= @user.name %></h1>
 		<%= image_tag(@user.avatar_url) %>
 	<div class="profile_information">
@@ -13,23 +13,21 @@
 
 
 
-<h2 class="heading">Your Portfolio </h2>
-	<div class="window">
-		<h3 class="edit"><%= link_to "Edit your portfolio", :remote => :true  %></h3>
-	</div>
-
-
-
-<h2 class="heading">People who Follow You</h2>
-	<div class="window">
-
+	<div class="window follow profile">
+		<h2 class="heading">People who Follow You</h2>
 		<% if @follow.exists?(followable_id: (current_user.id)) %>
-			<% @follow.each do |follow| %>
+
+				<% @follow.each do |follow| %>
+
 				<% if current_user == follow.followable %>
-					<%= follow.follower.name%>
-					<br>
+					<div class="follower-box">
+						<%= link_to (image_tag(follow.follower.avatar_url)), user_path(follow.follower.id)%>
+						<h3 class="center"><%= link_to follow.follower.name, user_path(follow.follower.id) %></h3>
+						<br>
+					</div>
 				<% end %>
 			<% end %>
+
 		<% else %>
 			<h2 class="center">You don't currently have any followers!</h2>
 		<% end %>
@@ -37,13 +35,17 @@
 
 
 
-<h2 class="heading">People You Are Following</h2>
-	<div class="window">
+
+	<div class="window follow profile">
+		<h2 class="heading">People You Are Following</h2>
 		<% if @follow.exists?(follower_id: (current_user.id)) %>
 			<% @follow.each do |follow| %>
-				<br>
 				<% if current_user == follow.follower %>
-					<%= follow.followable.name %>
+					<div class="follower-box">
+						<%= link_to image_tag(follow.followable.avatar_url), user_path(follow.followable.id) %>
+						<h3 class="center"><%= link_to follow.followable.name, user_path(follow.followable.id)%></h3>
+						<br>
+					</div>
 				<% end %>
 			<% end %>
 		<% else %>

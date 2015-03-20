@@ -15,7 +15,7 @@
   <% @conversations.each do |conversation| %>
   <h4 class="view-message"><%= link_to "View Message", conversation_path(conversation) %></h4>
     <div class="recipient">
-    <h3>To:</h3>
+
       <% conversation.participants.each do |participant| %>
       <% if participant != current_user %>
         <a href="<%= user_path(participant.id) %>"><%= image_tag(participant.avatar, :alt => "#{participant.name}", :title => "Home") %></a>
@@ -28,14 +28,6 @@
     <% end %>
     </div>
 
-    <div class="time">
-      <h3>Date:</h3>
-      <% if conversation.is_read?(current_user) %> <%= conversation.updated_at.strftime("%a, %m/%e/%Y %I:%M %p") %>
-      <% else %>
-      <b> <%= conversation.updated_at.strftime("%a, %m/%e/%Y %I:%M %p") %> </b>
-      <% end %>
-    </div>
-
     <div class="subject">
       <h3>Subject: </h3>
       <% if conversation.is_read?(current_user) %>
@@ -44,6 +36,16 @@
       <h4><%= link_to conversation.subject, conversation_path(conversation) %></h4>
      <% end %>
     </div>
+
+    <div class="time">
+      <h3>Date:</h3>
+      <% if conversation.is_read?(current_user) %> <%= conversation.updated_at.strftime("%a, %m/%e/%Y %I:%M %p") %>
+      <% else %>
+      <b> <%= conversation.updated_at.strftime("%a, %m/%e/%Y %I:%M %p") %> </b>
+      <% end %>
+    </div>
+
+
 
 
 

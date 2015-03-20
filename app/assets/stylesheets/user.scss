@@ -161,7 +161,18 @@ Profile Page
 .profile_information {
   vertical-align: top;
   display: inline-block;
-  width: 50%;
+  width: 67%;
+  margin-top: 5px;
+  margin-left: 2%;
   padding-left: 10px;
+}
+
+.profile {
+  padding: 20px 50px;
+  width: 70%;
+
+  img {
+    @include img(30%, 5px);
+  }
 }
 
