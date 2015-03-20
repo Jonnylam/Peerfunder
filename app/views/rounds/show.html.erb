@@ -1,6 +1,6 @@
 <div class="window headings">
   <div class="main-info">
-    <h1><a href="<%= company_path(@round.company.id) %>)"> <%= @round.company.name %> <%=  %></span> Fundraising Round </h1></a>
+    <h1><a class="other-hover" href="<%= company_path(@round.company.id) %>)"> <%= @round.company.name %></a> <br>Fundraising Round </h1></a>
     <h3>Lead Investor: </h3><p><%= @round.lead_investor.name %></p>
     <h3>Funding Goal: </h3><p>$<%= @round.funding_goal %></p>
     <h3>Amount Raised: </h3><p>$<%= @round.amount_raised %></p>
@@ -31,6 +31,8 @@
       </div>
     <% end %>
   </div>
+<% else %>
+  <h2 class="center">There are no investors at this time.</h2>
 <% end %>
 
  <form class="submit" action="<%= @round.id %>/investments/new">

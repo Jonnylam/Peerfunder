@@ -14,7 +14,7 @@ class ConversationsController < ApplicationController
   end
 
   def index
-    @conversations ||= @mailbox.inbox
+    @conversations ||= @mailbox.conversations
     @conversationscount ||= current_user.mailbox.inbox.all
     # @trash ||= current_user.mailbox.trash.all
   end

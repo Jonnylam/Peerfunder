@@ -16,13 +16,13 @@
   <h4 class="view-message"><%= link_to "View Message", conversation_path(conversation) %></h4>
     <div class="recipient">
 
-      <% conversation.participants.each do |participant| %>
-      <% if participant != current_user %>
-        <a href="<%= user_path(participant.id) %>"><%= image_tag(participant.avatar, :alt => "#{participant.name}", :title => "Home") %></a>
-        <% if conversation.is_read?(current_user) %>
-          <p><strong><a href="<%= user_path(participant.id) %>"></a><%= participant.name %></strong></p>
+      <% conversation.recipients.each do |recipient| %>
+      <% if recipient != current_user %>
+        <a href="<%= user_path(recipient.id) %>"><%= image_tag(recipient.avatar, :alt => "#{recipient.name}", :title => "Home") %></a>
+        <% if conversation %>
+          <p><strong><a href="<%= user_path(recipient.id) %>"></a><%= recipient.name %></strong></p>
          <% else %>
-          <p><strong><a href="<%= user_path(participant.id) %>"><%= participant.name %></a></strong></p>
+          <p><strong><a href="<%= user_path(recipient.id) %>"><%= recipient.name %></a></strong></p>
         <% end %>
       <% end %>
     <% end %>

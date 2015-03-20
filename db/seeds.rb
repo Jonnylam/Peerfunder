@@ -96,10 +96,10 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
     biography: "As a venture capitalist and entrepreneur, Peter has been involved with some of the most dynamic companies to emerge from Silicon Valley in the past decade",
     experience: "Cofounder of Paypal(acq:'02). Founder & Chairman at Clarium Capital, Mithril Capital Management, Palantir Technologies, Valar Ventures.  Partner at Founder's Fund ",
     accreditation: true,
-    profile_photo_url: 'http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2011/06/Peter_Thiel-657x245.jpg',
+    profile_photo_url: 'http://i.forbesimg.com/media/lists/people/peter-thiel_416x416.jpg',
     location: "San Francisco, California, USA",
     dob: "1967-10-11",
-    remote_avatar_url: 'http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2011/06/Peter_Thiel-657x245.jpg'
+    remote_avatar_url: 'http://i.forbesimg.com/media/lists/people/peter-thiel_416x416.jpg'
   })
 
     User.create!({
@@ -188,50 +188,50 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       team: "Lee Rosen, Matt Triff, Ronen Ackerman, Eva Tang, Waclaw Wolodko, Julia Ulida, Vadim Zverugo"
     })
 
-follows = 
-  Follow.create!({ 
+follows =
+  Follow.create!({
     followable_id: 1,
     followable_type: 'User',
     follower_type: 'User',
     follower_id: 2,
     })
 
-  Follow.create!({ 
+  Follow.create!({
     followable_id: 1,
     followable_type: 'User',
     follower_type: 'User',
     follower_id: 3,
     })
 
-  Follow.create!({ 
+  Follow.create!({
     followable_id: 2,
     followable_type: 'User',
     follower_type: 'User',
     follower_id: 5,
     })
 
-  Follow.create!({ 
+  Follow.create!({
     followable_id: 4,
     followable_type: 'User',
     follower_type: 'User',
     follower_id: 1,
     })
 
-  Follow.create!({ 
+  Follow.create!({
     followable_id: 3,
     followable_type: 'User',
     follower_type: 'User',
     follower_id: 2,
     })
 
-  Follow.create!({ 
+  Follow.create!({
     followable_id: 5,
     followable_type: 'User',
     follower_type: 'User',
     follower_id: 4,
     })
 
-  Follow.create!({ 
+  Follow.create!({
     followable_id: 7,
     followable_type: 'User',
     follower_type: 'User',
