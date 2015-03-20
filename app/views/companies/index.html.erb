@@ -6,7 +6,7 @@
 	<h2><%= link_to company.name, company %></h2>
 	<br>
 
-	<%= link_to image_tag("sdds.jpg"), company_path(company) %>
+	<%= link_to image_tag(company.company_logo), company_path(company) %>
 
 	<div class="quick-description headings">
 		<h3>Description</h3>
