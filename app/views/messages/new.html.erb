@@ -1,5 +1,5 @@
-Start a Conversation with <%= @user.name %>
- 
+<h2 class="start-conversation center">Start a Conversation with <span><%= link_to @user.name, user_path(@user.id) %></span> </h1>
+
 <%= form_tag({controller: 'messages', action: 'create'}, method: :post) do %>
  <%= label_tag :subject %>
  <%= text_field_tag :subject %>

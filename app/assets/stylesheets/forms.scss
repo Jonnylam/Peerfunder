@@ -29,13 +29,14 @@ form {
   input[type="submit"] {
     display: block;
     margin: 0 auto;
+    width: 60%;
   }
 
   input[type="submit"]:hover {
     background: #717171;
     color: white;
-    border: inset #717171 2px;
-    @include fadein(all)
+    @include fadein(all);
+
   }
 }
 

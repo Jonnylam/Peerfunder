@@ -8,29 +8,27 @@
 
 	 <div class="user-quick headings">
 	  <h3 class="headings">Biography</h3>
-	  <p><%= user.biography %></p>
+	  <p><%=h truncate(user.biography, :length => 200) %></p>
 	  <h3>Experience</h3>
 	  <p><%= user.experience %></p>
 	 </div>
 
 		<% if current_user.following?(user) %>
-		  <div class="unfollow" id="unfollow_<%=user.id%>">
+		  <div class="follower unfollow group" id="unfollow_<%=user.id%>">
 			  <%= button_to("Unfollow", user_follow_path(user.id, current_user.id),
 						  method: :delete)
 						   %>
-				<%= button_to("Start a Conversation", message_path(user)) %>
-
-
+				<%= button_to("Start a Conversation", message_path(user), :class => "conversate") %>
 	<!--
 	THIS IS FOR JAVASCRIPT LATER
 			  	$('#unfollow_<%=user.id%>').click(function(){
 
 			  	});
  -->
-
 		  </div>
+
 		<% else %>
-		  <div class="follow" id="follow_<%=user.id%>">
+		  <div class="follow follower group" id="follow_<%=user.id%>">
 				<%= button_to("Follow", user_follows_path(user))%>
 		  </div>
 		<% end %>
