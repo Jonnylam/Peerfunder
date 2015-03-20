@@ -29,9 +29,10 @@
 
 <h2 class="heading">Following</h2>
 	<div class="window">
-		<% if @follow.exists?(follower_id: (current_user.id)) %>
+		<% if @follow.exists?(follower_id: (@user.id)) %>
 			<% @follow.each do |follow| %>
 				<br>
+
 				<% if current_user == follow.follower %>
 					<%= link_to follow.followable.name, user_path(follow.follower.id) %>
 				<% end %>

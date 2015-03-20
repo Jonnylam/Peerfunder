@@ -8,10 +8,17 @@
         <div class="overview">
             <%= image_tag(@company.company_logo) %>
           <div class="quick_description headings">
+            <h3>Product</h3>
             <h3>Location</h3>
             <p><%= @company.location %></p>
             <h3>Industry Type</h3>
             <p><%= @company.industry_type %></p><br>
+            <h3>Founders</h3>
+            <h3>Previous Investors</h3>
+            <h3>Team</h3>
+            
+
+
             <% @company.rounds.each do |round| %>
               <% if @company == round.company %>
                 <p><strong>$<%= round.amount_raised %></strong> of $<%= round.funding_goal %> Goal</p>
