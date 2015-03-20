@@ -16,7 +16,7 @@
           <li><%= link_to "START-UPS", companies_path %></li>
           <% if current_user %>
             <li><%= link_to "REGISTER", new_company_path %></li>
-            <li><%= link_to "DASHBOARD", user_path(current_user) %></li>
+            <li><%= link_to "DASHBOARD", users_dashboard_path %></li>
           <% else %>
             <li><%= link_to "ABOUT US", users_path %></li>
           <% end %>
@@ -28,7 +28,7 @@
            <%= link_to users_profile_path do %>
             <li class="user">
               <p class="username"><%= current_user.first_name %></p>
-              <%= image_tag(@user.avatar.thumb, :class => "thumbnail", :alt => "logo", :title => "Home") %>
+              <%= image_tag(current_user.avatar.thumb, :class => "thumbnail", :alt => "logo", :title => "Home") %>
 
             </li>
             <% end %>

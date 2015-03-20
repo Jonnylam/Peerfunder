@@ -32,6 +32,11 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
+  def dashboard
+    @user = current_user
+    @invitations = Invitation.all
+  end
+
   def edit
     @user = User.find(params[:id])
     @user.save
