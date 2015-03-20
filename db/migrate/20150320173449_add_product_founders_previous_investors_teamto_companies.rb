@@ -6,3 +6,4 @@ class AddProductFoundersPreviousInvestorsTeamtoCompanies < ActiveRecord::Migrati
   	add_column :companies, :team, :string 
   end
 end
+
