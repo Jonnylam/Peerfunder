@@ -35,7 +35,8 @@ I am most famous for having written 'BrickBreaker' for the RIM Blackberry device
       accreditation: true,
       profile_photo_url: 'https://d1qb2nb5cznatu.cloudfront.net/users/258873-medium_jpg?1405549666',
       location: "Toronto, Ontario, Canada",
-      dob: "1970-05-27"
+      dob: "1970-05-27",
+      remote_avatar_url: 'https://d1qb2nb5cznatu.cloudfront.net/users/258873-medium_jpg?1405549666'
     })
 
     User.create!({
@@ -52,7 +53,8 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       accreditation: true,
       profile_photo_url: 'http://cdn.crowdfundinsider.com/wp-content/uploads/2014/12/Andrew-Graham.jpg',
       location: "Toronto, Ontario, Canada",
-      dob: "1985-09-27"
+      dob: "1985-09-27",
+      remote_avatar_url: 'http://cdn.crowdfundinsider.com/wp-content/uploads/2014/12/Andrew-Graham.jpg'
     })
 
     User.create!({
@@ -66,7 +68,8 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       accreditation: true,
       profile_photo_url: 'https://500px.com/',
       location: "Toronto, Ontario, Canada",
-      dob: "1975-10-11"
+      dob: "1975-10-11",
+      remote_avatar_url: 'http://www.marketwire.com/library/20130807-Oleg%20Gutsol%20CEO%20500px_lg.jpg'
     })
 
     User.create!({
@@ -80,7 +83,8 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       accreditation: true,
       profile_photo_url: 'https://www.opencare.com/',
       location: "Toronto, Ontario, Canada",
-      dob: "1982-10-12"
+      dob: "1982-10-12",
+      remote_avatar_url: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/017/17b/1d859cd.jpg'
     })
 
   companies =
@@ -90,7 +94,8 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       elevator_pitch: "Borrowing money should be simple. For many of us, it’s part of our everyday lives.",
       location: "Toronto, Canada",
       industry_type: "Financial Services",
-      website_url: "https://www.borrowell.com/"
+      website_url: "https://www.borrowell.com/",
+      company_logo: 'https://pbs.twimg.com/profile_images/532559103063650304/athJzjSl.jpeg'
     })
 
     Company.create!({
@@ -99,7 +104,8 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       elevator_pitch: "Tulip Retail provides a cloud-based solution to leading retailers that brings the best of online retail to their brick-and-mortar stores.",
       location: "Toronto, Canada",
       industry_type: "Retail",
-      website_url: "http://tulip.io/"
+      website_url: "http://tulip.io/",
+      company_logo: 'https://pbs.twimg.com/profile_images/566355500711682049/pAqN-IeH.png'
     })
 
     Company.create!({
@@ -108,7 +114,8 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       elevator_pitch: "Write reviews, pin and like businesses, upload photos, check-in, invite friends and much more.",
       location: "Toronto, Canada",
       industry_type: "Mobile Applications",
-      website_url: "https://www.mopals.com/"
+      website_url: "https://www.mopals.com/",
+      company_logo: 'https://pbs.twimg.com/profile_images/532223368666152961/RhrRdGQf_400x400.jpeg'
     })
 
     Company.create!({
@@ -117,7 +124,8 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       elevator_pitch: "500px is a premium photo sharing platform for aspiring and professional photographers.",
       location: "Toronto, Canada",
       industry_type: "Social Media",
-      website_url: "https://500px.com/"
+      website_url: "https://500px.com/",
+      company_logo: 'https://pbs.twimg.com/profile_images/426172939646431232/-650I_gs_400x400.jpeg'
     })
 
     Company.create!({
@@ -126,7 +134,8 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       elevator_pitch: "Opencare matches patients with the best healthcare providers to improve outcomes and patient experience. Our vision at Opencare is to make the world a healthier place by connecting health providers, patients and health data. As a the first step, we are laser focused on creating an amazing appointment experience for both patients and health providers. Used by over 4 million patients and 26,000 health providers, Opencare is the fastest growing healthcare platform.",
       location: "Toronto, Canada",
       industry_type: "Online Healthcare",
-      website_url: "https://www.opencare.com/"
+      website_url: "https://www.opencare.com/",
+      company_logo: 'https://pbs.twimg.com/profile_images/3407164292/1d4399afe9a38d290e7492c2c60e1f49_400x400.jpeg'
     })
 
 follows = 
