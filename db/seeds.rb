@@ -96,10 +96,10 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
     biography: "As a venture capitalist and entrepreneur, Peter has been involved with some of the most dynamic companies to emerge from Silicon Valley in the past decade",
     experience: "Cofounder of Paypal(acq:'02). Founder & Chairman at Clarium Capital, Mithril Capital Management, Palantir Technologies, Valar Ventures.  Partner at Founder's Fund ",
     accreditation: true,
-    profile_photo_url: 'http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2011/06/Peter_Thiel-657x245.jpg',
+    profile_photo_url: 'http://i.forbesimg.com/media/lists/people/peter-thiel_416x416.jpg',
     location: "San Francisco, California, USA",
     dob: "1967-10-11",
-    remote_avatar_url: 'http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2011/06/Peter_Thiel-657x245.jpg'
+    remote_avatar_url: 'http://i.forbesimg.com/media/lists/people/peter-thiel_416x416.jpg'
   })
 
     User.create!({
@@ -125,7 +125,11 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       location: "Toronto, Canada",
       industry_type: "Financial Services",
       website_url: "https://www.borrowell.com/",
-      company_logo: 'https://pbs.twimg.com/profile_images/532559103063650304/athJzjSl.jpeg'
+      company_logo: 'https://pbs.twimg.com/profile_images/532559103063650304/athJzjSl.jpeg',
+      product: "Borrowell is an online marketplace lending platform.  We provide Canadians who have good credit with low, fixed interest loans. We fund those loans with accredited institutional investors. We can provide low interest rate loans to borrowers and high interest returns to investors by operating at a lower cost than traditional financial intermediaries.",
+      founders: "Andrew Graham, Eva Wong, Salim Naran, Scott Laitinen",
+      previous_investors: "Equitable Bank, Oakwest, Roger Martin, John Bitove, Dan Debow, Stewart Lyons, Joe Canavan, Freycinet Investments",
+      team: "Rob Palumbo, Charanpal Brar, Jennifer Yellow"
     })
 
     Company.create!({
@@ -135,7 +139,11 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       location: "Toronto, Canada",
       industry_type: "Retail",
       website_url: "http://tulip.io/",
-      company_logo: 'https://pbs.twimg.com/profile_images/566355500711682049/pAqN-IeH.png'
+      company_logo: 'https://pbs.twimg.com/profile_images/566355500711682049/pAqN-IeH.png',
+      product: "Tulip Retail delivers a mobile platform for sales associates, giving them access to the information they need to deliver breakthrough customer service. Sales associates can easily access catalogue, customer and sales transaction information from a mobile device allowing them to quickly answer questions, make personalized recommendations and check out faster.",
+      founders: "Ali Asaria",
+      previous_investors: "BoxGroup, Lerer Hippeau Ventures, Promus Ventures, Founder Collective, SoftTech VC, iNovia Capital, Matt Mullenweg, Mike McCauley",
+      team: "April Dunford, Rob Mueller, Matthew Charters"
     })
 
     Company.create!({
@@ -145,7 +153,11 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       location: "Toronto, Canada",
       industry_type: "Mobile Applications",
       website_url: "https://www.mopals.com/",
-      company_logo: 'https://pbs.twimg.com/profile_images/532223368666152961/RhrRdGQf_400x400.jpeg'
+      company_logo: 'https://pbs.twimg.com/profile_images/532223368666152961/RhrRdGQf_400x400.jpeg',
+      product: "The MoPals beta program rewards community members for making purchases at participating businesses and engaging in a range of social media activities that enhance brand value. MoPals offers a cost-effective means for small- and medium-sized businesses to go mobile. With a selection of fully automated tools, MoPals provides these companies the flexibility and freedom to control their own marketing efforts.",
+      founders: "Alex Haditaghi",
+      previous_investors: "None",
+      team: "Stephen Lean, Roman Alexeev"
     })
 
     Company.create!({
@@ -155,7 +167,11 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       location: "Toronto, Canada",
       industry_type: "Social Media",
       website_url: "https://500px.com/",
-      company_logo: 'https://pbs.twimg.com/profile_images/426172939646431232/-650I_gs_400x400.jpeg'
+      company_logo: 'https://pbs.twimg.com/profile_images/426172939646431232/-650I_gs_400x400.jpeg',
+      product: "500px is powered by creative people worldwide and lets you discover, share, buy and sell inspiring photos. It has grown to become the premier platform with the highest quality photography worldwide.",
+      founders: "Oleg Gutsol, Evgeny Tchebotarev",
+      previous_investors: "Andreessen Horowitz, High Line Venture Partners, ff Venture Capital, Rugged Ventures, CAA Ventures, Harrison Metal",
+      team: "Andy Yang, Arseniy Ivanov, Roxy Keshavarznia"
     })
 
     Company.create!({
@@ -165,53 +181,57 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       location: "Toronto, Canada",
       industry_type: "Online Healthcare",
       website_url: "https://www.opencare.com/",
-      company_logo: 'https://pbs.twimg.com/profile_images/3407164292/1d4399afe9a38d290e7492c2c60e1f49_400x400.jpeg'
+      company_logo: 'https://pbs.twimg.com/profile_images/3407164292/1d4399afe9a38d290e7492c2c60e1f49_400x400.jpeg',
+      product: "Opencare helps patients find the best health providers in their neighbourhood. Whether you’ve recently moved to a new area or your lifelong dentist retired, we can help.",
+      founders: "Nikolai Bratkovski",
+      previous_investors: "Graph Ventures, Real Ventures, Matt Wyndowe, Kirill Makharinsky, Fritz Lanman, Adam Foroughi, Dave Johnson, David Crow, Ian Jeffrey, Oleg Gutsol, Evgeny Tchebotarev",
+      team: "Lee Rosen, Matt Triff, Ronen Ackerman, Eva Tang, Waclaw Wolodko, Julia Ulida, Vadim Zverugo"
     })
 
-follows = 
-  Follow.create!({ 
+follows =
+  Follow.create!({
     followable_id: 1,
     followable_type: 'User',
     follower_type: 'User',
     follower_id: 2,
     })
 
-  Follow.create!({ 
+  Follow.create!({
     followable_id: 1,
     followable_type: 'User',
     follower_type: 'User',
     follower_id: 3,
     })
 
-  Follow.create!({ 
+  Follow.create!({
     followable_id: 2,
     followable_type: 'User',
     follower_type: 'User',
     follower_id: 5,
     })
 
-  Follow.create!({ 
+  Follow.create!({
     followable_id: 4,
     followable_type: 'User',
     follower_type: 'User',
     follower_id: 1,
     })
 
-  Follow.create!({ 
+  Follow.create!({
     followable_id: 3,
     followable_type: 'User',
     follower_type: 'User',
     follower_id: 2,
     })
 
-  Follow.create!({ 
+  Follow.create!({
     followable_id: 5,
     followable_type: 'User',
     follower_type: 'User',
     follower_id: 4,
     })
 
-  Follow.create!({ 
+  Follow.create!({
     followable_id: 7,
     followable_type: 'User',
     follower_type: 'User',

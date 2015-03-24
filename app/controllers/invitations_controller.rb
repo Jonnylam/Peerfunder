@@ -17,6 +17,9 @@ class InvitationsController < ApplicationController
 	end
 
 	def load_users
+  end
+
+  def find_lead_investors
     
   end
 

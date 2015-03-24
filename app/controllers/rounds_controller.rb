@@ -16,7 +16,10 @@ class RoundsController < ApplicationController
     if @round.save
       redirect_to company_round_path(@company, @round), notice: "New Round has been created"
     else
-       format.html { render :show , alert: "Round could not be saved. Please try again!" }
+       format.html { 
+        flash[:notice] = "Failed to save round."
+        render :show
+       }
         format.js {}
     end
   end
