@@ -8,13 +8,12 @@ class RoundsController < ApplicationController
   end
 
   def create
-    # binding.pry
     @round = Round.new(round_params)
-    @round.lead_investor = current_user
+    # @round.lead_investor = current_user  //Setting the lead_investor to current_user.  
     @round.company_id = params[:company_id]
     
     if @round.save
-      redirect_to company_round_path(@company, @round), notice: "New Round has been created"
+      redirect_to company_round_fundraisings_path(@company, @round), notice: "New Round has been created"
     else
        format.html { 
         flash[:notice] = "Failed to save round."
@@ -25,7 +24,6 @@ class RoundsController < ApplicationController
   end
 
   def show
-    
     find_round
   end
 

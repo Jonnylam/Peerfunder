@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :companies do
     resources :rounds do
       resources :investments
+      resources :fundraisings
     end
   end
 
@@ -22,6 +23,7 @@ root :to => 'start#index'
 resources :user_sessions
 resources :users do
   resources :follows
+  resources :accreditations
 end
 resources :invitations do
   collection do
