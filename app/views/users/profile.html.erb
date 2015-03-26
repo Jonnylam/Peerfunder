@@ -9,8 +9,12 @@
 	</div>
 		<h3 class="edit", id = "show_edit_button"><%= link_to "Edit your profile", :remote => :true  %></h3>
 		<h3 class='edit', id="cancel_edit_button"><%= link_to "Cancel", :remote => :true  %></h3>
-		<h3 class='edit', id="get_button_to_js" onClick="divFunction()"><%= link_to "EDIT USING JS" %></h3>
+
+
+
 		<% if @user.accreditation == false %>
+
+
 		<h3 class='accreditation', id="apply_for_accreditation"><%= link_to "Apply for Accreditation Status", user_accreditations_path(@user) %></h3>
 		<% end %>
 		
@@ -73,4 +77,14 @@
 		$(".edit_button").hide();
 		$('#cancel_edit_button').hide();
 	});
+
+	$(document).ready(function(){
+   $("#item").click(function(event){
+     $("#show_edit_button").click(function() {
+ 			 $('.edit_button').show();
+ 			 $('#cancel_edit_button').show();
+ 			 $('#show_edit_button').hide();
+});
+   });
+ });
 </script>
