@@ -9,7 +9,7 @@ class RoundsController < ApplicationController
 
   def create
     @round = Round.new(round_params)
-    # @round.lead_investor = current_user  //Setting the lead_investor to current_user.  
+    @round.lead_investor = current_user  #Setting the lead_investor to current_user.  
     @round.company_id = params[:company_id]
     
     if @round.save

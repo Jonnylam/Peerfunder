@@ -1,4 +1,5 @@
 class FundraisingsController < ApplicationController
+	  before_action :load_everything
 	def index
 	end
 
@@ -11,4 +12,11 @@ class FundraisingsController < ApplicationController
 
 	def havealead
 	end
+
+private
+
+	def load_everything
+    @round = Round.find(params[:round_id])
+    @company = Company.find(params[:company_id])
+  end
 end
