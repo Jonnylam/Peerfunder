@@ -7,16 +7,15 @@ before_action :load_user
 	end
 
 	def create
-		@accreditation = Accreditation.new
+		@accreditation = Accreditation.new(accreditation_params)
+		@accreditation.user_id = current_user
 		@user = current_user
 		if @accreditation.save 
+			@user.accreditation = true
+			@user.save
 			redirect_to users_profile_path, notice: "Accreditation Saved Son!"
 		else
-			 format.html { 
-        flash[:notice] = "Failed to Accreditate"
-        render :show
-       }
-        format.js {}
+
     end
 
 	end

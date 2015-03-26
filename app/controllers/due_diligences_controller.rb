@@ -20,7 +20,8 @@ class DueDiligencesController < ApplicationController
   end
 
   private
-  def reward_params
+  def reward_params 
+    #Doesnt this have to be diligence_params?
     params.require(:reward).permit(:title,:description,:amount,:_destroy)
   end
 end
