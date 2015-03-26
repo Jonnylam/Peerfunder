@@ -24,12 +24,15 @@ resources :user_sessions
 resources :users do
   resources :follows
   resources :accreditations
+  post :update_accreditations, :as => :update_accreditations
 end
+
 resources :invitations do
   collection do
     post :send_out_invitations, :as => :send_out_invitations
   end
 end
+
 resources :rounds
 
 get 'login' => 'user_sessions#new', :as => :login

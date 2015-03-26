@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150320173449) do
+ActiveRecord::Schema.define(version: 20150326145857) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "accreditations", force: :cascade do |t|
+    t.string   "legal_name"
+    t.string   "investing_entity_type"
+    t.string   "type_of_accreditation"
+    t.string   "signature"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"

@@ -47,7 +47,7 @@ class UsersController < ApplicationController
     @user.skip_password = true
       respond_to do |format|
       if @user.update_attributes(user_params)
-        format.html { redirect_to user_path(@user)}
+        format.html { redirect_to users_profile_path}
         format.js {}
         @user.save
       else
@@ -64,19 +64,12 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
-  # def follow
-  #   @user = User.find(params[:id])
-  #     if current_user
-  #        current_user.follow(@user)
-  #        flash[:notice] = "You are now following this person"
-  #     else
-  #        flash[:notice] = "Sorry you could not follow this person"
-  #     end
-  # end
-
-  # def followable
-  #   @followable ||= User.find(params[:id])
-  # end
+  def update_accreditations
+    @user = current_user
+    @user.skip_password = true
+    @user.save  #User is saving
+    redirect_to users_profile_path
+  end
 
   # def inbox
   #   @user = User.first

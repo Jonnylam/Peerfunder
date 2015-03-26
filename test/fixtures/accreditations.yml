@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  legal_name: MyString
+  investing_entity_type: MyString
+  type_of_accreditation: MyString
+  signature: MyString
+
+two:
+  legal_name: MyString
+  investing_entity_type: MyString
+  type_of_accreditation: MyString
+  signature: MyString
