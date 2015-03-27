@@ -11,17 +11,17 @@
 
   <div class="field">
     <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, placeholder: "First Name" %>
   </div>
 
   <div class="field">
     <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, placeholder: "Last Name" %>
   </div>
 
   <div class="field">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, placeholder: "Email" %>
   </div>
 
   <div class="field">
@@ -29,19 +29,14 @@
     <%= f.file_field :avatar %>
   </div>
 
-  <!-- <div class="field">
-    f.label :accreditation
-     f.text_field :accreditation
-  </div> -->
-
   <div class="field">
     <%= f.label :password %>
-    <%= f.password_field :password %>
+    <%= f.password_field :password, placeholder: "*********" %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation, placeholder: "*********"  %>
   </div>
 
   <div class="action">
