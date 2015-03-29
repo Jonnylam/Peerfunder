@@ -1,35 +1,54 @@
 
-  <h1 class="center">Register a New Company </h1>
+
 
 <%= form_for @company do |f| %>
+  <div class = "formtitle">
+    <!-- <h1 class="center"> -->
+    <center>Register a New Company</center>
+    <br>
+    <!-- </h1> -->
+  </div>
+
  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %><br>
+    <div class ="formlabel">
+      <%= f.label :name %><br>
+      <%= f.text_field :name %><br>
+    </div>
   </div>
     <br>
   <div class="field">
-    <%= f.label :company_logo %><br>
-    <%= f.text_field :company_logo %><br>
+    <div class ="formlabel">
+      <%= f.label :company_logo %><br>
+      <%= f.text_field :company_logo %><br>
+    </div>
   </div>
     <br>
   <div class="field">
-    <%= f.label :elevator_pitch %><br>
-    <%= f.text_area :elevator_pitch %><br>
+    <div class ="formlabel">
+      <%= f.label :elevator_pitch %><br>
+      <%= f.text_area :elevator_pitch %><br>
+    </div>
     <br>
   </div>
   <div class="field">
-    <%= f.label :location %><br>
-    <%= f.text_field :location %><br>
+    <div class ="formlabel">
+      <%= f.label :location %><br>
+      <%= f.text_field :location %><br>
+    </div>
     <br>
   </div>
   <div class="field">
-    <%= f.label :industry_type %><br>
-    <%= f.text_field :industry_type %><br>
+    <div class ="formlabel">
+      <%= f.label :industry_type %><br>
+      <%= f.text_field :industry_type %><br>
+    </div>
     <br>
   </div>
  	<div class="field">
-    <%= f.label :website_url %><br>
-    <%= f.text_field :website_url %><br>
+    <div class ="formlabel">
+      <%= f.label :website_url %><br>
+      <%= f.text_field :website_url %><br>
+    </div>
     <br>
   </div>
 <%= f.submit %>

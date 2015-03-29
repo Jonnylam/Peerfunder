@@ -1,0 +1,70 @@
+Searching 341 files for "sans"
+
+/Users/lanlee/Desktop/Bitmaker/angellistcanada/app/assets/stylesheets/layout.scss:
+    3    background: #fafafa;
+    4    min-width: 1100px;
+    5:   font-family: $sans;
+    6    color: #333;
+    7  }
+    .
+  126  nav {
+  127  
+  128:   font-family: $sans;
+  129    font-weight: $bold;
+  130    letter-spacing: 2px;
+
+/Users/lanlee/Desktop/Bitmaker/angellistcanada/app/assets/stylesheets/normalize.css:
+    2  
+    3  /**
+    4:  * 1. Set default font family to sans-serif.
+    5   * 2. Prevent iOS text size adjust after orientation change, without disabling
+    6   *    user zoom.
+    .
+    8  
+    9  html {
+   10:   font-family: sans-serif; /* 1 */
+   11    -ms-text-size-adjust: 100%; /* 2 */
+   12    -webkit-text-size-adjust: 100%; /* 2 */
+
+/Users/lanlee/Desktop/Bitmaker/angellistcanada/app/assets/stylesheets/scaffolds.scss:
+    2    background-color: #fff;
+    3    color: #333;
+    4:   font-family: verdana, arial, helvetica, sans-serif;
+    5    font-size: 13px;
+    6    line-height: 18px;
+    .
+    8  
+    9  p, ol, ul, td {
+   10:   font-family: verdana, arial, helvetica, sans-serif;
+   11    font-size: 13px;
+   12    line-height: 18px;
+
+/Users/lanlee/Desktop/Bitmaker/angellistcanada/app/assets/stylesheets/variables.scss:
+   28  $black: #222;
+   29  $border-test: 1px solid black;
+   30: $sans: 'Lato';
+   31  $serif: 'Merriweather';
+   32  $bold: 700;
+
+/Users/lanlee/Desktop/Bitmaker/angellistcanada/public/404.html:
+    9      color: #2E2F30;
+   10      text-align: center;
+   11:     font-family: arial, sans-serif;
+   12      margin: 0;
+   13    }
+
+/Users/lanlee/Desktop/Bitmaker/angellistcanada/public/422.html:
+    9      color: #2E2F30;
+   10      text-align: center;
+   11:     font-family: arial, sans-serif;
+   12      margin: 0;
+   13    }
+
+/Users/lanlee/Desktop/Bitmaker/angellistcanada/public/500.html:
+    9      color: #2E2F30;
+   10      text-align: center;
+   11:     font-family: arial, sans-serif;
+   12      margin: 0;
+   13    }
+
+10 matches across 7 files

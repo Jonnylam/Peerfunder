@@ -1,8 +1,13 @@
 
 
 <%= form_for @user do |f| %>
-  <h1 style="padding: 0;">Create a New User</h1>
-
+  <div class = "formtitle">
+    <!-- <h2 style="padding: 0;"> -->
+    <center>Create a New Account</center>
+    <br>
+   
+    <!-- </h2> -->
+  </div>
   <% if @user.errors.any? %>
     <% @user.errors.full_messages.each do |message| %>
       <p class="errors"><%= message %></p>
@@ -10,36 +15,54 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name, placeholder: "First Name" %>
+    <div class = "formlabel">
+     <%= f.label :first_name %>
+    </div>
+    <%= f.text_field :first_name %>
+  </div>
+
+      
+  <div class="field">
+    <div class = "formlabel">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+    </div>
   </div>
 
   <div class="field">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name, placeholder: "Last Name" %>
+    <div class = "formlabel">
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
   </div>
 
   <div class="field">
-    <%= f.label :email %>
-    <%= f.text_field :email, placeholder: "Email" %>
+    <div class = "formlabel">
+      <div class = "for,label">
+        <%= f.label :avatar %>
+        <%= f.file_field :avatar %>
+      </div>
+    </div>
   </div>
 
   <div class="field">
-    <%= f.label :avatar %>
-    <%= f.file_field :avatar %>
+    <div class = "formlabel">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <%= f.password_field :password, placeholder: "*********" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, placeholder: "*********"  %>
+    <div class = "formlabel">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation  %>
+    </div>
   </div>
 
   <div class="action">
     <%= f.submit %>
+  </div>
+  <div class = "formlinks"><br>
+  <%= link_to "I already have an account", new_user_session_path %>
   </div>
 <% end %>
