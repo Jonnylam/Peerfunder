@@ -1,6 +1,6 @@
 class FundraisingsController < ApplicationController
-	  before_action :load_everything
 	def index
+		find_everything
 	end
 
 	def currentislead
@@ -13,9 +13,15 @@ class FundraisingsController < ApplicationController
 	def havealead
 	end
 
-private
+	def email
+	end
 
-	def load_everything
+private
+	def fundraising_params
+		params.require(:fundraising).permit(:round_id, :company_id, :user_id, :email, :subject, :emailcontent)
+	end
+
+	def find_everything
     @round = Round.find(params[:round_id])
     @company = Company.find(params[:company_id])
   end
