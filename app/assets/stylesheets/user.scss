@@ -154,6 +154,19 @@ Dashboard Page
   }
 }
 
+  #dashboardtitle{
+    position:relative;
+    left:235px;
+    top: -15px
+  }
+
+
+  #dashboardtitle1{
+    position:relative;
+    left:235px;
+    top: -30px;
+    padding-top: -200px;
+  }
 /*-------------------------------
 Profile Page
 --------------------------------*/
@@ -174,5 +187,11 @@ Profile Page
   img {
     @include img(30%, 5px);
   }
+}
+
+#profiletitle{
+  position: relative;
+  left: 180px;
+  top: -25px;
 }
 

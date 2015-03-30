@@ -8,8 +8,29 @@ form {
   background: #f9f9f9;
 
 
+
   h1 {
     text-align: center;
+  }
+
+
+  .formlabel{
+  font-size: 13px;
+  font-weight: bold;
+  }
+
+  .formtitle{
+  font-size: 24px;
+  font-weight: none;
+  font-family: 'Georgia';
+  letter-spacing: 0.25spx;
+  font-weight: bold;
+
+  }
+
+  .formlinks {
+  font-size: 12px;
+  text-align: 'right';
   }
 
   input, textarea {
@@ -18,7 +39,7 @@ form {
     width: 100%;
     border: 1px solid #ccc;
     @include border-radius(4px);
-    margin: 5px 0 30px;
+    margin: 2px 0 30px;
   }
 
 
@@ -39,6 +60,8 @@ form {
 
   }
 }
+
+
 
  .submit {
     border: none;

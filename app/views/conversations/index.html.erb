@@ -1,7 +1,7 @@
 <div class="conversations">
   <div class="well">
     <div class="title">
-      <h1>Conversations</h1></div>
+      <h1 id="conversationtitle">Conversations</h1></div>
        Click on subject to open the conversation
     <br>
     <br>
@@ -31,7 +31,9 @@
     <div class="subject">
       <h3>Subject: </h3>
       <% if conversation.is_read?(current_user) %>
-        <h4><%= link_to conversation.subject, conversation_path(conversation) %></h4>
+        <h4>
+          <%= link_to conversation.subject, conversation_path(conversation) %>
+        </h4>
       <% else %>
       <h4><%= link_to conversation.subject, conversation_path(conversation) %></h4>
      <% end %>
