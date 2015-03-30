@@ -8,7 +8,7 @@ before_action :load_user
 
 	def create
 		@accreditation = Accreditation.new(accreditation_params)
-		@accreditation.user_id = current_user
+		@accreditation.user_id = current_user.id
 		@user = current_user
 		if @accreditation.save 
 			@user.accreditation = true
