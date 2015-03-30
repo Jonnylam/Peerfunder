@@ -1,7 +1,3 @@
-Send emails out................
-
-
-
 
   <%= form_for ([@company, @round, @fundraising]) do |f| %>
 	<div class = "formtitle">
@@ -19,7 +15,7 @@ Send emails out................
 	
   <div class="field">
   	<div class = "formlabel">
-	    <%= f.label :subbject%><br>
+	    <%= f.label :subject%><br>
 	    <%= f.text_field :subject %><br>
   	</div>
   </div>
@@ -28,13 +24,13 @@ Send emails out................
   <div class="field">
   	<div class = "formlabel">
 	    <%= f.label :emailcontent%><br>
-	    <%= f.text_field :emailcontent %><br>
+	    <%= f.text_area :emailcontent %><br>
   	</div>
   </div>
 
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Send your invites"%>
   </div>
 <% end %>
 

@@ -5,7 +5,9 @@ class FundraisingsController < ApplicationController
 	end
 
 	def create
-
+		@fundraising = Fundraising.new(fundraising_params)
+		if @fundraising.save 
+		end
 	end
 	def index
 		find_everything
