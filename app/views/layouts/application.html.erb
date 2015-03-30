@@ -8,15 +8,16 @@
   <body>
 
   <header>
-  <%= link_to(image_tag("/angels_north_logo.png", :class => "logo", :alt => "Angels North Logo", :title => "Home"), root_url) %>
+  <%= link_to(image_tag("/logo_no_text.png", :class => "logo", :alt => "Angels North Logo", :title => "Home"), root_url) %>
     <nav class="group">
       <div id="primary-nav">
         <ul>
-          <li class="first"><%= link_to "INVESTORS", investors_path %></li>
-          <li><%= link_to "START-UPS", companies_path %></li>
+          <li class = "first"><%= link_to "START-UPS", companies_path %></li>
           <% if current_user %>
+            <li><%= link_to "INVESTORS", investors_path %></li>
             <li><%= link_to "REGISTER", new_company_path %></li>
-            <li><%= link_to "DASHBOARD", users_dashboard_path %></li>
+            <!-- <li><%= link_to "DASHBOARD", users_dashboard_path %></li> -->
+            <li><%= link_to "MESSAGES", conversations_path %></li>
           <% else %>
             <li><%= link_to "ABOUT US", users_path %></li>
           <% end %>
@@ -33,6 +34,7 @@
                 </a>
                 <ul>
                   <li><a href="<%= users_profile_path %>">Profile</a></li>
+                  <li><a href="<%= users_dashboard_path %>">Dashboard</a></li>
                   <li><a href="<%= conversations_path %>">Conversations</a></li>
                   <li> <%= link_to "Logout", :logout, method: :post %></li>
                 </ul>

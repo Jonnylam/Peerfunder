@@ -1,8 +1,15 @@
+ @font-face {
+        font-family: "texgyreheros regular";
+        src: url(/assets/textgyreheroscn-regular.otf) format("truetype");
+
+    }
+
+
 html, body, #container { height: 80%; }
 body {
   background: #fafafa;
   min-width: 1100px;
-  font-family: $sans;
+  font-family: 'texgyreheros regular', 'open sans';
   color: #333;
 }
 
@@ -111,9 +118,10 @@ header {
 
   .logo {
     position: absolute;
-    max-width: 4%;
+    max-width: 4.5%;
     height: auto;
     margin-left: 1%;
+    margin-top: 0.5%;
     border: none;
   }
 }
@@ -128,7 +136,7 @@ nav {
 
   font-family: $sans;
   font-weight: none;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.5px;
 
   ul {
     margin-top: 20px;
@@ -241,7 +249,7 @@ ul li:hover ul li {
     text-align: center;
     display: inline-block;
     margin: -18px 0 0 0px;
-    padding: -5px;
+    padding: px;
   }
 
   li.user:hover {
@@ -387,5 +395,9 @@ div.headings {
   width: 20%;
   height: auto;
   margin: 20px 0 0 0;
+}
+
+.link-path{
+  font-size: 13px;
 }
 

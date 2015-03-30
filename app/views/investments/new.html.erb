@@ -1,12 +1,18 @@
-<h1>Make A New Investment</h1>
+
 
   
 
   <%= form_for ([@company, @round, @investment]) do |f| %>
+	<div class = "formtitle">
+		<center>Make A New Investment</center>
+		<br>
+	</div>
 
   <div class="field">
-    <%= f.label :amount%><br>
-    <%= f.text_field :amount %><br>
+  	<div class = "formlabel">
+	    <%= f.label :amount%><br>
+	    <%= f.text_field :amount %><br>
+  	</div>
   </div>
 
   <div class="actions">
