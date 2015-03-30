@@ -1,4 +1,12 @@
 class FundraisingsController < ApplicationController
+	before_action :find_everything
+	def new
+		@fundraising = Fundraising.new
+	end
+
+	def create
+
+	end
 	def index
 		find_everything
 	end
@@ -13,7 +21,13 @@ class FundraisingsController < ApplicationController
 	def havealead
 	end
 
+	def find_investors
+	end
+
 	def email
+	end
+
+	def show
 	end
 
 private
@@ -25,4 +39,8 @@ private
     @round = Round.find(params[:round_id])
     @company = Company.find(params[:company_id])
   end
+
+
 end
+
+

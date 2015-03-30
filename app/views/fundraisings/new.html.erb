@@ -1,0 +1,40 @@
+Send emails out................
+
+
+
+
+  <%= form_for ([@company, @round, @fundraising]) do |f| %>
+	<div class = "formtitle">
+		<center>Invite your Friends!!</center>
+		<br>
+	</div>
+
+  <div class="field">
+  	<div class = "formlabel">
+	    <%= f.label :email%><br>
+	    <%= f.text_field :email %><br>
+  	</div>
+  </div>
+
+	
+  <div class="field">
+  	<div class = "formlabel">
+	    <%= f.label :subbject%><br>
+	    <%= f.text_field :subject %><br>
+  	</div>
+  </div>
+
+
+  <div class="field">
+  	<div class = "formlabel">
+	    <%= f.label :emailcontent%><br>
+	    <%= f.text_field :emailcontent %><br>
+  	</div>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

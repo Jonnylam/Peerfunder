@@ -14,10 +14,6 @@ Rails.application.routes.draw do
     resources :rounds do
       resources :investments
       resources :fundraisings
-        collection do
-        get 'fundraisings/email'
-        post :find_investors, :as => :find_investors
-        end
     end
   end
 
