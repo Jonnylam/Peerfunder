@@ -8,6 +8,28 @@
 
   users =
     User.create!({
+      email: "jonatham.lam@gmail.com",
+      first_name: "Jonathan",
+      last_name: "Lam",
+      password: "password",
+      password_confirmation: "password",
+      biography: "Aspiring business developer with a strong technical background in finance and technology through education and international work experience in China and Canada.",
+      experience: "Currently Business Development Manager at Crossmo Technology Co, Beijing, China
+        Created concise, value-based business plans, sales proposals, and partnership proposals for Crossmo’s Checknow vertical social gaming service for mobile platforms
+      Generated 5 B2B partnerships for the Check Now through revenue sharing, licensing, and distribution agreements
+      Developed a feasibility study using primary and secondary market research that determined the proposed North American development and localization of a social gaming platform was ripe for expansion
+      Used to be a Research Analyst at Vo Industries, Toronto, Canada Identified potential trades and positions by conducting quantitative analysis of key technical indicators on the S&P and large cap stocks
+      Created quarterly portfolio reviews and analysis for clients and customers on trades conducted within the quarter
+      Read market trends to identify areas and products that offer scope for profitable trading using technical analysis."
+      accreditation: true,
+      profile_photo_url: '/fileuploads/jon.jpg',
+      location: "Toronto, Ontario, Canada",
+      dob: "1990-07-15",
+      remote_avatar_url: ''
+    })
+
+
+    User.create!({
       email: "aliasaria@tulip.io",
       first_name: "Ali",
       last_name: "Asaria",
@@ -116,6 +138,22 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
     dob: "1971-07-09",
     remote_avatar_url: 'http://static1.businessinsider.com/image/532ebee46da811c10a3bff41-480/andreessen.jpg'
   })
+
+  User.create!({
+      email: "admin",
+      first_name: "Angels North",
+      last_name: "Admin",
+      password: "password",
+      password_confirmation: "password",
+      biography: "Hello Hello Hello",
+      experience: 'Founder of Pacific Mortgage Group, CEO of Mopals',
+      accreditation: true,
+      profile_photo_url: 'http://s1.postimg.org/ckh0vrvpr/Admin_Logo.png',
+      location: "Toronto, Ontario, Canada",
+      dob: "1970-05-27",
+      remote_avatar_url: 'http://s1.postimg.org/ckh0vrvpr/Admin_Logo.png'
+    })
+
 
   companies =
     Company.create!({
