@@ -139,7 +139,7 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
     remote_avatar_url: 'http://static1.businessinsider.com/image/532ebee46da811c10a3bff41-480/andreessen.jpg'
   })
 
-  User.create!({
+    User.create!({
       email: "admin",
       first_name: "Angels North",
       last_name: "Admin",
@@ -154,7 +154,10 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       remote_avatar_url: 'http://s1.postimg.org/ckh0vrvpr/Admin_Logo.png'
     })
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 01d6623877f0cc97dde19a203f9179db108f2323
   companies =
     Company.create!({
       name: "Borrowell",
