@@ -17,8 +17,8 @@ class FundraisingsController < ApplicationController
 		@round.lead_investor = current_user
 	end
 
-	def findlead
-		@round = Round.find(params[:round_id])
+	def findalead
+		@round = Round.find(params[1])
     @company = Company.find(params[:company_id])
 	end
 

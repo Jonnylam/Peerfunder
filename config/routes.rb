@@ -14,9 +14,13 @@ Rails.application.routes.draw do
     resources :rounds do
       collection do
         get 'processing_round_information'
+        get 'rounds/:id/fundraisings/findalead', to: 'fundraisings#findalead'
       end
       resources :investments
       resources :fundraisings
+      collection do 
+        get 'fundraisings/findalead'
+      end
     end
   end
 

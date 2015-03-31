@@ -1,17 +1,19 @@
 
-<p>Please fill out the following information</p>
+<h2 class="center">Please fill out the following information</h2>
+<br><Br>
 
-<%= form_tag %>
+
+<%= form_for @user do |f| %>
  <div class="field">
-    <h1>Legal name of the investing entity</h1><br>
-    <%= text_field_tag :legal_name %><br>
+    <h2>Legal name of the investing entity</h2><br>
+    <input type="text"> <br>
   </div>
     <br>
   <div class="field">
     <!--
 Use Javascript to only allow them to check one box
   -->
-    <h1>Type of Investing Entity</h1>
+    <h2>Type of Investing Entity</h2><Br>
     An Individual
     <%= check_box_tag "investing_entity_type", "individual" %>
     A Trust
@@ -22,8 +24,8 @@ Use Javascript to only allow them to check one box
   </div>
     <br>
   <div class="field">
-    <h1>How is <%= @user.first_name %> accedited?</h1>
-    <h3>Please select the best one that applies to you </h3>
+    <h2>How is <%= @user.first_name %> accedited?</h2><br>
+    <h3>Please select the best one that applies to you </h3><br>
     Income
     <%= check_box_tag "type_of_accreditation", "income" %>
     Cash And Securities
@@ -36,16 +38,17 @@ Use Javascript to only allow them to check one box
   
   <div class = "field">
   Please Enter your Signature Here
-  <%= text_field_tag :signature %><br>
+  <input type="text"> <br>
   </div>
 
 <%= hidden_field_tag 'user_id', @user.id %>
 
+ <div class="checkbox_tag">
+ 
+  Click here to agree
+  <%= f.check_box :accreditation %>
 
-<%= form_for @user do |f| %>
-   I confirm that I am an “Accredited Investor” in Canada as defined in Section 1.1 of NI 45-106<%= f.check_box :accreditation %>
-
-<%= f.submit %>
-
-<% end %>
+ <%= f.submit %>
+ 
+ <% end %>
 

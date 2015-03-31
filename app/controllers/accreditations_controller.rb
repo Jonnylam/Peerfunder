@@ -20,6 +20,7 @@ before_action :load_user
 
 	end
 
+
 	def index
 	end
 

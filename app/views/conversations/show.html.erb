@@ -23,7 +23,7 @@
               <%= message.sender.name %>
             </b>
             <p>
-              <%= simple_format h message.body %>
+              <%= raw message.body %>
             </p>
           </div>
         <p class="time-sent">Sent <%= time_ago_in_words(message.updated_at) %> ago.</p>
