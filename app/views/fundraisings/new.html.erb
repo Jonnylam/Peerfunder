@@ -1,18 +1,20 @@
 
   <%= form_for ([@company, @round, @fundraising]) do |f| %>
 	<div class = "formtitle">
-		<center>Invite your Friends!!</center>
+		<center>Email Invitations</center>
 		<br>
 	</div>
 
-  <div class="field">
-  	<div class = "formlabel">
-	    <%= f.label :email%><br>
-	    <%= f.text_field :email %><br>
-  	</div>
+	<div id="due_diligences">
+    <%= f.fields_for :email do |email| %>
+     <%= f.label :email%>
+    <%= f.text_field :email %>
+    <% end %>
+    <div class="links">
+    
+    </div>
   </div>
 
-	
   <div class="field">
   	<div class = "formlabel">
 	    <%= f.label :subject%><br>
