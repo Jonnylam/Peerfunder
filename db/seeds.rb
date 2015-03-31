@@ -117,6 +117,21 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
     remote_avatar_url: 'http://static1.businessinsider.com/image/532ebee46da811c10a3bff41-480/andreessen.jpg'
   })
 
+    User.create!({
+      email: "admin",
+      first_name: "Angels North",
+      last_name: "Admin",
+      password: "password",
+      password_confirmation: "password",
+      biography: "Hello Hello Hello",
+      experience: 'Founder of Pacific Mortgage Group, CEO of Mopals',
+      accreditation: true,
+      profile_photo_url: 'http://s1.postimg.org/ckh0vrvpr/Admin_Logo.png',
+      location: "Toronto, Ontario, Canada",
+      dob: "1970-05-27",
+      remote_avatar_url: 'http://s1.postimg.org/ckh0vrvpr/Admin_Logo.png'
+    })
+
   companies =
     Company.create!({
       name: "Borrowell",
