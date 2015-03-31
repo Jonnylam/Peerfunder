@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'investors' => 'users#index'
   get 'users/inbox'
 
+
   resources :companies do
     resources :rounds do
       resources :investments

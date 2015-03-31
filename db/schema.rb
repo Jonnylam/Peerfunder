@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150326193527) do
+ActiveRecord::Schema.define(version: 20150330175719) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,17 @@ ActiveRecord::Schema.define(version: 20150326193527) do
 
   add_index "follows", ["followable_id", "followable_type"], name: "fk_followables", using: :btree
   add_index "follows", ["follower_id", "follower_type"], name: "fk_follows", using: :btree
+
+  create_table "fundraisings", force: :cascade do |t|
+    t.integer  "round_id"
+    t.integer  "user_id"
+    t.integer  "company_id"
+    t.string   "email"
+    t.string   "subject"
+    t.text     "emailcontent"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "investments", force: :cascade do |t|
     t.integer  "investor_id"

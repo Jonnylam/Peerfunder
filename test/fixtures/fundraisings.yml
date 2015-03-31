@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  round_id: 1
+  user_id: 1
+  company_id: 1
+  email: MyString
+  subject: MyString
+  emailcontent: MyText
+
+two:
+  round_id: 1
+  user_id: 1
+  company_id: 1
+  email: MyString
+  subject: MyString
+  emailcontent: MyText
