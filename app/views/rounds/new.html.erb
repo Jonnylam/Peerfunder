@@ -7,22 +7,25 @@
   </div>
   <div class="field">
     <div class ="formlabel">
-      <%= f.label :funding_goal %><br>
+      <%= f.label :funding_goal %>
+      <br>
       <%= f.text_field :funding_goal %><br>
     </div>
   </div>
 
   <div class="field">
     <div class ="formlabel">
-      <%= f.label :term_sheet %><br>
+      <%= f.label :term_sheet %> <img src = "http://www.opticsinfobase.org/images/small_question_mark.gif", id = "termquestionmark" />
       <%= f.file_field :term_sheet %><br>
     </div>
   </div>
   <div class ="formlabel">
-    <h3> Due Diligence files </h3>
+    <h3> Due Diligence files  <img src = "http://www.opticsinfobase.org/images/small_question_mark.gif", id = "duequestionmark" /></h3>
   </div>
     <div id="due_diligences">
-      <%= f.fields_for :due_diligences do |diligence| %>
+
+      <%= f.fields_for :due_diligences do |diligence| %> 
+       <img src = "http://www.opticsinfobase.org/images/small_question_mark.gif" />
        <%= render 'due_diligence_fields', :f => diligence %>
       <% end %>
       <div class="links">

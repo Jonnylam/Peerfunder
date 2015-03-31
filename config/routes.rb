@@ -17,9 +17,6 @@ Rails.application.routes.draw do
       end
       resources :investments
       resources :fundraisings
-      collection do
-        get 'fundraisings/findalead'
-      end
     end
   end
 

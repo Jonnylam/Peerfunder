@@ -1,5 +1,5 @@
 class FundraisingsController < ApplicationController
-
+	before_action :find_everything
 	def new
 		@fundraising = Fundraising.new
 	end
