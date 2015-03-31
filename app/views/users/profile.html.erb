@@ -1,6 +1,6 @@
 	<h1 class="heading", id = "profiletitle">Profile</h1>
 
- 
+
 <div class="window profile">
 	<h1 class"center"><%= @user.name %></h1>
 		<%= image_tag(@user.avatar_url) %>
@@ -17,7 +17,7 @@
 
 		<h3 class='accreditation', id="apply_for_accreditation"><%= link_to "Apply for Accreditation Status", user_accreditations_path(@user) %></h3>
 		<% end %>
-		
+
 </div>
 
 
@@ -38,7 +38,8 @@
 			<% end %>
 
 		<% else %>
-			<h2 class="center">You don't currently have any followers!</h2>
+			<p class="center">You don't currently have any followers!</p>
+			<h3 class="center">Check out the <%= link_to "investors page", investors_path %>, and reach out to some other users on the site!</h3>
 		<% end %>
 	</div>
 

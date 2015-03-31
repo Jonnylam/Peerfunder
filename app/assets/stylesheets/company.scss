@@ -30,6 +30,7 @@
 .company-view {
   width: 80%;
   margin-top: 30px;
+  margin-bottom: 10px;
   padding: 2%;
 
   .overview {
@@ -55,4 +56,28 @@
   top: -25px;
 }
 
+.company_info {
+  width: 80%;
+  margin-top: 0px;
+  padding: 2% 3%;
+
+  img {
+      border: 1px solid #ccc;
+      padding: 2px;
+      width: 20%;
+      float: left;
+
+  }
+}
+
+.quick_info {
+  float: left;
+  margin-left: 5%;
+  width: 60%;
+  vertical-align: top;
+
+  h2:first-child {
+    margin-top: 0;
+  }
+}
 
