@@ -3,6 +3,12 @@
         src: url(/assets/textgyreheroscn-regular.otf) format("truetype");
         font-family: "SourceSansPro-Black.otf";
         src: url(SourceSansPro-Regular.otf) format("truetype");
+        font-family: "Nobile Regular";
+        src: url(Nobile-Regular.ttf) format("truetype");
+        font-family: "BebasNeue Light";
+        src: url(BebasNeue-Regular.otf) format("truetype");
+        font-family: "fire sans";
+        src: url(FiraSans-Light.otf) format("truetype");
     }
 
 
@@ -123,10 +129,10 @@ header {
 
   .logo {
     position: absolute;
-    max-width: 4.5%;
+    max-width: 4.00%;
     height: auto;
     margin-left: 1%;
-    margin-top: 0.5%;
+    margin-top: 0.4%;
     border: none;
   }
 }
@@ -141,10 +147,11 @@ nav {
 
   font-family: $sans;
   font-weight: none;
-  letter-spacing: 0.5px;
+  letter-spacing: 0px;
+  font-size: 16px;
 
   ul {
-    margin-top: 20px;
+    margin-top: 14px;
   }
 
   a {
@@ -204,14 +211,19 @@ ul li:hover ul li {
 
 }
 
-
+.username {
+  font-family: $sans;
+  margin-top: 4%;
+  font-weight: bold;
+}
 
 
 #primary-nav {
   float: left;
   width: 60%;
-  margin-left: 13%;
-  padding-bottom: 1em;
+  margin-left: 8%;
+  margin-top: 0.4%;
+  padding-bottom: 0em;
 
 
 
@@ -220,7 +232,7 @@ ul li:hover ul li {
   }
   li {
     float: left;
-    padding-left: 9%;
+    padding-left: 3%;
   }
 }
 
@@ -266,8 +278,16 @@ ul li:hover ul li {
   }
 }
 
+.elsenavbar {
+  margin-top: 20px;
+  font-family: $sans;
+  padding-top: 0px;
+}
 
 
+#notloggedin{
+  margin-top: 2%;
+}
 
 footer {
   background: #a23d43; /* Old browsers */

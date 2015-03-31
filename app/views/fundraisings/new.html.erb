@@ -1,0 +1,32 @@
+
+  <%= form_for ([@company, @round, @fundraising]) do |f| %>
+	<div class = "formtitle">
+		<center>Email Invitations</center>
+		<br>
+	</div>
+  <h4>New Message </h4><br>
+	
+    <div class = "formlabel">
+    <%= f.text_field :email, placeholder: "To" %>
+    </div>
+    
+
+
+  <div class="field">
+  	<div class = "formlabel">
+	    <%= f.text_field :subject, placeholder: "Subject" %><br>
+  	</div>
+  </div>
+
+  <div class="field">
+  	<div class = "formlabel">
+	    <%= f.text_area :emailcontent %><br>
+  	</div>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit "Send"%>
+  </div>
+<% end %>
+

@@ -4,6 +4,7 @@ class Round < ActiveRecord::Base
   has_many :due_diligences
   has_many :investments, :dependent => :destroy
   has_many :investors, through: :investments
+  has_many :fundraisings
   belongs_to :lead_investor, class_name: 'User'
   accepts_nested_attributes_for :due_diligences, :reject_if => :all_blank, :allow_destroy => true
   mount_uploader :term_sheet, TermSheetUploader

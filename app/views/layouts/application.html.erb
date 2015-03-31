@@ -19,7 +19,9 @@
             <!-- <li><%= link_to "DASHBOARD", users_dashboard_path %></li> -->
             <li><%= link_to "MESSAGES", conversations_path %></li>
           <% else %>
+            <div id = "notloggedin">
             <li><%= link_to "ABOUT US", users_path %></li>
+            </div>
           <% end %>
         </ul>
       </div>
@@ -33,17 +35,21 @@
                 <%= image_tag(current_user.avatar.thumb, :class => "thumbnail", :alt => "logo", :title => "Home") %>
                 </a>
                 <ul>
-                  <li><a href="<%= users_profile_path %>">Profile</a></li>
-                  <li><a href="<%= users_dashboard_path %>">Dashboard</a></li>
-                  <li><a href="<%= conversations_path %>">Conversations</a></li>
-                  <li> <%= link_to "Logout", :logout, method: :post %></li>
+                  <li class="username"><a href="<%= users_profile_path %>">Profile</a></li>
+                  <li class="username"><a href="<%= users_dashboard_path %>">Dashboard</a></li>
+                  <li class="username"><a href="<%= conversations_path %>">Conversations</a></li>
+                  <li class="username"> <%= link_to "Logout", :logout, method: :post %></li>
                 </ul>
 
             </li>
 
           <% else %>
+            <div class = "elsenavbar">
             <li><%= link_to "Login", :login %></li>
+            </div>
+            <div class = "elsenavbar">
             <li><%= link_to "Join", new_user_path %></li>
+            </div>
           <% end %>
         </ul>
       </div>
