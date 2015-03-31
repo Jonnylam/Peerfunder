@@ -19,7 +19,9 @@
             <!-- <li><%= link_to "DASHBOARD", users_dashboard_path %></li> -->
             <li><%= link_to "MESSAGES", conversations_path %></li>
           <% else %>
+            <div id = "notloggedin">
             <li><%= link_to "ABOUT US", users_path %></li>
+            </div>
           <% end %>
         </ul>
       </div>
@@ -42,8 +44,12 @@
             </li>
 
           <% else %>
+            <div class = "elsenavbar">
             <li><%= link_to "Login", :login %></li>
+            </div>
+            <div class = "elsenavbar">
             <li><%= link_to "Join", new_user_path %></li>
+            </div>
           <% end %>
         </ul>
       </div>

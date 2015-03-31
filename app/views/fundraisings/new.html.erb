@@ -4,35 +4,29 @@
 		<center>Email Invitations</center>
 		<br>
 	</div>
-
-	<div id="due_diligences">
-    <%= f.fields_for :email do |email| %>
-     <%= f.label :email%>
-    <%= f.text_field :email %>
-    <% end %>
-    <div class="links">
-    
+  <h4>New Message </h4><br>
+	
+    <div class = "formlabel">
+    <%= f.text_field :email, placeholder: "To" %>
     </div>
-  </div>
+    
+
 
   <div class="field">
   	<div class = "formlabel">
-	    <%= f.label :subject%><br>
-	    <%= f.text_field :subject %><br>
+	    <%= f.text_field :subject, placeholder: "Subject" %><br>
   	</div>
   </div>
 
-
   <div class="field">
   	<div class = "formlabel">
-	    <%= f.label :emailcontent%><br>
 	    <%= f.text_area :emailcontent %><br>
   	</div>
   </div>
 
 
   <div class="actions">
-    <%= f.submit "Send your invites"%>
+    <%= f.submit "Send"%>
   </div>
 <% end %>
 

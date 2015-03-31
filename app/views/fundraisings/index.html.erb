@@ -1,9 +1,9 @@
 <div class="window welcome">
-  <h2>Seed Canada can assist you in finding the right lead investor for your company</h2>
+  <h2>In Canada, companies have the choice of using </h2>
 
   <p>Select how you would like to proceed:</p>
 
-   <%= link_to company_round_path(@company, @round) do %>
+   <%= link_to fundraisings_findalead_company_rounds_url do %>
     <div class="button-path">
       <h3>I want to use a lead syndicate to raise my round</h3>
     </div>
@@ -14,23 +14,4 @@
       <h3>I want to use the offering memorandum to raise my round</h3>
     </div>
   <% end %>
-<!-- 
-   <%= link_to company_round_path(@company, @round) do %>
-    <div class="button-path">
-      <h3>I am the lead investor</h3>
-    </div>
-  <% end %>
-  <%= link_to company_round_path(@company, @round) do %>
-    <div class="button-path">
-      <h3>I have a lead investor aligned up</h3>
-    </div>
-  <% end %>
 
-  <%= link_to investors_path do %>
-    <div class="button-path">
-      <h3>Find a lead investor on Angels North</h3>
-    </div>
-  <% end %>
-
-</div>
- -->

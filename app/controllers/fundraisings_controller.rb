@@ -1,5 +1,5 @@
 class FundraisingsController < ApplicationController
-	before_action :find_everything
+
 	def new
 		@fundraising = Fundraising.new
 	end
@@ -18,6 +18,8 @@ class FundraisingsController < ApplicationController
 	end
 
 	def findlead
+		@round = Round.find(params[:round_id])
+    @company = Company.find(params[:company_id])
 	end
 
 	def havealead
