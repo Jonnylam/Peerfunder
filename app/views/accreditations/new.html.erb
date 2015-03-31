@@ -1,7 +1,7 @@
 
 <p>Please fill out the following information</p>
 
-<%= form_tag url_for(:controller => 'accreditations', :action => 'create'), :method => 'post' do %>
+<%= form_tag %>
  <div class="field">
     <h1>Legal name of the investing entity</h1><br>
     <%= text_field_tag :legal_name %><br>
@@ -33,74 +33,23 @@ Use Javascript to only allow them to check one box
     Net Assets
     <%= check_box_tag "type_of_accreditation", "net_assets" %>
   </div>
-
+  
   <div class = "field">
   Please Enter your Signature Here
   <%= text_field_tag :signature %><br>
   </div>
   
 <%= hidden_field_tag 'user_id', @user.id %>
-
-<%= submit_tag %>
-
-<% end %>
-
-
-<%= form_for @user, :remote => true  do |f| %>
-  <p><br>
-  <div class="checkbox_tag">
-  
-  Click here to agree
-  <%= f.check_box :accreditation %>
+<%= form_for @user do |f| %>
+   I confirm that I am an “Accredited Investor” in Canada as defined in Section 1.1 of NI 45-106<%= f.check_box :accreditation %>
 <%= f.submit %>
 
 <% end %>
-</p>
-
-
-
-<p>Please fill out the following information.  Thanks.</p>
-<%= form_for ([@user, @accreditation]) do |f| %>
- <div class="field">
-    <%= f.label :legal_name %><br>
-    <%= f.text_field :legal_name %><br>
-  </div>
-    <br>
-  <div class="field">
-    <!-- 
-Use Javascript to only allow them to check one box
-  -->
-    <h1>Type of Investing Entity</h1>
-    An Individual
-    <%= check_box_tag "investing_entity_type", "individual" %>
-    A Trust
-    <%= f.check_box :investing_entity_type %>
-    A Company
-    <%= f.check_box :investing_entity_type %>
-  </div>
-    <br>
-  <div class="field">
-    <h1>How is <%= @user.first_name %> accedited?</h1>
-    <h3>Please select the best one that applies to you </h3>
-    Income
-    <%= f.check_box :type_of_accreditation %>
-    Cash And Securities
-    <%= f.check_box :type_of_accreditation %>
-    Financial Assets
-    <%= f.check_box :type_of_accreditation %>
-    Net Assets
-    <%= f.check_box :type_of_accreditation %>
-  </div>
-  <div class = "field">
-  Please Enter your Signature Here
-  <%= f.text_field :signature %><br>
-  </div>
-<%= f.submit %>
-<% end %>
 
 
 
 
-<!-- If I take out the submit take, and check the box, put it in the other form, will accreditation still become true? -->
+
+
 
 
