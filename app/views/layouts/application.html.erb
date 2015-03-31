@@ -33,10 +33,10 @@
                 <%= image_tag(current_user.avatar.thumb, :class => "thumbnail", :alt => "logo", :title => "Home") %>
                 </a>
                 <ul>
-                  <li><a href="<%= users_profile_path %>">Profile</a></li>
-                  <li><a href="<%= users_dashboard_path %>">Dashboard</a></li>
-                  <li><a href="<%= conversations_path %>">Conversations</a></li>
-                  <li> <%= link_to "Logout", :logout, method: :post %></li>
+                  <li class="username"><a href="<%= users_profile_path %>">Profile</a></li>
+                  <li class="username"><a href="<%= users_dashboard_path %>">Dashboard</a></li>
+                  <li class="username"><a href="<%= conversations_path %>">Conversations</a></li>
+                  <li class="username"> <%= link_to "Logout", :logout, method: :post %></li>
                 </ul>
 
             </li>
