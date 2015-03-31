@@ -8,7 +8,7 @@
   </div>
     <br>
   <div class="field">
-    <!-- 
+    <!--
 Use Javascript to only allow them to check one box
   -->
     <h1>Type of Investing Entity</h1>
@@ -18,7 +18,7 @@ Use Javascript to only allow them to check one box
     <%= check_box_tag "investing_entity_type", "trust" %>
     A Company
     <%= check_box_tag "investing_entity_type", "company" %>
- 
+
   </div>
     <br>
   <div class="field">
@@ -38,7 +38,7 @@ Use Javascript to only allow them to check one box
   Please Enter your Signature Here
   <%= text_field_tag :signature %><br>
   </div>
-  
+
 <%= hidden_field_tag 'user_id', @user.id %>
 
 <%= submit_tag %>
@@ -46,10 +46,10 @@ Use Javascript to only allow them to check one box
 <% end %>
 
 
-<%= form_for @user, :remote => true  do |f| %>
+<%= form_for @user do |f| %>
   <p><br>
   <div class="checkbox_tag">
-  
+
   Click here to agree
   <%= f.check_box :accreditation %>
 <%= f.submit %>
@@ -67,7 +67,7 @@ Use Javascript to only allow them to check one box
   </div>
     <br>
   <div class="field">
-    <!-- 
+    <!--
 Use Javascript to only allow them to check one box
   -->
     <h1>Type of Investing Entity</h1>

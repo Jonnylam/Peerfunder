@@ -12,6 +12,9 @@ Rails.application.routes.draw do
 
   resources :companies do
     resources :rounds do
+      collection do
+        get 'processing_round_information'
+      end
       resources :investments
       resources :fundraisings
       collection do

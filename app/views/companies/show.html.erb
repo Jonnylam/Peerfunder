@@ -60,6 +60,6 @@
   <h2>Founder</h2>
   <img src="<%= @company.owner.avatar %>" alt="">
   <div class="quick_info">
-    <h2><%= link_to @company.owner.name, users_profile_path(@company.owner.id) %></h2>
-    <p><%=h truncate(@company.owner.biography, :length => 300) %> <%= link_to "See more", users_profile_path(@company.owner.id) %></p>
+    <h2><%= link_to @company.owner.name, user_path(@company.owner.id) %></h2>
+    <p><%=h truncate(@company.owner.biography, :length => 300) %> <%= link_to "See more", user_path(@company.owner.id) %></p>
   </div>

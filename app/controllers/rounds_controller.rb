@@ -9,13 +9,14 @@ class RoundsController < ApplicationController
 
   def create
     @round = Round.new(round_params)
-    @round.lead_investor = current_user  #Setting the lead_investor to current_user.  
+    @round.lead_investor = current_user  #Setting the lead_investor to current_user.
     @round.company_id = params[:company_id]
-    
+
     if @round.save
-      redirect_to company_round_fundraisings_path(@company, @round), notice: "New Round has been created"
+      redirect_to processing_round_information_company_rounds_path
+      # redirect_to company_round_fundraisings_path(@company, @round), notice: "New Round has been created"
     else
-       format.html { 
+       format.html {
         flash[:notice] = "Failed to save round."
         render :show
        }
@@ -37,7 +38,10 @@ class RoundsController < ApplicationController
     redirect_to @round.company
   end
 
-  private 
+  private
+
+  def processing_round_information
+  end
 
   def find_round
     @round = Round.find(params[:id])
@@ -45,10 +49,10 @@ class RoundsController < ApplicationController
 
   def round_params
     params.require(:round)
-          .permit(:company_id, 
-                  :lead_investor_id, 
-                  :funding_goal, 
-                  :term_sheet, 
+          .permit(:company_id,
+                  :lead_investor_id,
+                  :funding_goal,
+                  :term_sheet,
                   due_diligences_attributes: [:id, :file, :done, :_destroy])
   end
 

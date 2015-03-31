@@ -16,7 +16,7 @@ html, body, #container { height: 80%; }
 body {
   background: #fafafa;
   min-width: 1100px;
-  font-family: "SourceSansPro-Black.otf";
+  font-family: $sans;
   color: #333;
 }
 
@@ -129,7 +129,7 @@ header {
 
   .logo {
     position: absolute;
-    max-width: 4.00%;
+    max-width: 5.5%;
     height: auto;
     margin-left: 1%;
     margin-top: 0.4%;
@@ -149,6 +149,7 @@ nav {
   font-weight: none;
   letter-spacing: 0px;
   font-size: 16px;
+  min-height: 60px;
 
   ul {
     margin-top: 14px;
@@ -265,8 +266,7 @@ ul li:hover ul li {
   img.thumbnail {
     text-align: center;
     display: inline-block;
-    margin: -18px 0 0 0px;
-    padding: px;
+    margin: -8px 0 0 5px;
   }
 
   li.user:hover {
@@ -430,5 +430,17 @@ div.headings {
 .title {
   width: 80%;
   margin: 0 auto;
+  border: none;
+  background: none;
 }
 
+.title-window {
+  width: 60%;
+  margin-bottom: 1em;
+}
+
+.notification {
+  p {
+    font-size: 1.2em;
+  }
+}

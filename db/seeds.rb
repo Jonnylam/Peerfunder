@@ -7,26 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
   users =
-    User.create!({
-      email: "jonatham.lam@gmail.com",
-      first_name: "Jonathan",
-      last_name: "Lam",
-      password: "password",
-      password_confirmation: "password",
-      biography: "Aspiring business developer with a strong technical background in finance and technology through education and international work experience in China and Canada.",
-      experience: "Currently Business Development Manager at Crossmo Technology Co, Beijing, China
-        Created concise, value-based business plans, sales proposals, and partnership proposals for Crossmo’s Checknow vertical social gaming service for mobile platforms
-      Generated 5 B2B partnerships for the Check Now through revenue sharing, licensing, and distribution agreements
-      Developed a feasibility study using primary and secondary market research that determined the proposed North American development and localization of a social gaming platform was ripe for expansion
-      Used to be a Research Analyst at Vo Industries, Toronto, Canada Identified potential trades and positions by conducting quantitative analysis of key technical indicators on the S&P and large cap stocks
-      Created quarterly portfolio reviews and analysis for clients and customers on trades conducted within the quarter
-      Read market trends to identify areas and products that offer scope for profitable trading using technical analysis."
-      accreditation: true,
-      profile_photo_url: '/fileuploads/jon.jpg',
-      location: "Toronto, Ontario, Canada",
-      dob: "1990-07-15",
-      remote_avatar_url: ''
-    })
+
 
 
     User.create!({
@@ -154,10 +135,27 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       remote_avatar_url: 'http://s1.postimg.org/ckh0vrvpr/Admin_Logo.png'
     })
 
-<<<<<<< HEAD
+     User.create!({
+      email: "jonatham.lam@gmail.com",
+      first_name: "Jonathan",
+      last_name: "Lam",
+      password: "password",
+      password_confirmation: "password",
+      biography: "Aspiring business developer with a strong technical background in finance and technology through education and international work experience in China and Canada.",
+      experience: "Currently Business Development Manager at Crossmo Technology Co, Beijing, China
+        Created concise, value-based business plans, sales proposals, and partnership proposals for Crossmo’s Checknow vertical social gaming service for mobile platforms
+      Generated 5 B2B partnerships for the Check Now through revenue sharing, licensing, and distribution agreements
+      Developed a feasibility study using primary and secondary market research that determined the proposed North American development and localization of a social gaming platform was ripe for expansion
+      Used to be a Research Analyst at Vo Industries, Toronto, Canada Identified potential trades and positions by conducting quantitative analysis of key technical indicators on the S&P and large cap stocks
+      Created quarterly portfolio reviews and analysis for clients and customers on trades conducted within the quarter
+      Read market trends to identify areas and products that offer scope for profitable trading using technical analysis.",
+      accreditation: false,
+      profile_photo_url: 'https://pbs.twimg.com/profile_images/568141551214153728/bvRbDOSh_400x400.jpeg',
+      location: "Toronto, Ontario, Canada",
+      dob: "1990-07-15",
+      remote_avatar_url: 'https://pbs.twimg.com/profile_images/568141551214153728/bvRbDOSh_400x400.jpeg'
+    })
 
-=======
->>>>>>> 01d6623877f0cc97dde19a203f9179db108f2323
   companies =
     Company.create!({
       name: "Borrowell",
@@ -228,6 +226,25 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       previous_investors: "Graph Ventures, Real Ventures, Matt Wyndowe, Kirill Makharinsky, Fritz Lanman, Adam Foroughi, Dave Johnson, David Crow, Ian Jeffrey, Oleg Gutsol, Evgeny Tchebotarev",
       team: "Lee Rosen, Matt Triff, Ronen Ackerman, Eva Tang, Waclaw Wolodko, Julia Ulida, Vadim Zverugo"
     })
+
+    Company.create!({
+      name: "Gamr",
+      owner_id: 9,
+      elevator_pitch: "Gamr is a Vertical Social Networking Service for Mobile Gamers and Developers",
+      location: "Toronto, Canada",
+      industry_type: "Mobile Gaming",
+      website_url: "https://www.gamr.com/",
+      company_logo: '/gamr.png',
+      product: "OCrosses major phone platforms (IOS, Android and WP)
+Has a game center and community for mobile gamers and developers.
+Buddy score boards.
+Group chat for those interested / playing the same game.
+Has special developer accounts, where developers can contact directly the players, offer support and promote their new games.
+Helps developers increase their games’ discoverability, with “people doing the promotion”.",
+      founders: "Jonathan Lam",
+    })
+
+
 
 follows =
   Follow.create!({

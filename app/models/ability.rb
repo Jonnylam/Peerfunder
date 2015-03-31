@@ -14,6 +14,7 @@ class Ability
       if user.admin?
         can :manage, :all
       else #if user.accreditation?
+        can :manage, :all
         can :crud, Company, :owner_id => user.id
         can :crud, User, :user_id => user.id
         # binding.pry
