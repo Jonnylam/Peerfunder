@@ -2,7 +2,11 @@
 
 
 <div class="window profile">
-	<h1 class"center"><%= @user.name %></h1>
+	<h1 class="center accreditation"><%= @user.name %>
+	<% if @user.accreditation == true %>
+		<span>ACCREDITED INVESTOR</span>
+	<% end %>
+	</h1>
 		<%= image_tag(@user.avatar_url) %>
 	<div class="profile_information">
 		<%= render partial: 'profileinformation', locals: {user: @user} %>
