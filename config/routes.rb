@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   get 'users/dashboard'
   get 'investors' => 'users#index'
   get 'users/inbox'
-
+  get 'companies/profile'
 
   resources :companies do
+
     resources :rounds do
       collection do
         get 'processing_round_information'

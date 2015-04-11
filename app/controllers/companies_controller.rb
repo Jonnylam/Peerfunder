@@ -26,6 +26,9 @@ class CompaniesController < ApplicationController
     find_company
   end
 
+  def profile
+  end
+
   def update
     @company = find_company
     respond_to do |format| 
