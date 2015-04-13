@@ -1,5 +1,30 @@
+
+
+<ul class="bxslider">
+    <center><li>
+      <h2 class = "slidertext">Syndicate North</h2>
+      <h3 class = "sliderbutton">How It Works</h3>
+      <div class = "backgroundoverlay">
+      <img src="http://pixabay.com/static/uploads/photo/2014/09/02/12/50/panorama-433610_640.jpg" title="How It Works" class = "sliderimage" />
+    </div>
+    </li></center>
+
+  
+    <center><li>
+      <h2 class = "slidertext">Equity Crowdfunding</h2>
+      <h3 class = "sliderbutton">Find out More </h3>
+      <img src="http://pixabay.com/static/uploads/photo/2015/01/08/18/11/startup-593296_640.jpg" title="Join Today" class = "sliderimage" />
+    </li></center>
+
+
+    <center><li>
+      <h2 class = "slidertext">Test</h2>
+      <h3 class = "sliderbutton">Join Now</h3><img src="http://pixabay.com/static/uploads/photo/2015/02/05/09/17/office-624749_640.jpg" title="Join Today" class = "sliderimage" />
+    </li></center>
+</ul>
+
 <div class="window welcome">
-    <h2 class="center">Angels North</h2>
+    <h2 class="center">Syndicate North</h2>
   <h3 class="center">Equity Crowdfunding for Startups and Small Businesses</h3>
 
     <div id = "welcomemessage">
@@ -16,19 +41,13 @@
 
   <%= link_to new_user_session_path do %>
     <div class="button-path">
-      <h3>As a company looking to find investors and raise capital</h3>
+      <h3>Invest in Canadian Startups</h3>
     </div>
   <% end %>
 
   <%= link_to new_user_session_path do %>
     <div class="button-path">
-      <h3>As an investor looking to invest in a company</h3>
-    </div>
-  <% end %>
-
-  <%= link_to new_user_session_path do %>
-    <div class="button-path">
-      <h3>As a basic user able to view companies' and investor's public pages</h3>
+      <h3>Fund Your Company</h3>
     </div>
   <% end %>
 
@@ -40,4 +59,12 @@
 
    </div>
 
+<script type = "text/javascript">
+  $(document).ready(function(){
+  $('.bxslider').bxSlider({
+      auto: true,
+      autoControls: true
+  });
+});
+</script>
 

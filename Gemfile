@@ -31,6 +31,8 @@ gem 'faker'
 
 gem 'cancancan', '~> 1.10'
 
+gem 'bxslider-rails', '~> 4.1.0'
+
 #postgreSQL gem
 gem 'pg'
 
