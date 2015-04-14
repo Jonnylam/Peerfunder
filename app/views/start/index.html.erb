@@ -11,53 +11,73 @@
 
   
     <center><li>
-      <h2 class = "slidertext">Equity Crowdfunding</h2>
+      <h2 class = "slidertext">Are you a comapny looking to raise capital?</h2>
       <h3 class = "sliderbutton">Find out More </h3>
+      <div class = "backgroundoverlay">
       <img src="http://pixabay.com/static/uploads/photo/2015/01/08/18/11/startup-593296_640.jpg" title="Join Today" class = "sliderimage" />
+    </div>
     </li></center>
 
 
     <center><li>
-      <h2 class = "slidertext">Test</h2>
-      <h3 class = "sliderbutton">Join Now</h3><img src="http://pixabay.com/static/uploads/photo/2015/02/05/09/17/office-624749_640.jpg" title="Join Today" class = "sliderimage" />
+      <h2 class = "slidertext">Are you an investor looking to diversify your portfolio?</h2>
+      <h3 class = "sliderbutton">Find out More</h3>
+      <div class = "backgroundoverlay">
+      <img src="http://pixabay.com/static/uploads/photo/2015/02/05/09/17/office-624749_640.jpg" title="Join Today" class = "sliderimage" />
+      </div>
     </li></center>
 </ul>
 
 <div class="window welcome">
-    <h2 class="center">Syndicate North</h2>
-  <h3 class="center">Equity Crowdfunding for Startups and Small Businesses</h3>
-
-    <div id = "welcomemessage">
-    <p>
-    We help Canadian companies privately raise capital, and investors to explore new iniatives
-    </p>
-   </div>
+    <h2 class="center">Why Start A Round With Syndicate North?</h2>
+  <h3 class="center"></h3>
 
 
-  </h3>
-
-
-  <p>Select how you would like to proceed:</p>
-
+<div id = "linkpath1">
   <%= link_to new_user_session_path do %>
-    <div class="button-path">
-      <h3>Invest in Canadian Startups</h3>
-    </div>
+      <div id = "squareposition">
+            <img src="http://www.motorolasolutions.com/web/Business/Solutions/Network_Technologies/Icon_Security_324x324.jpg" class = "squarelinkimage">
+      </div>
+      <h3>Highly Vetted Investments</h3>
   <% end %>
+</div>
 
+
+
+<div id = "linkpath2">
   <%= link_to new_user_session_path do %>
-    <div class="button-path">
-      <h3>Fund Your Company</h3>
-    </div>
+      <div id = "squareposition2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_3QxbE4o5uUbs900LOALOxIjy-K1DlM6qMq6Eblifnv_OjwKH" class = "squarelinkimage">
+      </div>
+      <h3>Invest with professionals</h3>
   <% end %>
+</div>
+
+<div id = "linkpath3">
+  <%= link_to new_user_session_path do %>
+      <div id = "squareposition3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_3QxbE4o5uUbs900LOALOxIjy-K1DlM6qMq6Eblifnv_OjwKH" class = "squarelinkimage">
+      </div>
+      <h3>Canadian Owned, Based, and Operated</h3>
+  <% end %>
+</div>
+
+<div id = "linkpath4">
+  <%= link_to new_user_session_path do %>
+      <div id = "squareposition4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_3QxbE4o5uUbs900LOALOxIjy-K1DlM6qMq6Eblifnv_OjwKH" class = "squarelinkimage">
+      </div>
+      <h3>No Transaction Fees</h3>
+  <% end %>
+</div>
+</div>
+
 
   <div class = "link-path">
   <%= link_to new_user_session_path do %>
     <h5 align = "left" >Already have an account? Login here</h5>
   </div>
   <% end %>
-
-   </div>
 
 <script type = "text/javascript">
   $(document).ready(function(){

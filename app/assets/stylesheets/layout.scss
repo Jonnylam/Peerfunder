@@ -9,6 +9,8 @@
         src: url(BebasNeue-Regular.otf) format("truetype");
         font-family: "fire sans";
         src: url(FiraSans-Light.otf) format("truetype");
+        font-family: "freightneopro";
+        src: url(AlegreyaSansSC-Regular.otf) format("truetype");
     }
 
 
@@ -113,23 +115,23 @@ img {
 }
 
 header {
-  background: #f6f9ff; /* Old browsers */
-  background: -moz-linear-gradient(top, #f6f9ff 0%, #e3eaed 37%, #e5e5e5 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f9ff), color-stop(37%,#e3eaed), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #f6f9ff 0%,#e3eaed 37%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #f6f9ff 0%,#e3eaed 37%,#e5e5e5 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #f6f9ff 0%,#e3eaed 37%,#e5e5e5 100%); /* IE10+ */
-  background: linear-gradient(to bottom, #f6f9ff 0%,#e3eaed 37%,#e5e5e5 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f9ff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+  background: #dddddd; /* Old browsers */
+  background: -moz-linear-gradient(top, #dddddd 0%, #fafafa 99%, #6d707f 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c8c8c8), color-stop(37%,#e3eaed), color-stop(80%,#fafafa)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #dddddd 0%,#fafafa 99%,#6d707f 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #dddddd 0%,#fafafa 99%,#6d707f 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #dddddd 0%,#fafafa 99%,#6d707f 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #dddddd 0%,#fafafa 99%,#6d707f 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#fafafa',GradientType=0 ); /* IE6-9 */
 
   margin-bottom: 70px;
   position: relative;
-  border-bottom: 3px solid #ccc;
+  // border-bottom: 3px solid #ccc;
 
 
   .logo {
     position: absolute;
-    max-width: 5.5%;
+    max-width: 3.5%;
     height: auto;
     margin-left: 1%;
     margin-top: 0.4%;
@@ -145,10 +147,10 @@ header {
 
 nav {
 
-  font-family: $sans;
+  font-family: "freightneopro";
   font-weight: none;
-  letter-spacing: 0px;
-  font-size: 16px;
+  letter-spacing: 0.5px;
+  font-size: 18px;
   min-height: 60px;
 
   ul {
@@ -214,7 +216,7 @@ ul li:hover ul li {
 
 .username {
   font-family: $sans;
-  margin-top: 4%;
+  margin-top: 7%;
   font-weight: bold;
 }
 
@@ -222,8 +224,8 @@ ul li:hover ul li {
 #primary-nav {
   float: left;
   width: 60%;
-  margin-left: 8%;
-  margin-top: 0.4%;
+  margin-left: 5.6%;
+  margin-top: 0.5%;
   padding-bottom: 0em;
 
 
@@ -279,15 +281,12 @@ ul li:hover ul li {
 }
 
 .elsenavbar {
-  margin-top: 20px;
+  margin-top: 23px;
   font-family: $sans;
   padding-top: 0px;
 }
 
 
-#notloggedin{
-  margin-top: 2%;
-}
 
 footer {
   background: #a23d43; /* Old browsers */

@@ -39,16 +39,23 @@
   @include fadein(all)
 }
 
+.squarelinkimage {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+}
+
 
 .bx-wrapper {
   position: relative;
   margin: 0 auto 60px;
   padding: 0;
   *zoom: 1;
+  margin-top: -40px;
 }
 
 .bx-wrapper img {
-  max-width: 70%;
+  width: 70%;
   display: block;
 }
 
@@ -72,7 +79,7 @@
 }
 
 .backgroundoverlay{
-  background: rgba(70, 72, 82, 0.3);
+  background: #fafafa;
 
 }
   
@@ -83,12 +90,12 @@
 .bx-wrapper .bx-viewport {
   -moz-box-shadow: 0 0 5px #ccc;
   -webkit-box-shadow: 0 0 5px #ccc;
-  box-shadow: 0 0 5px #ccc;
-  border:  5px solid #fff;
+  box-shadow: 0 0 0px #ccc;
+  border:  0px;
   left: 50%;
   background: #fff;
-  max-width: 80%;
-  margin-left: -750px;
+  max-width: 85%;
+  margin-left: -42.4%;
   /*fix other elements on the page moving (on Chrome)*/
   -webkit-transform: translatez(0);
   -moz-transform: translatez(0);
@@ -255,4 +262,53 @@
   display: block;
   font-size: .85em;
   padding: 10px;
+}
+
+/* Why Raise with Us */ 
+
+.linkpaths{
+  position:relative
+}
+
+#linkpath1{ 
+  position: relative;
+  margin-left: 0;
+  top: -40px;
+}
+#squareposition{
+  position: relative;
+  margin-left: 9.5%;
+}
+
+#linkpath2{
+position:relative;
+margin-left: 24%;
+margin-top: -20.75%;
+}
+#squareposition2{
+  position: relative;
+  margin-left: 10.5%;
+
+}
+
+#linkpath3 {
+  position:relative;
+  margin-left: 48%;
+  margin-top: -16.7%;
+}
+#squareposition3{
+  position: relative;
+  margin-left: 24%;
+
+}
+
+#linkpath4 {
+  position:relative;
+  margin-left: 81%;
+  margin-top: -16.72%;
+}
+#squareposition4{
+  position: relative;
+  margin-left: 24%;
+
 }
