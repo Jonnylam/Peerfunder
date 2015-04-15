@@ -266,9 +266,11 @@
 
 /* Why Raise with Us */ 
 
+
 .linkpaths{
-  position:relative
+  width: 1000px;
 }
+
 
 #linkpath1{ 
   position: relative;
@@ -282,8 +284,8 @@
 
 #linkpath2{
 position:relative;
-margin-left: 24%;
-margin-top: -20.75%;
+margin-left: 23%;
+margin-top: -20.90%;
 }
 #squareposition2{
   position: relative;
@@ -293,8 +295,8 @@ margin-top: -20.75%;
 
 #linkpath3 {
   position:relative;
-  margin-left: 48%;
-  margin-top: -16.7%;
+  margin-left: 44%;
+  margin-top: -16.935%;
 }
 #squareposition3{
   position: relative;
@@ -304,11 +306,29 @@ margin-top: -20.75%;
 
 #linkpath4 {
   position:relative;
-  margin-left: 81%;
-  margin-top: -16.72%;
+  margin-left: 77%;
+  margin-top: -17%;
 }
 #squareposition4{
   position: relative;
   margin-left: 24%;
+}
+
+.columns{
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+
+.homepage-investor-description{
+  text-align: center;
+  font-family: "fire sans";
+  font-size: 16px;
 
 }
+.investor-button{
+
+ text-align: center
+  
+}
+

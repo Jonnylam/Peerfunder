@@ -282,23 +282,24 @@ ul li:hover ul li {
 
 .elsenavbar {
   margin-top: 23px;
-  font-family: $sans;
+  font-family: "freightneopro";
   padding-top: 0px;
+  font-size: 18px;
 }
 
 
 
 footer {
-  background: #a23d43; /* Old browsers */
-  background: -moz-linear-gradient(top, #a23d43 0%, #77222b 50%, #7a1f2a 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a23d43), color-stop(50%,#77222b), color-stop(100%,#7a1f2a)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #a23d43 0%,#77222b 50%,#7a1f2a 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #a23d43 0%,#77222b 50%,#7a1f2a 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #a23d43 0%,#77222b 50%,#7a1f2a 100%); /* IE10+ */
-  background: linear-gradient(to bottom, #a23d43 0%,#77222b 50%,#7a1f2a 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a23d43', endColorstr='#7a1f2a',GradientType=0 ); /* IE6-9 */
+  background: #2c2e32; /* Old browsers */
+  background: -moz-linear-gradient(top, #2c2e32 0%, #2c2e32 50%, #32302c 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2c2e32), color-stop(50%,#2c2e32), color-stop(100%,#32302c)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #2c2e32 0%,#2c2e32 50%,#32302c 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #2c2e32 0%,#2c2e32 50%,#32302c 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #2c2e32 0%,#2c2e32 50%,#32302c 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #2c2e32 0%,#2c2e32 50%,#32302c 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c2e32', endColorstr='#32302c',GradientType=0 ); /* IE6-9 */
 
-  border-top: thick solid #777;
+  border-top: thin solid #777;
 
   padding: 10px 0 0;
   margin-top: 100px;
@@ -314,14 +315,19 @@ footer {
       ul {
         padding: 0;
         margin-left: 5%;
+        margin-top: 0.5%;
       }
       li {
         float: left;
         padding-left: 10%;
+        font-family: "freightneopro";
+        font-size: 18px;
 
       }
       a {
-        color: $white;
+        color: #eaeef6;
+        font-family: "freightneopro";
+        font-size: 18px;
         padding-left: 0%;
       }
 
@@ -343,8 +349,8 @@ footer {
     }
     img {
       position: absolute;
-      top: -6px;
-      right: 42%;
+      top: -3px;
+      right: 27.5%;
       width: 35px;
       height: auto;
       padding: 0;
