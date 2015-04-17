@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   get 'investors' => 'users#index'
   get 'users/inbox'
   get 'companies/profile'
+root :to => 'start#index'
 
   resources :companies do
-
     resources :rounds do
       collection do
         get 'processing_round_information'
@@ -25,10 +25,8 @@ Rails.application.routes.draw do
     end
   end
 
-  # get 'user/new'
-  # get 'user/show'
-  # get 'user/edit'
-root :to => 'start#index'
+resources :entrepreneurs
+
 resources :user_sessions
 resources :users do
   resources :follows

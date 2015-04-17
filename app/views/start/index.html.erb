@@ -2,7 +2,7 @@
 
 <ul class="bxslider">
     <center><li>
-      <h2 class = "slidertext">Raise capital for your company like never before</h2>
+      <h2 class = "slidertext">Find The Right Investors for your Company</h2>
       <h3 class = "sliderbutton">Start Today!</h3>
       <div class = "backgroundoverlay">
       <img src="http://pixabay.com/static/uploads/photo/2014/09/02/12/50/panorama-433610_640.jpg" title="How It Works" class = "sliderimage" />
@@ -11,7 +11,7 @@
 
   
     <center><li>
-      <h2 class = "slidertext">Investors</h2>
+      <h2 class = "slidertext">The Right Startups for your Portfolio</h2>
       <h3 class = "sliderbutton">Join Now</h3>
       <div class = "backgroundoverlay">
       <img src="http://pixabay.com/static/uploads/photo/2015/01/08/18/11/startup-593296_640.jpg" title="Join Today" class = "sliderimage" />
@@ -20,7 +20,7 @@
 
 
     <center><li>
-      <h2 class = "slidertext">whatat is Equity Crowdfunding?</h2>
+      <h2 class = "slidertext">Equity Crowdfunding in Canada</h2>
       <h3 class = "sliderbutton">Find out More</h3>
       <div class = "backgroundoverlay">
       <img src="http://pixabay.com/static/uploads/photo/2015/02/05/09/17/office-624749_640.jpg" title="Join Today" class = "sliderimage" />
@@ -75,7 +75,7 @@
      Invest alongside professional and accredited investors <br>
      Same share class, same price per share as the lead investors<br>
      No fees to the investor</p>
-     <%= link_to new_user_session_path do %>
+     <%= link_to new_user_path do %>
       <p class = "investor-button">Sign Up Today</p>
      <%end%>
 
@@ -86,10 +86,22 @@
      SaaS Platform to manage your investors <br>
      test teststest
      </p>
-      <%= link_to new_user_session_path do %>
-     <p class = "investor-button">Learn More</p>
+      <%= link_to entrepreneurs_path do %>
+        <p class = "investor-button">Learn About Raising Capital</p>
       <% end %>
     </div>
+
+</div>
+
+<div class="window welcome">
+  <h1>Example Investment Opportunities</h1>
+
+</div>
+
+
+
+<div class="window welcome">
+  <h1>What They're Saying About Us</h1>
 
 </div>
 
@@ -98,6 +110,8 @@
     <h5 align = "left" >Already have an account? Login here</h5>
   </div>
   <% end %>
+
+
 
 <script type = "text/javascript">
   $(document).ready(function(){
