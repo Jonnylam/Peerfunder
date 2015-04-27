@@ -1,17 +1,3 @@
-@import 'reset';
-@import 'normalize';
-@import 'fonts';
-@import 'variables';
-@import 'layout';
-@import 'user';
-@import 'forms';
-@import 'rounds';
-@import 'company';
-@import 'messages';
-@import 'follows';
-@import 'start';
-@import "bootstrap-sprockets";
-
 // Core variables and mixins
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
@@ -62,5 +48,3 @@
 // Utility classes
 @import "bootstrap/utilities";
 @import "bootstrap/responsive-utilities";
-
-

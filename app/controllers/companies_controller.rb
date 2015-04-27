@@ -27,6 +27,7 @@ class CompaniesController < ApplicationController
   end
 
   def profile
+    @company = find_company
   end
 
   def update

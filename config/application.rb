@@ -24,5 +24,6 @@ module Angellistcanada
     config.active_record.raise_in_transactional_callbacks = true
     config.action_mailer.default_url_options = { host: 'angelsnorth.ca' }
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
   end
 end

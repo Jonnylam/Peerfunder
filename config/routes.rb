@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-
+root :to => 'start#index'
 
   get 'investments/new'
   get 'users/profile'
@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   get 'investors' => 'users#index'
   get 'users/inbox'
   get 'companies/profile'
-root :to => 'start#index'
+
+
 
   resources :companies do
     resources :rounds do

@@ -7,9 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
   users =
-
-
-
     User.create!({
       email: "aliasaria@tulip.io",
       first_name: "Ali",
@@ -69,12 +66,11 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       biography: "Building great teams and great software. Passionate about tech, photography, travel and culture. Love meeting people who are creating beautiful things.",
       experience: 'CEO of 500px, Investor of OpenCare, Advisor for Set Scouter',
       accreditation: true,
-      profile_photo_url: 'https://500px.com/',
+      profile_photo_url: 'http://www.marketwire.com/library/20130807-Oleg%20Gutsol%20CEO%20500px_lg.jpg',
       location: "Toronto, Ontario, Canada",
       dob: "1975-10-11",
-      remote_avatar_url: 'http://www.marketwire.com/library/20130807-Oleg%20Gutsol%20CEO%20500px_lg.jpg'
+      remote_avatar_url: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/017/17b/1d859cd.jpg'
     })
-
     User.create!({
       email: "nikolaibratkovski@opencare.com",
       first_name: "Nikolai",
