@@ -10,11 +10,34 @@ class ProfilesController < ApplicationController
 
 	def create
 		@profile = Profile.new(profile_params)
+		@profile.company_id = params[:company_id]
+
+		if @profile.save 
+			redirect_to company_profiles_path 
+			flash[:notice] = "Saved"
+		else
+			format.html {
+				flash[:notice] = "Not Saved!!!"
+			}
+			format.js{}
+		end
+	end
+
+	def show
 	end
 
 	private 
 	
 	def profile_params
+		params.require(:profile).permit(
+				:overview,
+				:video,
+				:team,
+				:products,
+				:business_model,
+				:competition,
+				:company_id
+		)
 	end
 
 	def load_everything

@@ -1,1 +1,11 @@
-_businessmodel.html.erb
+<%= form_for ([@company, @profile]), :remote => :true  do |f| %>
+
+
+      <%= f.label :business_model %>
+      <br>
+      <%= f.text_field :business_model %><br>
+
+
+
+    <%= f.submit %>
+<% end %>

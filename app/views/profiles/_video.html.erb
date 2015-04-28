@@ -1,1 +1,11 @@
-D
+<%= form_for ([@company, @profile]) do |f| %>
+
+
+      <%= f.label :video %>
+      <br>
+      <%= f.text_field :video %><br>
+
+
+
+    <%= f.submit %>
+<% end %>

@@ -1,1 +1,12 @@
-Overview Form
+
+<%= form_for ([@company, @profile]), :remote => :true do |f| %>
+
+
+      <%= f.label :overview %>
+      <br>
+      <%= f.text_field :overview %><br>
+
+
+
+    <%= f.submit %>
+<% end %>

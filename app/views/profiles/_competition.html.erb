@@ -1,1 +1,11 @@
-_competition.html.erb
+<%= form_for ([@company, @profile]), :remote => :true do |f| %>
+
+
+      <%= f.label :competition %>
+      <br>
+      <%= f.text_field :competition %><br>
+
+
+
+    <%= f.submit %>
+<% end %>

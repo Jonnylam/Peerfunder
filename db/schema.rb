@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150427164632) do
+ActiveRecord::Schema.define(version: 20150428162830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -152,8 +152,15 @@ ActiveRecord::Schema.define(version: 20150427164632) do
   add_index "mailboxer_receipts", ["receiver_id", "receiver_type"], name: "index_mailboxer_receipts_on_receiver_id_and_receiver_type", using: :btree
 
   create_table "profiles", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.text     "overview"
+    t.string   "video"
+    t.text     "team"
+    t.text     "products"
+    t.text     "business_model"
+    t.text     "competition"
+    t.integer  "company_id"
   end
 
   create_table "rounds", force: :cascade do |t|
