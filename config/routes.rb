@@ -13,6 +13,7 @@ root :to => 'start#index'
 
 
   resources :companies do
+    resources :profiles
     resources :rounds do
       collection do
         get 'processing_round_information'

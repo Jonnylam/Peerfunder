@@ -36,9 +36,13 @@
     <form class="submit"  action="<%= @company.id %>/rounds/new">
       <input type="submit" value="Begin A New Fundraising Round">
     </form>
+    
+    <form class = "submit" action = "<%=company_profiles_path(@company) %>">
+      <input type="submit" value="Add Existing Info to Your Company">
+    </form>
 
-      <h2><%= link_to "Add Existing Information About Your Company", companies_profile_path, locals: {company: @company} %></h2>
-
+      <!-- <h2><%= link_to "Add Existing Information About Your Company", company_profiles_path(@company) %></h2>
+ -->
   <% end %>
 
 </section>

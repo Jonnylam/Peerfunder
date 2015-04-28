@@ -3,4 +3,5 @@ class Company < ActiveRecord::Base
   has_many :rounds
   has_many :investments
   has_many :investors, through: :investments  
+  has_one :profile
 end
