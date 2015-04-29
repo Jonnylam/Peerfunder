@@ -1,3 +1,93 @@
-// Place all the styles related to the profiles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* New profile form page */
+
+  #main { width:960px; margin: 0px auto; border:solid 1px #b2b3b5; -moz-border-radius:10px; padding:20px; background-color:#f6f6f6;}
+        fieldset { border:none; width:320px;}
+        legend { font-size:18px; margin:0px; padding:10px 0px; color:#b0232a; font-weight:bold;}
+        label { display:block; margin:15px 0 5px;}
+        input[type=text], input[type=password] { width:300px; padding:5px; border:solid 1px #000;}
+        .prev, .next { background-color:#b0232a; padding:5px 10px; color:#fff; text-decoration:none;}
+        .prev:hover, .next:hover { background-color:#000; text-decoration:none;}
+        .prev { float:left;}
+        .next { float:right;}
+        #steps { list-style:none; width:100%; overflow:hidden; margin:0px; padding:0px;}
+        #steps li {font-size:24px; float:left; padding:10px; color:#b0b1b3;}
+        #steps li span {font-size:11px; display:block;}
+        #steps li.current { color:#000;}
+        #makeWizard { background-color:#b0232a; color:#fff; padding:5px 10px; text-decoration:none; font-size:18px;}
+        #makeWizard:hover { background-color:#000;}
+
+
+
+/* Profile Show Page */
+
+.tab-content {
+	
+	background: white; 
+	color: black;
+	padding: 0.5em;
+}
+
+
+.tab-header {
+	position: relative;
+	height: 3em;
+	width: 50em;
+}
+
+.tab-header ul.tab-list li  {
+	display: inline;
+	list-style: none;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.tab-header ul.tab-list {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: -1px;
+	width: 50em;
+}
+
+.tab-header ul.tab-list a,.tab-header ul.tab-list span,.tab-header ul.tab-list a.tab-active {
+	width: 8em;
+	display: block;
+	float: left;
+	padding: 4px 0;
+	margin: 1px 2px 0 0;
+	text-align: center;
+	font-family: tahoma, verdana, sans-serif;
+	font-size: 85%;
+	text-decoration: none;
+	color: #333;
+}
+
+.tab-header ul.tab-list span,.tab-header ul.tab-list a.tab-active,.tab-header ul.tab-list a.tab-active:hover {
+	border-top: 1px solid #666;
+	border-left: 1px solid #666;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	background: #99F;
+	color: black;
+	padding-bottom: 6px;
+	margin-top: 0;
+}
+
+
+.tab-header ul.tab-list a {
+	background: #ddd;
+	border-top: 1px solid #AAA;
+	border-left: 1px solid #AAA;
+	border-right: 1px solid #AAA;
+	border-bottom: 1px solid #AAA;
+}
+
+
+.tab-header ul.tab-list a:hover {
+	margin-top: 0;
+	border-color: #666;
+	background: #bbb;
+	color: black;
+	padding-bottom: 5px;
+}
+

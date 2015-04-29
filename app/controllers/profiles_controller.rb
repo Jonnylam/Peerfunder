@@ -24,9 +24,14 @@ class ProfilesController < ApplicationController
 	end
 
 	def show
+		find_profile
 	end
 
 	private 
+
+	def find_profile
+    @profile = Profile.find(params[:id])
+  end
 	
 	def profile_params
 		params.require(:profile).permit(

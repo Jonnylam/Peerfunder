@@ -152,15 +152,23 @@ ActiveRecord::Schema.define(version: 20150428162830) do
   add_index "mailboxer_receipts", ["receiver_id", "receiver_type"], name: "index_mailboxer_receipts_on_receiver_id_and_receiver_type", using: :btree
 
   create_table "profiles", force: :cascade do |t|
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.text     "overview"
-    t.string   "video"
-    t.text     "team"
-    t.text     "products"
-    t.text     "business_model"
-    t.text     "competition"
-    t.integer  "company_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.text     "story"
+    t.text     "product_overview"
+    t.text     "company_stage"
+    t.text     "year_founded"
+    t.text     "number_of_employees"
+    t.string   "pitch_video"
+    t.text     "advisors"
+    t.text     "previous_investors"
+    t.text     "founders"
+    t.text     "management_team"
+    t.text     "management_experience"
+    t.text     "customer_problem"
+    t.text     "other_products"
+    t.text     "target_market"
+    t.text     "customers"
   end
 
   create_table "rounds", force: :cascade do |t|

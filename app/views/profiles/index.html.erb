@@ -1,0 +1,198 @@
+
+<head>
+    <style type="text/css">
+  #main { width:960px; margin: 0px auto; border:solid 1px #b2b3b5; -moz-border-radius:10px; padding:20px; background-color:#f6f6f6;}
+        fieldset { border:none; width:320px;}
+        legend { font-size:18px; margin:0px; padding:10px 0px; color:#b0232a; font-weight:bold;}
+        label { display:block; margin:15px 0 5px;}
+        input[type=text], input[type=password] { width:300px; padding:5px; border:solid 1px #000;}
+        .prev, .next { background-color:#b0232a; padding:5px 10px; color:#fff; text-decoration:none;}
+        .prev:hover, .next:hover { background-color:#000; text-decoration:none;}
+        .prev { float:left;}
+        .next { float:right;}
+        #steps { list-style:none; width:100%; overflow:hidden; margin:0px; padding:0px;}
+        #steps li {font-size:24px; float:left; padding:10px; color:#b0b1b3;}
+        #steps li span {font-size:11px; display:block;}
+        #steps li.current { color:#000;}
+        #makeWizard { background-color:#b0232a; color:#fff; padding:5px 10px; text-decoration:none; font-size:18px;}
+        #makeWizard:hover { background-color:#000;}
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#SignupForm").formToWizard({ submitButton: 'SaveAccount' })
+        });
+    </script>
+</head>
+
+<body>
+
+        <form id="SignupForm" action="">
+        <fieldset>
+            <legend>Company Overview</legend>
+            <label for="story">Story</label>
+            <input id="story" type="text"/>
+            <label for="Password">Product Overview</label>
+            <input id="Password" type="password" />
+            <label for="Password">Stage</label>
+            <input id="Password" type="password" />
+            <label for="Password">Year Founded</label>
+            <input id="Password" type="password" />
+            <label for="Password">Number Of Employees</label>
+            <input id="Password" type="password" />
+        </fieldset>
+        <fieldset>
+            <legend>Company Profile</legend>
+            <label for="CompanyName">Pitch Video</label>
+            <input id="CompanyName" type="text" />
+            <label for="Website">Management Team</label>
+            <input id="Website" type="text" />
+            <label for="CompanyEmail">Advisors</label>
+            <input id="CompanyEmail" type="text" />
+            <label for="CompanyEmail">Previous Investors</label>
+            <input id="CompanyEmail" type="text" />
+        </fieldset>
+        <fieldset>
+            <legend>Team</legend>
+            <label for="NameOnCard">Founders</label>
+            <input id="NameOnCard" type="text" />
+    
+            <label for="CompanyName">Team</label>
+            <input id="CompanyName" type="text" />
+
+            <label for="CompanyName">Management Experience</label>
+            <input id="CompanyName" type="text" />
+        </fieldset>
+        <fieldset>
+            <legend>Executive Summary</legend>
+            <label for="NameOnCard">Customer Problem</label>
+            <input id="NameOnCard" type="text" />
+    
+            <label for="CompanyName">Products and Services</label>
+            <input id="CompanyName" type="text" />
+
+            <label for="CompanyName">Target Market</label>
+            <input id="CompanyName" type="text" />
+
+            <label for="CompanyName">Customers</label>
+            <input id="CompanyName" type="text" />
+
+            <label for="CompanyName">Sales and Marketing Strategy</label>
+            <input id="CompanyName" type="text" />
+
+
+            <label for="CompanyName">Business Model </label>
+            <input id="CompanyName" type="text" />
+
+
+            <label for="CompanyName">Competitors </label>
+            <input id="CompanyName" type="text" />
+
+            
+            <label for="CompanyName">Competitive Advantage </label>
+            <input id="CompanyName" type="text" />
+        </fieldset>
+
+        <fieldset>
+            <legend>Other Information</legend>
+            <label for="NameOnCard">Business Plan</label>
+            <input id="NameOnCard" type="text" />
+
+            <label for="CompanyName">Short-Term Goals</label>
+            <input id="CompanyName" type="text" />
+
+            <label for="CompanyName">Long-Term Goals</label>
+            <input id="CompanyName" type="text" />
+    
+            <label for="CompanyName">Financial Projections</label>
+            <input id="CompanyName" type="text" />
+        </fieldset>
+        <p>
+            <input id="SaveAccount" type="button" value="Submit form" />
+        </p>
+        </form>
+
+    </div>
+
+
+
+
+</body>
+
+
+
+<script type="text/javascript">
+(function($) {
+    $.fn.formToWizard = function(options) {
+        options = $.extend({  
+            submitButton: "" 
+        }, options); 
+        
+        var element = this;
+
+        var steps = $(element).find("fieldset");
+        var count = steps.size();
+        var submmitButtonName = "#" + options.submitButton;
+        $(submmitButtonName).hide();
+
+        // 2
+        $(element).before("<ul id='steps'></ul>");
+
+        steps.each(function(i) {
+            $(this).wrap("<div id='step" + i + "'></div>");
+            $(this).append("<p id='step" + i + "commands'></p>");
+
+            // 2
+            var name = $(this).find("legend").html();
+            $("#steps").append("<li id='stepDesc" + i + "'>Step " + (i + 1) + "<span>" + name + "</span></li>");
+
+            if (i == 0) {
+                createNextButton(i);
+                selectStep(i);
+            }
+            else if (i == count - 1) {
+                $("#step" + i).hide();
+                createPrevButton(i);
+            }
+            else {
+                $("#step" + i).hide();
+                createPrevButton(i);
+                createNextButton(i);
+            }
+        });
+
+        function createPrevButton(i) {
+            var stepName = "step" + i;
+            $("#" + stepName + "commands").append("<a href='#' id='" + stepName + "Prev' class='prev'>< Back</a>");
+
+            $("#" + stepName + "Prev").bind("click", function(e) {
+                $("#" + stepName).hide();
+                $("#step" + (i - 1)).show();
+                $(submmitButtonName).hide();
+                selectStep(i - 1);
+            });
+        }
+
+        function createNextButton(i) {
+            var stepName = "step" + i;
+            $("#" + stepName + "commands").append("<a href='#' id='" + stepName + "Next' class='next'>Next ></a>");
+
+            $("#" + stepName + "Next").bind("click", function(e) {
+                $("#" + stepName).hide();
+                $("#step" + (i + 1)).show();
+                if (i + 2 == count)
+                    $(submmitButtonName).show();
+                selectStep(i + 1);
+            });
+        }
+
+        function selectStep(i) {
+            $("#steps li").removeClass("current");
+            $("#stepDesc" + i).addClass("current");
+        }
+
+    }
+})(jQuery); 
+</script>
+
