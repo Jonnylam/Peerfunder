@@ -124,14 +124,14 @@ header {
   background: linear-gradient(to bottom, #dddddd 0%,#fafafa 99%,#6d707f 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dddddd', endColorstr='#fafafa',GradientType=0 ); /* IE6-9 */
 
-  margin-bottom: 0px;
+  margin-bottom: 70px;
   position: relative;
   // border-bottom: 3px solid #ccc;
 
 
   .logo {
     position: absolute;
-    max-width: 65px;
+    max-width: 3.5%;
     height: auto;
     margin-left: 1%;
     margin-top: 0.4%;
@@ -269,7 +269,6 @@ ul li:hover ul li {
     text-align: center;
     display: inline-block;
     margin: -8px 0 0 5px;
-    padding: 0px;
   }
 
   li.user:hover {

@@ -1,27 +1,72 @@
 
 <body>
+<section class="window">
+
+      <div class = ".col-md-4">
+        <h1><%= @company.name %></h1><br>
+          <div class="overview">
+            <div class="quick_description headings">
+            </div>
+          </div>
+      </div>
+
+
   <div id='tab-container'>
-
-      <h1>Company Profile Page</h1>
+      <div class="tab-content">
+        <div class = ".col-md-4">
+          <h1 class="tab" title="title for page 1">Overview</h1>
+            <h3>Product</h3>
+            <p><%=@company.product %></p>
+            <h3>Company Description</h3>
+            <p><%=h truncate(@company.elevator_pitch, :length => 300) %></p>
+            <h3>Location</h3>
+            <p><%= @company.location %></p>
+            <h3>Industry Type</h3>
+            <p><%= @company.industry_type %></p>
+        </div>
+      </div>
+      
+   
+    <div class="tab-content">
+         <div class = ".col-md-4">
+          <h1 class="tab" title="title for page 1">Business Plan</h1>
+          <p>This is the content of tab 1 on container 1</p>
+        </div>
+          </div>
+    
 
     <div class="tab-content">
-        <h1 class="tab" title="title for page 1">Company</h1>
-        <p>This is the content of tab 1 on container 1</p>
-    </div>
+         <div class = ".col-md-4">
+          <h1 class="tab" title="title for page 1">Market</h1>
+          <p>This is the content of tab 1 on container 1</p>
+        </div>
+          </div>
+    
     <div class="tab-content">
-        <h1 class="tab" title="title for page 2">Profile</h1>
-        <p>This is the content of tab 2 on container 1</p>
-    </div>
+        <div class = ".col-md-4">
+          <h1 class="tab" title="title for page 1">People</h1>
+          <p>This is the content of tab 1 on container 1</p>
+        </div>
+          </div>
+    
     <div class="tab-content">
-        <h1 class="tab" title="title for page 3">Test</h1>
-        <p>This is the content of tab 3 on container 1</p>
+         <div class = ".col-md-4">
+          <h1 class="tab" title="title for page 1">Financials</h1>
+          <p>This is the content of tab 1 on container 1</p>
+        </div>
     </div>
-  </div>
+</div>
+ 
+
+
+</section>
 
 
 
 
-  <script type="text/javascript" src="tabs.js"></script>
+
+
+
 </body>
 
   <script type = "text/javascript">
