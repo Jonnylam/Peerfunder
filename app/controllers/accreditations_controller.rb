@@ -11,12 +11,18 @@ before_action :load_user
 		@accreditation.user_id = current_user.id
 		@user = current_user
 		if @accreditation.save 
-			@user.accreditation = true
+			@user.accreditation == true
 			@user.save
 			redirect_to users_profile_path, notice: "Accreditation Saved Son!"
 		else
+			  format.html {
+        flash[:notice] = "Failed to save round."
 
+       }
+        format.js {}
     end
+
+  
 
 	end
 
