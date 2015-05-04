@@ -154,12 +154,15 @@ ActiveRecord::Schema.define(version: 20150428162830) do
   create_table "profiles", force: :cascade do |t|
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+    t.integer  "company_id"
     t.text     "story"
     t.text     "product_overview"
     t.text     "company_stage"
     t.text     "year_founded"
     t.text     "number_of_employees"
     t.string   "pitch_video"
+    t.text     "problem"
+    t.text     "opportunity"
     t.text     "management_team"
     t.text     "advisors"
     t.text     "previous_investors"

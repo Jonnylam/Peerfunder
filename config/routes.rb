@@ -9,7 +9,7 @@ root :to => 'start#index'
   get 'investors' => 'users#index'
   get 'users/inbox'
   get 'companies/profile'
-
+  get 'start/about'
 
 
   resources :companies do

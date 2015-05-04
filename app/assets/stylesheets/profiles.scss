@@ -11,7 +11,7 @@
 
 fieldset { 
 	border:none; 
-	width:320px;
+	max-width:100%;
 }
 
 legend { 
@@ -116,7 +116,7 @@ label {
 	padding: 0;
 	position: relative;
 	bottom: -1px;
-	width: 100%;
+	max-width: 100%;
 }
 
 .tab-header ul.tab-list a,.tab-header ul.tab-list span,.tab-header ul.tab-list a.tab-active {
@@ -165,3 +165,7 @@ label {
   	position: relative;
   	left: 20%;
   	}
+
+.form-label {
+	
+}

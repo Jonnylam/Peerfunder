@@ -1,7 +1,7 @@
 
 <body>
-<section class="window">
-
+<div class="window">
+<h4><%= link_to "Edit Your Information", edit_company_profile_path(@company, @profile) %></h4>
       <div class = ".col-md-4">
         <h1><%= @company.name %></h1><br>
           <div class="overview">
@@ -29,23 +29,65 @@
    
     <div class="tab-content">
          <div class = ".col-md-4">
-          <h1 class="tab" title="title for page 1">Business Plan</h1>
-          <p>This is the content of tab 1 on container 1</p>
+          <h1 class="tab" title="title for page 1">Profile</h1>
+            <h3>Story</h3>
+            <p><%=@profile.story %></p>
+            <h3>Product Overview</h3>
+            <p><%= @profile.product_overview %></p>
+            <h3>Company Stage</h3>
+            <p><%= @profile.company_stage %></p>
+            <h3>Year Founded</h3>
+            <p><%= @profile.year_founded %></p>
+            <h3>Number of Employees</h3>
+            <p><%=@profile.number_of_employees %></p>
+
         </div>
           </div>
     
 
     <div class="tab-content">
          <div class = ".col-md-4">
-          <h1 class="tab" title="title for page 1">Market</h1>
-          <p>This is the content of tab 1 on container 1</p>
+          <h1 class="tab" title="title for page 1">Executive Summary</h1>
+            <h3>Pitch Video</h3>
+            <p>Link here to directly play pitch video on youtube</p>
+            <h3>Problem</h3>
+            <p><%= @profile.problem%></p>
+            <h3>Opportunity</h3>
+            <p><%= @profile.opportunity %></p>
+            <h3>Management Team</h3>
+            <p><%= @profile.management_team %></p>
+            <h3>Management Experience</h3>
+            <p><%= @profile.management_experience %></p>
+            <h3>Advisors</h3>
+            <p><%=@profile.advisors %></p>
+            <h3>Previous Investors</h3>
+            <p><%=@profile.previous_investors%></p>
+            <h3>Founders</h3>
+            <p><%=@profile.founders %></p>
         </div>
           </div>
     
     <div class="tab-content">
         <div class = ".col-md-4">
-          <h1 class="tab" title="title for page 1">People</h1>
-          <p>This is the content of tab 1 on container 1</p>
+          <h1 class="tab" title="title for page 1">Business Plan</h1>
+            <h3>Customer Needs?</h3>
+            <p><%=@profile.customer_problem %></p>
+            <h3>Sales and Marketing Strategy</h3>
+            <p><%= @profile.sales_market_strategy %></p>
+            <h3>Competitors</h3>
+            <p><%= @profile.competitors %></p>
+            <h3>Competitive Advantage</h3>
+            <p><%= @profile.competitive_advantage %></p>
+            <h3>Target Market</h3>
+            <p><%= @profile.competitive_advantage %></p>
+            <h3>Business Plan</h3>
+            <p><%= @profile.business_plan %></p>
+            <h3>Short Term Goals</h3>
+            <p><%= @profile.short_term_goals%></p>
+            <h3>Long Term Goals</h3>
+            <p><%= @profile.long_term_goals%></p>
+            <h3>Use of Proceeds</h3>
+            <p><%= @profile.use_of_proceeds%></p>
         </div>
           </div>
     
@@ -59,9 +101,7 @@
  
 
 
-</section>
-
-
+</div>
 
 
 
