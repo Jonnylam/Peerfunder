@@ -42,6 +42,7 @@ before_action :load_user
     					:investing_entity_type, 
     					:type_of_accreditation, 
     					:signature, 
+    					:accreditation_status,
     					:user_id)
   end
 

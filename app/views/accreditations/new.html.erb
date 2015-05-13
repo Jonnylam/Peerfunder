@@ -34,8 +34,61 @@ Use Javascript to only allow them to check one box
   Please Enter your Signature Here
   <%= f.text_field :signature %><br>
   </div>
-
 <%= f.submit %>
 <% end %>
 
+
+
+<h2 class="center">Please fill out the following information</h2>
+<br><Br>
+
+
+<%= form_for @user do |f| %>
+ <div class="field">
+    <h2>Legal name of the investing entity</h2><br>
+    <input type="text"> <br>
+  </div>
+    <br>
+  <div class="field">
+    <!--
+Use Javascript to only allow them to check one box
+  -->
+    <h2>Type of Investing Entity</h2><Br>
+    An Individual
+    <%= check_box_tag "investing_entity_type", "individual" %>
+    A Trust
+    <%= check_box_tag "investing_entity_type", "trust" %>
+    A Company
+    <%= check_box_tag "investing_entity_type", "company" %>
+
+  </div>
+    <br>
+  <div class="field">
+    <h2>How is <%= @user.first_name %> accedited?</h2><br>
+    <h3>Please select the best one that applies to you </h3><br>
+    Income
+    <%= check_box_tag "type_of_accreditation", "income" %>
+    Cash And Securities
+    <%= check_box_tag "type_of_accreditation", "cash" %>
+    Financial Assets
+    <%= check_box_tag "type_of_accreditation", "financial_assets" %>
+    Net Assets
+    <%= check_box_tag "type_of_accreditation", "net_assets" %>
+  </div>
+  
+  <div class = "field">
+  Please Enter your Signature Here
+  <input type="text"> <br>
+  </div>
+
+<%= hidden_field_tag 'user_id', @user.id %>
+
+ <div class="checkbox_tag">
+ 
+  Click here to agree
+  <%= f.check_box :accreditation %>
+
+ <%= f.submit %>
+ 
+ <% end %>
 

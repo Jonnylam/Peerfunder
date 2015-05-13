@@ -91,5 +91,6 @@ class UsersController < ApplicationController
      @rounds = Round.all
      @invitations = Invitation.all
      @follow = Follow.all
+     @accreditation = Accreditation.all
   end
 end

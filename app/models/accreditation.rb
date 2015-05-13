@@ -1,3 +1,4 @@
 class Accreditation < ActiveRecord::Base
-	belongs_to :User
+	belongs_to :user
+	 accepts_nested_attributes_for :user
 end

@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
   users =
+    
     User.create!({
       email: "aliasaria@tulip.io",
       first_name: "Ali",
@@ -24,7 +25,9 @@ I am most famous for having written 'BrickBreaker' for the RIM Blackberry device
       remote_avatar_url: 'https://pbs.twimg.com/profile_images/2037532740/profile.jpg'
     })
 
+
     User.create!({
+
       email: "Alex.Haditaghi@gmail.com",
       first_name: "Alex",
       last_name: "Haditaghi",
