@@ -22,8 +22,8 @@ I am most famous for having written 'BrickBreaker' for the RIM Blackberry device
       profile_photo_url: 'https://pbs.twimg.com/profile_images/2037532740/profile.jpg',
       location: "Toronto, Ontario, Canada",
       dob: "1975-01-15",
-      remote_avatar_url: 'https://pbs.twimg.com/profile_images/2037532740/profile.jpg'
-    })
+      :avatar => open('public/images/seeds/AliAsaria.jpg')  
+      })
 
 
     User.create!({
@@ -39,7 +39,7 @@ I am most famous for having written 'BrickBreaker' for the RIM Blackberry device
       profile_photo_url: 'https://d1qb2nb5cznatu.cloudfront.net/users/258873-medium_jpg?1405549666',
       location: "Toronto, Ontario, Canada",
       dob: "1970-05-27",
-      remote_avatar_url: 'https://d1qb2nb5cznatu.cloudfront.net/users/258873-medium_jpg?1405549666'
+      :avatar => open('public/images/seeds/Alex-Haditaghi.jpg')  
     })
 
     User.create!({
@@ -57,7 +57,7 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       profile_photo_url: 'http://cdn.crowdfundinsider.com/wp-content/uploads/2014/12/Andrew-Graham.jpg',
       location: "Toronto, Ontario, Canada",
       dob: "1985-09-27",
-      remote_avatar_url: 'http://cdn.crowdfundinsider.com/wp-content/uploads/2014/12/Andrew-Graham.jpg'
+      :avatar => open('public/images/seeds/Andrew-Graham.jpg')  
     })
 
     User.create!({
@@ -72,7 +72,7 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       profile_photo_url: 'http://www.marketwire.com/library/20130807-Oleg%20Gutsol%20CEO%20500px_lg.jpg',
       location: "Toronto, Ontario, Canada",
       dob: "1975-10-11",
-      remote_avatar_url: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/017/17b/1d859cd.jpg'
+      :avatar => open('public/images/seeds/OlegGustol.jpg')  
     })
     User.create!({
       email: "nikolaibratkovski@opencare.com",
@@ -86,56 +86,56 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       profile_photo_url: 'https://www.opencare.com/',
       location: "Toronto, Ontario, Canada",
       dob: "1982-10-12",
-      remote_avatar_url: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/8/005/017/17b/1d859cd.jpg'
+      :avatar => open('public/images/seeds/NikolaiBratksoi.jpg')  
     })
 
-    User.create!({
-    email: "peter@foundersfund.com",
-    first_name: "Peter",
-    last_name: "Thiel",
-    password: "password",
-    password_confirmation: "password",
-    biography: "As a venture capitalist and entrepreneur, Peter has been involved with some of the most dynamic companies to emerge from Silicon Valley in the past decade",
-    experience: "Cofounder of Paypal(acq:'02). Founder & Chairman at Clarium Capital, Mithril Capital Management, Palantir Technologies, Valar Ventures.  Partner at Founder's Fund ",
-    accreditation: true,
-    profile_photo_url: 'http://i.forbesimg.com/media/lists/people/peter-thiel_416x416.jpg',
-    location: "San Francisco, California, USA",
-    dob: "1967-10-11",
-    remote_avatar_url: 'http://i.forbesimg.com/media/lists/people/peter-thiel_416x416.jpg'
-  })
+  #   User.create!({
+  #   email: "peter@foundersfund.com",
+  #   first_name: "Peter",
+  #   last_name: "Thiel",
+  #   password: "password",
+  #   password_confirmation: "password",
+  #   biography: "As a venture capitalist and entrepreneur, Peter has been involved with some of the most dynamic companies to emerge from Silicon Valley in the past decade",
+  #   experience: "Cofounder of Paypal(acq:'02). Founder & Chairman at Clarium Capital, Mithril Capital Management, Palantir Technologies, Valar Ventures.  Partner at Founder's Fund ",
+  #   accreditation: true,
+  #   profile_photo_url: 'http://i.forbesimg.com/media/lists/people/peter-thiel_416x416.jpg',
+  #   location: "San Francisco, California, USA",
+  #   dob: "1967-10-11",
+  #   :avatar => open('public/images/seeds/peterthiel.jpg')  
+  # })
 
-    User.create!({
-    email: "marc@a16z.com",
-    first_name: "Marc",
-    last_name: "Andreessen",
-    password: "password",
-    password_confirmation: "password",
-    biography: "Andreessen is the quintessential guy who is wrong with corporate America...Hard to hear, talks with a squeaky voice that only a dog can understand.'–Carl Icahn",
-    experience: "Cofounder of Netscape Communications Corp. and Opsware Inc. CTO of AOL.  Founder and managing partner at Andreessen Horowitz.",
-    accreditation: true,
-    profile_photo_url: 'http://static1.businessinsider.com/image/532ebee46da811c10a3bff41-480/andreessen.jpg',
-    location: "Menlo Park, California, USA",
-    dob: "1971-07-09",
-    remote_avatar_url: 'http://static1.businessinsider.com/image/532ebee46da811c10a3bff41-480/andreessen.jpg'
-  })
+  #   User.create!({
+  #   email: "marc@a16z.com",
+  #   first_name: "Marc",
+  #   last_name: "Andreessen",
+  #   password: "password",
+  #   password_confirmation: "password",
+  #   biography: "Andreessen is the quintessential guy who is wrong with corporate America...Hard to hear, talks with a squeaky voice that only a dog can understand.'–Carl Icahn",
+  #   experience: "Cofounder of Netscape Communications Corp. and Opsware Inc. CTO of AOL.  Founder and managing partner at Andreessen Horowitz.",
+  #   accreditation: true,
+  #   profile_photo_url: 'http://static1.businessinsider.com/image/532ebee46da811c10a3bff41-480/andreessen.jpg',
+  #   location: "Menlo Park, California, USA",
+  #   dob: "1971-07-09",
+  #   :avatar => open('public/images/seeds/andreessen.jpg')  
+  # })
 
-    User.create!({
-      email: "admin",
-      first_name: "Angels North",
-      last_name: "Admin",
-      password: "password",
-      password_confirmation: "password",
-      biography: "Hello Hello Hello",
-      experience: 'Founder of Pacific Mortgage Group, CEO of Mopals',
-      accreditation: true,
-      profile_photo_url: 'http://s1.postimg.org/ckh0vrvpr/Admin_Logo.png',
-      location: "Toronto, Ontario, Canada",
-      dob: "1970-05-27",
-      remote_avatar_url: 'http://s1.postimg.org/ckh0vrvpr/Admin_Logo.png'
-    })
+  #   User.create!({
+  #     email: "admin",
+  #     first_name: "Angels North",
+  #     last_name: "Admin",
+  #     password: "password",
+  #     password_confirmation: "password",
+  #     biography: "Hello Hello Hello",
+  #     experience: 'Founder of Pacific Mortgage Group, CEO of Mopals',
+  #     accreditation: true,
+  #     profile_photo_url: 'http://s1.postimg.org/ckh0vrvpr/Admin_Logo.png',
+  #     location: "Toronto, Ontario, Canada",
+  #     dob: "1970-05-27",
+  #     # remote_avatar_url: 'http://s1.postimg.org/ckh0vrvpr/Admin_Logo.png'
+  #   })
 
      User.create!({
-      email: "jonatham.lam@gmail.com",
+      email: "jonathanryanlam@gmail.com",
       first_name: "Jonathan",
       last_name: "Lam",
       password: "password",
@@ -152,7 +152,7 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       profile_photo_url: 'https://pbs.twimg.com/profile_images/568141551214153728/bvRbDOSh_400x400.jpeg',
       location: "Toronto, Ontario, Canada",
       dob: "1990-07-15",
-      remote_avatar_url: 'https://pbs.twimg.com/profile_images/568141551214153728/bvRbDOSh_400x400.jpeg'
+      :avatar => open('public/images/seeds/jonathanlam.jpg')  
     })
 
   companies =
