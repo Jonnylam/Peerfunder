@@ -41,9 +41,12 @@
 }
 
 .squarelinkimage {
-  width: 50px;
-  height: 50px;
+  width: 64px;
+  height: 64px;
   padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 
@@ -70,6 +73,17 @@ body {
 
 /* Background images are set within the HTML using inline CSS, not here */
 
+.overlay1{
+    
+ background: rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.overlay2 {
+  background: rgba(0, 5, 8, 0.20);
+  z-index: 2;
+}
+
 .fill {
     width: 100%;
     height: 100%;
@@ -79,6 +93,8 @@ body {
     background-size: cover;
     -o-background-size: cover;
     z-index: 1;
+  
+    
 }
 
 footer {
@@ -127,6 +143,7 @@ footer {
  #services{
    background-color: #f8f8f8;
    color: #535353;
+   margin-top: -70px;
    }
 
 

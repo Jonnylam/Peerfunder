@@ -89,50 +89,50 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       :avatar => open('public/images/seeds/NikolaiBratksoi.jpg')  
     })
 
-  #   User.create!({
-  #   email: "peter@foundersfund.com",
-  #   first_name: "Peter",
-  #   last_name: "Thiel",
-  #   password: "password",
-  #   password_confirmation: "password",
-  #   biography: "As a venture capitalist and entrepreneur, Peter has been involved with some of the most dynamic companies to emerge from Silicon Valley in the past decade",
-  #   experience: "Cofounder of Paypal(acq:'02). Founder & Chairman at Clarium Capital, Mithril Capital Management, Palantir Technologies, Valar Ventures.  Partner at Founder's Fund ",
-  #   accreditation: true,
-  #   profile_photo_url: 'http://i.forbesimg.com/media/lists/people/peter-thiel_416x416.jpg',
-  #   location: "San Francisco, California, USA",
-  #   dob: "1967-10-11",
-  #   :avatar => open('public/images/seeds/peterthiel.jpg')  
-  # })
+    User.create!({
+    email: "peter@foundersfund.com",
+    first_name: "Peter",
+    last_name: "Thiel",
+    password: "password",
+    password_confirmation: "password",
+    biography: "As a venture capitalist and entrepreneur, Peter has been involved with some of the most dynamic companies to emerge from Silicon Valley in the past decade",
+    experience: "Cofounder of Paypal(acq:'02). Founder & Chairman at Clarium Capital, Mithril Capital Management, Palantir Technologies, Valar Ventures.  Partner at Founder's Fund ",
+    accreditation: true,
+    profile_photo_url: 'http://i.forbesimg.com/media/lists/people/peter-thiel_416x416.jpg',
+    location: "San Francisco, California, USA",
+    dob: "1967-10-11",
+    :avatar => open('public/images/seeds/peterthiel.jpg')  
+  })
 
-  #   User.create!({
-  #   email: "marc@a16z.com",
-  #   first_name: "Marc",
-  #   last_name: "Andreessen",
-  #   password: "password",
-  #   password_confirmation: "password",
-  #   biography: "Andreessen is the quintessential guy who is wrong with corporate America...Hard to hear, talks with a squeaky voice that only a dog can understand.'–Carl Icahn",
-  #   experience: "Cofounder of Netscape Communications Corp. and Opsware Inc. CTO of AOL.  Founder and managing partner at Andreessen Horowitz.",
-  #   accreditation: true,
-  #   profile_photo_url: 'http://static1.businessinsider.com/image/532ebee46da811c10a3bff41-480/andreessen.jpg',
-  #   location: "Menlo Park, California, USA",
-  #   dob: "1971-07-09",
-  #   :avatar => open('public/images/seeds/andreessen.jpg')  
-  # })
+    User.create!({
+    email: "marc@a16z.com",
+    first_name: "Marc",
+    last_name: "Andreessen",
+    password: "password",
+    password_confirmation: "password",
+    biography: "Andreessen is the quintessential guy who is wrong with corporate America...Hard to hear, talks with a squeaky voice that only a dog can understand.'–Carl Icahn",
+    experience: "Cofounder of Netscape Communications Corp. and Opsware Inc. CTO of AOL.  Founder and managing partner at Andreessen Horowitz.",
+    accreditation: true,
+    profile_photo_url: 'http://static1.businessinsider.com/image/532ebee46da811c10a3bff41-480/andreessen.jpg',
+    location: "Menlo Park, California, USA",
+    dob: "1971-07-09",
+    :avatar => open('public/images/seeds/andreessen.jpg')  
+  })
 
-  #   User.create!({
-  #     email: "admin",
-  #     first_name: "Angels North",
-  #     last_name: "Admin",
-  #     password: "password",
-  #     password_confirmation: "password",
-  #     biography: "Hello Hello Hello",
-  #     experience: 'Founder of Pacific Mortgage Group, CEO of Mopals',
-  #     accreditation: true,
-  #     profile_photo_url: 'http://s1.postimg.org/ckh0vrvpr/Admin_Logo.png',
-  #     location: "Toronto, Ontario, Canada",
-  #     dob: "1970-05-27",
-  #     # remote_avatar_url: 'http://s1.postimg.org/ckh0vrvpr/Admin_Logo.png'
-  #   })
+    User.create!({
+      email: "admin",
+      first_name: "Angels North",
+      last_name: "Admin",
+      password: "password",
+      password_confirmation: "password",
+      biography: "Hello Hello Hello",
+      experience: 'Founder of Pacific Mortgage Group, CEO of Mopals',
+      accreditation: true,
+      profile_photo_url: 'http://s1.postimg.org/ckh0vrvpr/Admin_Logo.png',
+      location: "Toronto, Ontario, Canada",
+      dob: "1970-05-27",
+      # remote_avatar_url: 'http://s1.postimg.org/ckh0vrvpr/Admin_Logo.png'
+    })
 
      User.create!({
       email: "jonathanryanlam@gmail.com",
@@ -177,7 +177,7 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       location: "Toronto, Canada",
       industry_type: "Retail",
       website_url: "http://tulip.io/",
-      company_logo: 'https://pbs.twimg.com/profile_images/566355500711682049/pAqN-IeH.png',
+      company_logo: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSu8xIftiEIY4TEP0JT5aBr85LA_lW3srK1I7J_hfIoK8oDvB5Hmw',
       product: "Tulip Retail delivers a mobile platform for sales associates, giving them access to the information they need to deliver breakthrough customer service. Sales associates can easily access catalogue, customer and sales transaction information from a mobile device allowing them to quickly answer questions, make personalized recommendations and check out faster.",
       founders: "Ali Asaria",
       previous_investors: "BoxGroup, Lerer Hippeau Ventures, Promus Ventures, Founder Collective, SoftTech VC, iNovia Capital, Matt Mullenweg, Mike McCauley",
@@ -205,7 +205,7 @@ He holds an MBA from Harvard Business School and an MA from the University of Ed
       location: "Toronto, Canada",
       industry_type: "Social Media",
       website_url: "https://500px.com/",
-      company_logo: 'https://pbs.twimg.com/profile_images/426172939646431232/-650I_gs_400x400.jpeg',
+      company_logo: 'http://500px.com/graphics/media/500px_big_black.jpg',
       product: "500px is powered by creative people worldwide and lets you discover, share, buy and sell inspiring photos. It has grown to become the premier platform with the highest quality photography worldwide.",
       founders: "Oleg Gutsol, Evgeny Tchebotarev",
       previous_investors: "Andreessen Horowitz, High Line Venture Partners, ff Venture Capital, Rugged Ventures, CAA Ventures, Harrison Metal",

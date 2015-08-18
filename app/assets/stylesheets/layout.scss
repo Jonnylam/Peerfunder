@@ -78,7 +78,7 @@ body > #wrapper {
 
 a {
   text-decoration: none;
-  color: $red;
+  color: $darkred;
 
 }
 
@@ -98,7 +98,7 @@ a.other-hover:hover {
 
 h1, h2, h3, h4, h5{
     font-weight: $bold;
-    letter-spacing: 0px;
+    letter-spacing: 1.5px;
 }
 
 h2 {
