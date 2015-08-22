@@ -4,6 +4,6 @@ class ApplicationMailer < ActionMailer::Base
 	def welcome_email(user)
 		@user = user
 		@url = 'http://example.com/Login'
-		mail(to: @user.email, subject: 'Welcome to Angel List Canada')
+		mail(to: @user.email, subject: 'Welcome to Peerfunder')
 	end
 end

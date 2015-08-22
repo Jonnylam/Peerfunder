@@ -1,37 +1,12 @@
 <div class="window welcome">
-  <h2>In Canada, companies have the choice of using </h2>
-
-  <p>Select how you would like to proceed:</p>
-
-   <%= link_to fundraisings_findalead_company_rounds_url, :round_id=>1 do %>
-    <div class="button-path">
-      <h3>I want to use a lead syndicate to raise my round</h3>
-    </div>
-  <% end %>
-
-  <%= link_to company_round_path(@company, @round) do %>
-    <div class="button-path">
-      <h3>I want to use the offering memorandum to raise my round</h3>
-    </div>
-  <% end %>
 
 
-<h2>Angels North can help choose the right lead for you</h2>
+
+<h2>Peerfunder can help start a campaign for your business </h2>
 
    <%= link_to company_round_path(@company, @round) do %>
     <div class="button-path">
-      <h3>I am the lead investor</h3>
-    </div>
-  <% end %>
-  <%= link_to company_round_path(@company, @round) do %>
-    <div class="button-path">
-      <h3>I have a lead investor aligned up</h3>
-    </div>
-  <% end %>
-
-  <%= link_to investors_path do %>
-    <div class="button-path">
-      <h3>Find a lead investor on Angels North</h3>
+      <h2><center>Click Here</center></h2>
     </div>
   <% end %>
 

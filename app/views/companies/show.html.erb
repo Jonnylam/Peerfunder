@@ -34,7 +34,7 @@
 
   <% if current_user == @company.owner %>
     <form class="submit"  action="<%= @company.id %>/rounds/new">
-      <input type="submit" value="Begin A New Fundraising Round">
+      <input type="submit" value="Begin A New Campaign">
     </form>
     
     <form class = "submit" action = "<%=new_company_profile_path(@company) %>">

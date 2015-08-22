@@ -13,7 +13,7 @@
     <nav class="group">
       <div id="primary-nav">
         <ul>
-          <li class = "first"><%= link_to "START-UPS", companies_path %></li>
+          <li class = "first"><%= link_to "BUSINESSES", companies_path %></li>
           <% if current_user %>
             <li><%= link_to "INVESTORS", investors_path %></li>
             <li><%= link_to "REGISTER", new_company_path %></li>
@@ -21,7 +21,7 @@
             <li><%= link_to "MESSAGES", conversations_path %></li>
           <% else %>
             <div id = "notloggedin">
-            <li><%= link_to "ABOUT", users_path %></li>
+            <li><%= link_to "ABOUT", entrepreneurs_path %></li>
             </div>
           <% end %>
         </ul>
@@ -81,7 +81,7 @@
     </div>
 
     <div class="copyright">
-      <img src="/logo_footer.png" alt="" class="logo">
+      <!-- <img src="/logo_footer.png" alt="" class="logo"> -->
       <p>Peerfunder</p>
       <p>Copyright &copy; 2015</p>
       </div>
