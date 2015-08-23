@@ -17,7 +17,7 @@ class UsersController < ApplicationController
      if @user.save
       UserMailer.welcome_email(@user).deliver_now
       auto_login(@user)
-      redirect_to users_url, notice: "Signed up!"
+      redirect_to companies_url, notice: "Signed up!"
     else
       render "new"
     end
